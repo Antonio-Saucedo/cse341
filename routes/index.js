@@ -1,6 +1,6 @@
 const routes = require("express").Router();
 
-app.get("/", (req, res) => {
+routes.get("/", (req, res) => {
   res.send("Antonio Saucedo");
 });
 
