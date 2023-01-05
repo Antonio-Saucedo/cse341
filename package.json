@@ -1,0 +1,23 @@
+{
+  "name": "cse341",
+  "version": "1.0.0",
+  "description": "Web Backend II",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antonio-Saucedo/cse341.git"
+  },
+  "author": "Antonio Saucedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antonio-Saucedo/cse341/issues"
+  },
+  "homepage": "https://github.com/Antonio-Saucedo/cse341#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
