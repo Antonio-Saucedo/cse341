@@ -10,3 +10,10 @@ GET http://localhost:8080/contacts/644bea15120bd798503c7f0c
 
 PRODUCTION
 ###
+GET https://cse341-lesson2.onrender.com/contacts
+###
+GET https://cse341-lesson2.onrender.com/contacts/644be97f120bd798503c7f0a
+###
+GET http://cse341-lesson2.onrender.com/contacts/644be9fc120bd798503c7f0b
+###
+GET http://cse341-lesson2.onrender.com/contacts/644bea15120bd798503c7f0c
