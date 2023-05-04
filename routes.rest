@@ -36,23 +36,23 @@ content-type: application/json
 }
 
 ### DELETE contact
-DELETE http://localhost:8080/contacts/644be97f120bd798503c7f0a HTTP/1.1
+DELETE http://localhost:8080/contacts/64543571406e38e68981fcc3 HTTP/1.1
 
 // PRODUCTION
 ### Get all contacts
-GET https://cse341-lesson3.onrender.com/contacts
+GET https://cse341-lesson3-duhm.onrender.com/contacts
 
 ### Get contact by id
-GET https://cse341-lesson3.onrender.com/contacts/644be97f120bd798503c7f0a
+GET https://cse341-lesson3-duhm.onrender.com/contacts/644be97f120bd798503c7f0a
 
 ### Get contact by id
-GET http://cse341-lesson3.onrender.com/contacts/644be9fc120bd798503c7f0b
+GET https://cse341-lesson3-duhm.onrender.com/contacts/644be9fc120bd798503c7f0b
 
 ### Get contact by id
-GET http://cse341-lesson3.onrender.com/contacts/644bea15120bd798503c7f0c
+GET https://cse341-lesson3-duhm.onrender.com/contacts/644bea15120bd798503c7f0c
 
 ### Create contact
-POST http://cse341-lesson3.onrender.com/contacts HTTP/1.1
+POST https://cse341-lesson3-duhm.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
@@ -64,7 +64,7 @@ content-type: application/json
 }
 
 ### PUT contact
-PUT http://cse341-lesson3.onrender.com/contacts/64543571406e38e68981fcc3 HTTP/1.1
+PUT https://cse341-lesson3-duhm.onrender.com/contacts/645444c5474f3853db50ee44 HTTP/1.1
 content-type: application/json
 
 {
@@ -76,4 +76,4 @@ content-type: application/json
 }
 
 ### DELETE contact
-DELETE http://cse341-lesson3.onrender.com/contacts/644be97f120bd798503c7f0a HTTP/1.1
+DELETE https://cse341-lesson3-duhm.onrender.com/contacts/645444c5474f3853db50ee44 HTTP/1.1
