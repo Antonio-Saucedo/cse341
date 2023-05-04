@@ -1,0 +1,23 @@
+{
+  "contact1": {
+    "firstName": "Gary",
+    "lastName": "Chenney",
+    "email": "garyChenney@email.com",
+    "favoriteColor": "Blue",
+    "birthday": "April 16, 1991"
+  },
+  "contact2": {
+    "firstName": "Connor",
+    "lastName": "Erb",
+    "email": "connorErb@email.com",
+    "favoriteColor": "Green",
+    "birthday": "December 3, 1992"
+  },
+  "contact3": {
+    "firstName": "Caleb",
+    "lastName": "Barnhart",
+    "email": "calebBarnhart@email.com",
+    "favoriteColor": "Yellow",
+    "birthday": "November 14, 1995"
+  }
+}

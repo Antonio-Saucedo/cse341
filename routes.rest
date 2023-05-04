@@ -1,0 +1,79 @@
+// LOCALHOST
+### Get all contacts
+GET http://localhost:8080/contacts HTTP/1.1
+
+### Get contact by id
+GET http://localhost:8080/contacts/644be97f120bd798503c7f0a
+
+### Get contact by id
+GET http://localhost:8080/contacts/644be9fc120bd798503c7f0b
+
+### Get contact by id
+GET http://localhost:8080/contacts/644bea15120bd798503c7f0c
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Antonio",
+    "lastName":"S.",
+    "email":"aSaucedo@email.com",
+    "favoriteColor":"Blue",
+    "birthday":"September 29, 1993"
+}
+
+### PUT contact
+PUT http://localhost:8080/contacts/64543571406e38e68981fcc3 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Antonio",
+    "lastName":"Saucedo",
+    "email":"AntonioSaucedo@email.com",
+    "favoriteColor":"Red",
+    "birthday":"September 29, 1993"
+}
+
+### DELETE contact
+DELETE http://localhost:8080/contacts/644be97f120bd798503c7f0a HTTP/1.1
+
+// PRODUCTION
+### Get all contacts
+GET https://cse341-lesson3.onrender.com/contacts
+
+### Get contact by id
+GET https://cse341-lesson3.onrender.com/contacts/644be97f120bd798503c7f0a
+
+### Get contact by id
+GET http://cse341-lesson3.onrender.com/contacts/644be9fc120bd798503c7f0b
+
+### Get contact by id
+GET http://cse341-lesson3.onrender.com/contacts/644bea15120bd798503c7f0c
+
+### Create contact
+POST http://cse341-lesson3.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Antonio",
+    "lastName":"S.",
+    "email":"aSaucedo@email.com",
+    "favoriteColor":"Blue",
+    "birthday":"September 29, 1993"
+}
+
+### PUT contact
+PUT http://cse341-lesson3.onrender.com/contacts/64543571406e38e68981fcc3 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Antonio",
+    "lastName":"Saucedo",
+    "email":"antonioSaucedo@email.com",
+    "favoriteColor":"Red",
+    "birthday":"September 29, 1993"
+}
+
+### DELETE contact
+DELETE http://cse341-lesson3.onrender.com/contacts/644be97f120bd798503c7f0a HTTP/1.1
