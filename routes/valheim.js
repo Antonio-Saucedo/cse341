@@ -21,7 +21,7 @@ router.get('/arrows', arrowController.getAllArrowData);
 router.get('/arrows/:id', arrowController.getArrowDataById);
 
 // POST/Create arrow data
-router.post('/', arrowController.createArrowData);
+router.post('/arrows/', arrowController.createArrowData);
 
 // GET all axe data
 router.get('/axes', axeController.getAllAxeData);
@@ -30,7 +30,7 @@ router.get('/axes', axeController.getAllAxeData);
 router.get('/axes/:id', axeController.getAxeDataById);
 
 // POST/Create axe data
-router.post('/', axeController.createAxeData);
+router.post('/axes/', axeController.createAxeData);
 
 // GET all bow data
 router.get('/bows', bowController.getAllBowData);
@@ -39,7 +39,7 @@ router.get('/bows', bowController.getAllBowData);
 router.get('/bows/:id', bowController.getBowDataById);
 
 // POST/Create bow data
-router.post('/', bowController.createBowData);
+router.post('/bows/', bowController.createBowData);
 
 // GET all club data
 router.get('/clubs', clubController.getAllClubData);
@@ -48,7 +48,7 @@ router.get('/clubs', clubController.getAllClubData);
 router.get('/clubs/:id', clubController.getClubDataById);
 
 // POST/Create club data
-router.post('/', clubController.createClubData);
+router.post('/clubs/', clubController.createClubData);
 
 // GET all fist data
 router.get('/fists', fistController.getAllFistData);
@@ -57,7 +57,7 @@ router.get('/fists', fistController.getAllFistData);
 router.get('/fists/:id', fistController.getFistDataById);
 
 // POST/Create fist data
-router.post('/', fistController.createFistData);
+router.post('/fists/', fistController.createFistData);
 
 // GET all food data
 router.get('/food', foodController.getAllFoodData);
@@ -66,7 +66,7 @@ router.get('/food', foodController.getAllFoodData);
 router.get('/food/:id', foodController.getFoodDataById);
 
 // POST/Create food data
-router.post('/', foodController.createFoodData);
+router.post('/food/', foodController.createFoodData);
 
 // GET all knife data
 router.get('/knifes', knifeController.getAllKnifeData);
@@ -75,7 +75,7 @@ router.get('/knifes', knifeController.getAllKnifeData);
 router.get('/knifes/:id', knifeController.getKnifeDataById);
 
 // POST/Create knife data
-router.post('/', knifeController.createKnifeData);
+router.post('/knifes/', knifeController.createKnifeData);
 
 // GET all pickaxe data
 router.get('/pickaxes', pickaxeController.getAllPickaxeData);
@@ -84,7 +84,7 @@ router.get('/pickaxes', pickaxeController.getAllPickaxeData);
 router.get('/pickaxes/:id', pickaxeController.getPickaxeDataById);
 
 // POST/Create pickaxe data
-router.post('/', pickaxeController.createPickaxeData);
+router.post('/pickaxes/', pickaxeController.createPickaxeData);
 
 // GET all polearm data
 router.get('/polearms', polearmController.getAllPolearmData);
@@ -93,7 +93,7 @@ router.get('/polearms', polearmController.getAllPolearmData);
 router.get('/polearms/:id', polearmController.getPolearmDataById);
 
 // POST/Create polearm data
-router.post('/', polearmController.createPolearmData);
+router.post('/polearms/', polearmController.createPolearmData);
 
 // GET all shield data
 router.get('/shields', shieldController.getAllShieldData);
@@ -102,7 +102,7 @@ router.get('/shields', shieldController.getAllShieldData);
 router.get('/shields/:id', shieldController.getShieldDataById);
 
 // POST/Create shield data
-router.post('/', shieldController.createShieldData);
+router.post('/shields/', shieldController.createShieldData);
 
 // GET all spear data
 router.get('/spears', spearController.getAllSpearData);
@@ -111,7 +111,7 @@ router.get('/spears', spearController.getAllSpearData);
 router.get('/spears/:id', spearController.getSpearDataById);
 
 // POST/Create spear data
-router.post('/', spearController.createSpearData);
+router.post('/spears/', spearController.createSpearData);
 
 // GET all sword data
 router.get('/swords', swordController.getAllSwordData);
@@ -120,7 +120,7 @@ router.get('/swords', swordController.getAllSwordData);
 router.get('/swords/:id', swordController.getSwordDataById);
 
 // POST/Create sword data
-router.post('/', swordController.createSwordData);
+router.post('/swords/', swordController.createSwordData);
 
 // localhost:8080/
 module.exports = router;
