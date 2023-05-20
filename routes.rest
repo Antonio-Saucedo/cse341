@@ -1,7 +1,1423 @@
 // LOCALHOST
-### Get all contacts
-GET http://localhost:8080/data HTTP/1.1
+### Get all arrow data
+GET http://localhost:8080/arrows HTTP/1.1
+
+### Get arrow data by id
+GET http://localhost:8080/arrows/646836958395082a472a48ed HTTP/1.1
+
+### Get all axe data
+GET http://localhost:8080/axes HTTP/1.1
+
+### Get axe data by id
+GET http://localhost:8080/axes/64683bf48395082a472d732f HTTP/1.1
+
+### Get all bow data
+GET http://localhost:8080/bows HTTP/1.1
+
+### Get bow data by id
+GET http://localhost:8080/bows/64683d6d8395082a472e4b11 HTTP/1.1
+
+### Get all club data
+GET http://localhost:8080/clubs HTTP/1.1
+
+### Get club data by id
+GET http://localhost:8080/clubs/646840d68395082a473044f9 HTTP/1.1
+
+### Get all fist data
+GET http://localhost:8080/fists HTTP/1.1
+
+### Get fist data by id
+GET http://localhost:8080/fists/646841558395082a473090d3 HTTP/1.1
+
+### Get all food data
+GET http://localhost:8080/food HTTP/1.1
+
+### Get food data by id
+GET http://localhost:8080/food/646842508395082a47312284 HTTP/1.1
+
+### Get all knife data
+GET http://localhost:8080/knifes HTTP/1.1
+
+### Get knife data by id
+GET http://localhost:8080/knifes/646847128395082a4733edce HTTP/1.1
+
+### Get all pickaxe data
+GET http://localhost:8080/pickaxes HTTP/1.1
+
+### Get pickaxe data by id
+GET http://localhost:8080/pickaxes/646847b88395082a47344d4a HTTP/1.1
+
+### Get all polearm data
+GET http://localhost:8080/polearms HTTP/1.1
+
+### Get polearm data by id
+GET http://localhost:8080/polearms/646848ce8395082a4734f05d HTTP/1.1
+
+### Get all shield data
+GET http://localhost:8080/shields HTTP/1.1
+
+### Get shield data by id
+GET http://localhost:8080/shields/646849838395082a47355e96 HTTP/1.1
+
+### Get all spear data
+GET http://localhost:8080/spears HTTP/1.1
+
+### Get spear data by id
+GET http://localhost:8080/spears/64684a528395082a4735d701 HTTP/1.1
+
+### Get all sword data
+GET http://localhost:8080/swords HTTP/1.1
+
+### Get sword data by id
+GET http://localhost:8080/swords/64684b508395082a4736686a HTTP/1.1
 
 // PRODUCTION
-### Get all data
-GET https://valheim-v1-data.onrender.com/data
+### Get all arrow data
+GET https://valheim-v1-data.onrender.com/arrows HTTP/1.1
+
+### Get arrow data by id
+GET https://valheim-v1-data.onrender.com/arrows/646836958395082a472a48ed HTTP/1.1
+
+### Create arrow data
+POST https://valheim-v1-data.onrender.com/arrows HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Shiny arrow",
+    "description": "glowing arrow that attract bugs.",
+    "recipe": "8 Wood, 4 Obsidian, 2 Honey, 2 Feathers",
+    "quantity": "20",
+    "weight": "0.1",
+    "pierce": "52",
+    "fire": "0",
+    "spirit": "0",
+    "poison": "0",
+    "frost": "0",
+    "stagger": "52",
+    "knockback": "10"
+}
+
+### PUT/Update arrow data
+PUT https://valheim-v1-data.onrender.com/arrows/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Glowing arrow",
+    "description": "glowing arrow that attract bugs.",
+    "recipe": "8 Wood, 4 Obsidian, 1 Honey, 1 Feathers",
+    "quantity": "20",
+    "weight": "0.1",
+    "pierce": "42",
+    "fire": "0",
+    "spirit": "0",
+    "poison": "0",
+    "frost": "0",
+    "stagger": "42",
+    "knockback": "10"
+}
+
+### DELETE arrow data
+DELETE https://valheim-v1-data.onrender.com/arrows/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all axe data
+GET https://valheim-v1-data.onrender.com/axes HTTP/1.1
+
+### Get axe data by id
+GET https://valheim-v1-data.onrender.com/axes/64683bf48395082a472d732f HTTP/1.1
+
+### Create axe data
+POST https://valheim-v1-data.onrender.com/axes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Stone axe DUPLICATE",
+    "description": "A crude axe for tree-felling.",
+    "quality1": {
+      "recipe": "5 Wood, 4 Stone",
+      "weight": "1.5",
+      "durability": "100",
+      "slash": "15",
+      "spirit": "0",
+      "poison": "0",
+      "chop": "20",
+      "backstab": "3x",
+      "stagger": "15",
+      "knockback": "50",
+      "blockForce": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "5 Wood, 4 Stone",
+      "weight": "1.5",
+      "durability": "130",
+      "slash": "20",
+      "spirit": "0",
+      "poison": "0",
+      "chop": "23",
+      "backstab": "3x",
+      "stagger": "20",
+      "knockback": "50",
+      "blockForce": "25",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "5 Wood, 4 Stone",
+      "weight": "1.5",
+      "durability": "160",
+      "slash": "25",
+      "spirit": "0",
+      "poison": "0",
+      "chop": "26",
+      "backstab": "3x",
+      "stagger": "25",
+      "knockback": "50",
+      "blockForce": "30",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "5 Wood, 4 Stone",
+      "weight": "1.5",
+      "durability": "190",
+      "slash": "30",
+      "spirit": "0",
+      "poison": "0",
+      "chop": "29",
+      "backstab": "3x",
+      "stagger": "30",
+      "knockback": "50",
+      "blockForce": "35",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
+}
+
+### PUT/Update axe data
+PUT https://valheim-v1-data.onrender.com/axes/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Stone axe DUPLICATE EDITED",
+    "description": "A crude axe for tree-felling.",
+    "quality1": {
+      "recipe": "EDITED",
+      "weight": "1.5",
+      "durability": "100",
+      "slash": "15",
+      "spirit": "0",
+      "poison": "0",
+      "chop": "20",
+      "backstab": "3x",
+      "stagger": "15",
+      "knockback": "50",
+      "blockForce": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "EDITED",
+      "weight": "1.5",
+      "durability": "130",
+      "slash": "20",
+      "spirit": "0",
+      "poison": "0",
+      "chop": "23",
+      "backstab": "3x",
+      "stagger": "20",
+      "knockback": "50",
+      "blockForce": "25",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "EDITED",
+      "weight": "1.5",
+      "durability": "160",
+      "slash": "25",
+      "spirit": "0",
+      "poison": "0",
+      "chop": "26",
+      "backstab": "3x",
+      "stagger": "25",
+      "knockback": "50",
+      "blockForce": "30",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "EDITED",
+      "weight": "1.5",
+      "durability": "190",
+      "slash": "30",
+      "spirit": "0",
+      "poison": "0",
+      "chop": "29",
+      "backstab": "3x",
+      "stagger": "30",
+      "knockback": "50",
+      "blockForce": "35",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
+}
+
+### DELETE axe data
+DELETE https://valheim-v1-data.onrender.com/axes/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all bow data
+GET https://valheim-v1-data.onrender.com/bows HTTP/1.1
+
+### Get bow data by id
+GET https://valheim-v1-data.onrender.com/bows/64683d6d8395082a472e4b11 HTTP/1.1
+
+### Create bow data
+POST https://valheim-v1-data.onrender.com/bows HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Crude bow DUPLICATE",
+    "description": "A crude but functional bow.",
+    "quality1": {
+      "recipe": "10 Wood, 8 Leather scraps",
+      "weight": "1.5",
+      "durability": "50",
+      "pierce": "22",
+      "spirit": "0",
+      "poison": "0",
+      "backstab": "3x",
+      "stagger": "22",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "5 Wood, 4 Leather scraps, 1 Deer hide",
+      "weight": "1.5",
+      "durability": "100",
+      "pierce": "25",
+      "spirit": "0",
+      "poison": "0",
+      "backstab": "3x",
+      "stagger": "25",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "10 Wood, 8 Leather scraps, 2 Deer hide",
+      "weight": "1.5",
+      "durability": "150",
+      "pierce": "28",
+      "spirit": "0",
+      "poison": "0",
+      "backstab": "3x",
+      "stagger": "28",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "15 Wood, 12 Leather scraps, 3 Deer hide",
+      "weight": "1.5",
+      "durability": "200",
+      "pierce": "31",
+      "spirit": "0",
+      "poison": "0",
+      "backstab": "3x",
+      "stagger": "31",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    }
+}
+
+### PUT/Update bow data
+PUT https://valheim-v1-data.onrender.com/bows/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Crude bow",
+    "description": "A crude but functional bow.",
+    "quality1": {
+      "recipe": "DUPLICATE",
+      "weight": "1.5",
+      "durability": "50",
+      "pierce": "22",
+      "spirit": "0",
+      "poison": "0",
+      "backstab": "3x",
+      "stagger": "22",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "DUPLICATE",
+      "weight": "1.5",
+      "durability": "100",
+      "pierce": "25",
+      "spirit": "0",
+      "poison": "0",
+      "backstab": "3x",
+      "stagger": "25",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "DUPLICATE",
+      "weight": "1.5",
+      "durability": "150",
+      "pierce": "28",
+      "spirit": "0",
+      "poison": "0",
+      "backstab": "3x",
+      "stagger": "28",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "DUPLICATE",
+      "weight": "1.5",
+      "durability": "200",
+      "pierce": "31",
+      "spirit": "0",
+      "poison": "0",
+      "backstab": "3x",
+      "stagger": "31",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    }
+}
+
+### DELETE bow data
+DELETE https://valheim-v1-data.onrender.com/bows/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all club data
+GET https://valheim-v1-data.onrender.com/clubs HTTP/1.1
+
+### Get club data by id
+GET https://valheim-v1-data.onrender.com/clubs/646840d68395082a473044f9 HTTP/1.1
+
+### Create club data
+POST https://valheim-v1-data.onrender.com/clubs HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Club DUPLICATE",
+    "description": "A crude but useful weapon.",
+    "quality1": {
+      "recipe": "6 Wood",
+      "weight": "2.0",
+      "durability": "100",
+      "blunt": "12",
+      "pierce": "0",
+      "fire": "0",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "12",
+      "knockback": "30",
+      "blockForce": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "5 Bone Fragments",
+      "weight": "2.0",
+      "durability": "150",
+      "blunt": "18",
+      "pierce": "0",
+      "fire": "0",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "18",
+      "knockback": "30",
+      "blockForce": "25",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "10 Bone Fragments",
+      "weight": "2.0",
+      "durability": "200",
+      "blunt": "24",
+      "pierce": "0",
+      "fire": "0",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "24",
+      "knockback": "30",
+      "blockForce": "30",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "15 Bone Fragments",
+      "weight": "2.0",
+      "durability": "250",
+      "blunt": "30",
+      "pierce": "0",
+      "fire": "0",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "30",
+      "knockback": "30",
+      "blockForce": "35",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
+}
+
+### PUT/Update club data
+PUT https://valheim-v1-data.onrender.com/clubs/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Club",
+    "description": "A crude but useful weapon.",
+    "quality1": {
+      "recipe": "DUPLICATE",
+      "weight": "2.0",
+      "durability": "100",
+      "blunt": "12",
+      "pierce": "0",
+      "fire": "0",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "12",
+      "knockback": "30",
+      "blockForce": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "DUPLICATE",
+      "weight": "2.0",
+      "durability": "150",
+      "blunt": "18",
+      "pierce": "0",
+      "fire": "0",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "18",
+      "knockback": "30",
+      "blockForce": "25",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "DUPLICATE",
+      "weight": "2.0",
+      "durability": "200",
+      "blunt": "24",
+      "pierce": "0",
+      "fire": "0",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "24",
+      "knockback": "30",
+      "blockForce": "30",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "DUPLICATE",
+      "weight": "2.0",
+      "durability": "250",
+      "blunt": "30",
+      "pierce": "0",
+      "fire": "0",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "30",
+      "knockback": "30",
+      "blockForce": "35",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
+}
+
+### DELETE club data
+DELETE https://valheim-v1-data.onrender.com/clubs/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all fist data
+GET https://valheim-v1-data.onrender.com/fists HTTP/1.1
+
+### Get fist data by id
+GET https://valheim-v1-data.onrender.com/fists/646841558395082a473090d3 HTTP/1.1
+
+### Create fist data
+POST https://valheim-v1-data.onrender.com/fists HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Flesh Rippers DUPLICATE",
+    "description": "If claws work for wolves, why not for a viking?",
+    "quality1": {
+      "recipe": "10 Fenris hair, 6 Fenris claw, 10 Silver",
+      "weight": "2.0",
+      "durability": "300",
+      "slash": "60",
+      "backstab": "6x",
+      "stagger": "60",
+      "blockForce": "10",
+      "parryBonus": "6x"
+    },
+    "quality2": {
+      "recipe": "1 Fenris hair, 1 Fenris claw, 1 Silver",
+      "weight": "2.0",
+      "durability": "350",
+      "slash": "64",
+      "backstab": "6x",
+      "stagger": "64",
+      "blockForce": "15",
+      "parryBonus": "6x"
+    },
+    "quality3": {
+      "recipe": "2 Fenris hair, 2 Fenris claw, 2 Silver",
+      "weight": "2.0",
+      "durability": "400",
+      "slash": "68",
+      "backstab": "6x",
+      "stagger": "68",
+      "blockForce": "20",
+      "parryBonus": "6x"
+    },
+    "quality4": {
+      "recipe": "3 Fenris hair, 3 Fenris claw, 3 Silver",
+      "weight": "2.0",
+      "durability": "450",
+      "slash": "72",
+      "backstab": "6x",
+      "stagger": "72",
+      "blockForce": "25",
+      "parryBonus": "6x"
+    }
+}
+
+### PUT/Update fist data
+PUT https://valheim-v1-data.onrender.com/fists/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Flesh Rippers",
+    "description": "If claws work for wolves, why not for a viking?",
+    "quality1": {
+      "recipe": "DUPLICATE",
+      "weight": "2.0",
+      "durability": "300",
+      "slash": "60",
+      "backstab": "6x",
+      "stagger": "60",
+      "blockForce": "10",
+      "parryBonus": "6x"
+    },
+    "quality2": {
+      "recipe": "DUPLICATE",
+      "weight": "2.0",
+      "durability": "350",
+      "slash": "64",
+      "backstab": "6x",
+      "stagger": "64",
+      "blockForce": "15",
+      "parryBonus": "6x"
+    },
+    "quality3": {
+      "recipe": "DUPLICATE",
+      "weight": "2.0",
+      "durability": "400",
+      "slash": "68",
+      "backstab": "6x",
+      "stagger": "68",
+      "blockForce": "20",
+      "parryBonus": "6x"
+    },
+    "quality4": {
+      "recipe": "DUPLICATE",
+      "weight": "2.0",
+      "durability": "450",
+      "slash": "72",
+      "backstab": "6x",
+      "stagger": "72",
+      "blockForce": "25",
+      "parryBonus": "6x"
+    }
+}
+
+### DELETE fist data
+DELETE https://valheim-v1-data.onrender.com/fists/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all food data
+GET https://valheim-v1-data.onrender.com/food HTTP/1.1
+
+### Get food data by id
+GET https://valheim-v1-data.onrender.com/food/646842508395082a47312284 HTTP/1.1
+
+### Create food data
+POST https://valheim-v1-data.onrender.com/food HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Raspberries DUPLICATE",
+    "description": "Sweet and delicious.",
+    "recipe": "1 Raspberries",
+    "weight": "0.1",
+    "stack": "50",
+    "maxHealth": "7",
+    "maxStamina": "20",
+    "maxEitr": "0",
+    "duration": "600s",
+    "healing": "1 hp/tick"
+}
+
+### PUT/Update food data
+PUT https://valheim-v1-data.onrender.com/food/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Raspberries",
+    "description": "Sweet and delicious.",
+    "recipe": "DUPLICATE",
+    "weight": "0.1",
+    "stack": "50",
+    "maxHealth": "7",
+    "maxStamina": "20",
+    "maxEitr": "0",
+    "duration": "600s",
+    "healing": "1 hp/tick"
+}
+
+### DELETE food data
+DELETE https://valheim-v1-data.onrender.com/food/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all knife data
+GET https://valheim-v1-data.onrender.com/knifes HTTP/1.1
+
+### Get knife data by id
+GET https://valheim-v1-data.onrender.com/knifes/646847128395082a4733edce HTTP/1.1
+
+### Create knife data
+POST https://valheim-v1-data.onrender.com/knifes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Flint knife DUPLICATE",
+    "description": "Sharpened flint, a reliable tool.",
+    "quality1": {
+      "recipe": "2 Wood, 4 Flint, 2 Leather scraps",
+      "weight": "0.3",
+      "durability": "200",
+      "pierce": "5",
+      "slash": "5",
+      "spirit": "0",
+      "backstab": "6x",
+      "stagger": "10",
+      "knockback": "10",
+      "blockForce": "10",
+      "parryBonus": "4x"
+    },
+    "quality2": {
+      "recipe": "2 Flint",
+      "weight": "0.3",
+      "durability": "250",
+      "pierce": "6",
+      "slash": "6",
+      "spirit": "0",
+      "backstab": "6x",
+      "stagger": "12",
+      "knockback": "10",
+      "blockForce": "15",
+      "parryBonus": "4x"
+    },
+    "quality3": {
+      "recipe": "4 Flint",
+      "weight": "0.3",
+      "durability": "300",
+      "pierce": "7",
+      "slash": "7",
+      "spirit": "0",
+      "backstab": "6x",
+      "stagger": "14",
+      "knockback": "10",
+      "blockForce": "20",
+      "parryBonus": "4x"
+    },
+    "quality4": {
+      "recipe": "6 Flint",
+      "weight": "0.3",
+      "durability": "350",
+      "pierce": "8",
+      "slash": "8",
+      "spirit": "0",
+      "backstab": "6x",
+      "stagger": "16",
+      "knockback": "10",
+      "blockForce": "25",
+      "parryBonus": "4x"
+    }
+}
+
+### PUT/Update knife data
+PUT https://valheim-v1-data.onrender.com/knifes/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Flint knife",
+    "description": "Sharpened flint, a reliable tool.",
+    "quality1": {
+      "recipe": "DUPLICATE",
+      "weight": "0.3",
+      "durability": "200",
+      "pierce": "5",
+      "slash": "5",
+      "spirit": "0",
+      "backstab": "6x",
+      "stagger": "10",
+      "knockback": "10",
+      "blockForce": "10",
+      "parryBonus": "4x"
+    },
+    "quality2": {
+      "recipe": "DUPLICATE",
+      "weight": "0.3",
+      "durability": "250",
+      "pierce": "6",
+      "slash": "6",
+      "spirit": "0",
+      "backstab": "6x",
+      "stagger": "12",
+      "knockback": "10",
+      "blockForce": "15",
+      "parryBonus": "4x"
+    },
+    "quality3": {
+      "recipe": "DUPLICATE",
+      "weight": "0.3",
+      "durability": "300",
+      "pierce": "7",
+      "slash": "7",
+      "spirit": "0",
+      "backstab": "6x",
+      "stagger": "14",
+      "knockback": "10",
+      "blockForce": "20",
+      "parryBonus": "4x"
+    },
+    "quality4": {
+      "recipe": "DUPLICATE",
+      "weight": "0.3",
+      "durability": "350",
+      "pierce": "8",
+      "slash": "8",
+      "spirit": "0",
+      "backstab": "6x",
+      "stagger": "16",
+      "knockback": "10",
+      "blockForce": "25",
+      "parryBonus": "4x"
+    }
+}
+
+### DELETE knife data
+DELETE https://valheim-v1-data.onrender.com/knifes/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all pickaxe data
+GET https://valheim-v1-data.onrender.com/pickaxes HTTP/1.1
+
+### Get pickaxe data by id
+GET https://valheim-v1-data.onrender.com/pickaxes/646847b88395082a47344d4a HTTP/1.1
+
+### Create pickaxe data
+POST https://valheim-v1-data.onrender.com/pickaxes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bronze pickaxe DUPLICATE",
+    "description": "A good bronze pick. Can break very hard rocks.",
+    "quality1": {
+      "recipe": "3 Core wood, 10 Bronze",
+      "weight": "2.0",
+      "durability": "120",
+      "pierce": "25",
+      "mining": "25",
+      "backstab": "3x",
+      "stagger": "25",
+      "knockback": "50",
+      "blockForce": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+        "recipe": "1 Core wood, 5 Bronze",
+        "weight": "2.0",
+        "durability": "170",
+        "pierce": "30",
+        "mining": "39",
+        "backstab": "3x",
+        "stagger": "30",
+        "knockback": "50",
+        "blockForce": "25",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      "quality3": {
+        "recipe": "2 Core wood, 10 Bronze",
+        "weight": "2.0",
+        "durability": "220",
+        "pierce": "35",
+        "mining": "33",
+        "backstab": "3x",
+        "stagger": "35",
+        "knockback": "50",
+        "blockForce": "30",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      "quality4": {
+        "recipe": "3 Core wood, 15 Bronze",
+        "weight": "2.0",
+        "durability": "270",
+        "pierce": "40",
+        "mining": "37",
+        "backstab": "3x",
+        "stagger": "40",
+        "knockback": "50",
+        "blockForce": "35",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      }
+}
+
+### PUT/Update pickaxe data
+PUT https://valheim-v1-data.onrender.com/pickaxes/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bronze pickaxe",
+    "description": "A good bronze pick. Can break very hard rocks.",
+    "quality1": {
+      "recipe": "DUPLICATE",
+      "weight": "2.0",
+      "durability": "120",
+      "pierce": "25",
+      "mining": "25",
+      "backstab": "3x",
+      "stagger": "25",
+      "knockback": "50",
+      "blockForce": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+        "recipe": "DUPLICATE",
+        "weight": "2.0",
+        "durability": "170",
+        "pierce": "30",
+        "mining": "39",
+        "backstab": "3x",
+        "stagger": "30",
+        "knockback": "50",
+        "blockForce": "25",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      "quality3": {
+        "recipe": "DUPLICATE",
+        "weight": "2.0",
+        "durability": "220",
+        "pierce": "35",
+        "mining": "33",
+        "backstab": "3x",
+        "stagger": "35",
+        "knockback": "50",
+        "blockForce": "30",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      "quality4": {
+        "recipe": "DUPLICATE",
+        "weight": "2.0",
+        "durability": "270",
+        "pierce": "40",
+        "mining": "37",
+        "backstab": "3x",
+        "stagger": "40",
+        "knockback": "50",
+        "blockForce": "35",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      }
+}
+
+### DELETE pickaxe data
+DELETE https://valheim-v1-data.onrender.com/pickaxes/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all polearm data
+GET https://valheim-v1-data.onrender.com/polearms HTTP/1.1
+
+### Get polearm data by id
+GET https://valheim-v1-data.onrender.com/polearms/646848ce8395082a4734f05d HTTP/1.1
+
+### Create polearm data
+POST https://valheim-v1-data.onrender.com/polearms HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bronze atgeir DUPLICATE",
+    "description": "A true warrior's tool.",
+    "quality1": {
+      "recipe": "10 Wood, 8 Bronze, 2 Leather scraps",
+      "weight": "2.5",
+      "durability": "125",
+      "pierce": "45",
+      "lightning": "0",
+      "backstab": "3x",
+      "stagger": "45",
+      "knockback": "30",
+      "blockForce": "40",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "4 Bronze",
+      "weight": "2.5",
+      "durability": "175",
+      "pierce": "51",
+      "lightning": "0",
+      "backstab": "3x",
+      "stagger": "51",
+      "knockback": "30",
+      "blockForce": "45",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "8 Bronze",
+      "weight": "2.5",
+      "durability": "225",
+      "pierce": "57",
+      "lightning": "0",
+      "backstab": "3x",
+      "stagger": "57",
+      "knockback": "30",
+      "blockForce": "50",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "12 Bronze",
+      "weight": "2.5",
+      "durability": "275",
+      "pierce": "63",
+      "lightning": "0",
+      "backstab": "3x",
+      "stagger": "63",
+      "knockback": "30",
+      "blockForce": "55",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
+}
+
+### PUT/Update polearm data
+PUT https://valheim-v1-data.onrender.com/polearms/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bronze atgeir",
+    "description": "A true warrior's tool.",
+    "quality1": {
+      "recipe": "DUPLICATE",
+      "weight": "2.5",
+      "durability": "125",
+      "pierce": "45",
+      "lightning": "0",
+      "backstab": "3x",
+      "stagger": "45",
+      "knockback": "30",
+      "blockForce": "40",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "DUPLICATE",
+      "weight": "2.5",
+      "durability": "175",
+      "pierce": "51",
+      "lightning": "0",
+      "backstab": "3x",
+      "stagger": "51",
+      "knockback": "30",
+      "blockForce": "45",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "DUPLICATE",
+      "weight": "2.5",
+      "durability": "225",
+      "pierce": "57",
+      "lightning": "0",
+      "backstab": "3x",
+      "stagger": "57",
+      "knockback": "30",
+      "blockForce": "50",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "DUPLICATE",
+      "weight": "2.5",
+      "durability": "275",
+      "pierce": "63",
+      "lightning": "0",
+      "backstab": "3x",
+      "stagger": "63",
+      "knockback": "30",
+      "blockForce": "55",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
+}
+
+### DELETE polearm data
+DELETE https://valheim-v1-data.onrender.com/polearms/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all shield data
+GET https://valheim-v1-data.onrender.com/shields HTTP/1.1
+
+### Get shield data by id
+GET https://valheim-v1-data.onrender.com/shields/646849838395082a47355e96 HTTP/1.1
+
+### Create shield data
+POST https://valheim-v1-data.onrender.com/shields HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Wood shield DUPLICATE",
+    "description": "A simple wooden shield.",
+    "quality1": {
+      "recipe": "10 Wood, 4 Resin, 4 Leather scraps",
+      "weight": "4.0",
+      "durability": "200",
+      "blockArmor": "6",
+      "blockForce": "20",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "5 Wood, 2 Resin, 2 Leather scraps",
+      "weight": "4.0",
+      "durability": "250",
+      "blockArmor": "12",
+      "blockForce": "25",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "10 Wood, 4 Resin, 4 Leather scraps",
+      "weight": "4.0",
+      "durability": "300",
+      "blockArmor": "18",
+      "blockForce": "30",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    }
+}
+
+### PUT/Update shield data
+PUT https://valheim-v1-data.onrender.com/shields/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Wood shield",
+    "description": "A simple wooden shield.",
+    "quality1": {
+      "recipe": "DUPLICATE",
+      "weight": "4.0",
+      "durability": "200",
+      "blockArmor": "6",
+      "blockForce": "20",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "DUPLICATE",
+      "weight": "4.0",
+      "durability": "250",
+      "blockArmor": "12",
+      "blockForce": "25",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "DUPLICATE",
+      "weight": "4.0",
+      "durability": "300",
+      "blockArmor": "18",
+      "blockForce": "30",
+      "parryBonus": "1.5x",
+      "movement": "-5%"
+    }
+}
+
+### DELETE shield data
+DELETE https://valheim-v1-data.onrender.com/shields/64567792a3b874e1f4642980 HTTP/1.1
+
+### Get all spear data
+GET https://valheim-v1-data.onrender.com/spears HTTP/1.1
+
+### Get spear data by id
+GET https://valheim-v1-data.onrender.com/spears/64684a528395082a4735d701 HTTP/1.1
+
+### Create spear data
+POST https://valheim-v1-data.onrender.com/spears HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Flint spear DUPLICATE",
+    "description": "If your eye marks a thing for death, let your arm send the messenger.",
+    "quality1": {
+      "recipe": "5 Wood, 10 Flint, 2 Leather scraps",
+      "weight": "1.5",
+      "durability": "100",
+      "pierce": "20",
+      "backstab": "3x",
+      "stagger": "20",
+      "knockback": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+        "recipe": "3 Wood, 5 Flint, 1 Leather scraps",
+        "weight": "1.5",
+        "durability": "150",
+        "pierce": "26",
+        "backstab": "3x",
+        "stagger": "26",
+        "knockback": "20",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      "quality3": {
+        "recipe": "6 Wood, 10 Flint, 2 Leather scraps",
+        "weight": "1.5",
+        "durability": "200",
+        "pierce": "32",
+        "backstab": "3x",
+        "stagger": "32",
+        "knockback": "20",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      "quality4": {
+        "recipe": "9 Wood, 15 Flint, 3 Leather scraps",
+        "weight": "1.5",
+        "durability": "250",
+        "pierce": "38",
+        "backstab": "3x",
+        "stagger": "38",
+        "knockback": "20",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      }
+}
+
+### PUT/Update spear data
+PUT https://valheim-v1-data.onrender.com/spears/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Flint spear",
+    "description": "If your eye marks a thing for death, let your arm send the messenger.",
+    "quality1": {
+      "recipe": "DUPLICATE",
+      "weight": "1.5",
+      "durability": "100",
+      "pierce": "20",
+      "backstab": "3x",
+      "stagger": "20",
+      "knockback": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+        "recipe": "DUPLICATE",
+        "weight": "1.5",
+        "durability": "150",
+        "pierce": "26",
+        "backstab": "3x",
+        "stagger": "26",
+        "knockback": "20",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      "quality3": {
+        "recipe": "DUPLICATE",
+        "weight": "1.5",
+        "durability": "200",
+        "pierce": "32",
+        "backstab": "3x",
+        "stagger": "32",
+        "knockback": "20",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      "quality4": {
+        "recipe": "DUPLICATE",
+        "weight": "1.5",
+        "durability": "250",
+        "pierce": "38",
+        "backstab": "3x",
+        "stagger": "38",
+        "knockback": "20",
+        "parryBonus": "2x",
+        "movement": "-5%"
+      }
+}
+
+### DELETE spear data
+DELETE https://valheim-v1-data.onrender.com/spears/64689fc98b3eb2547425b6c7 HTTP/1.1
+
+### Get all sword data
+GET https://valheim-v1-data.onrender.com/swords HTTP/1.1
+
+### Get sword data by id
+GET https://valheim-v1-data.onrender.com/swords/64684b508395082a4736686a HTTP/1.1
+
+### Create sword data
+POST https://valheim-v1-data.onrender.com/swords HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bronze sword DUPLICATE",
+    "description": "Blood-drinker, a thirsty friend.",
+    "quality1": {
+      "recipe": "2 Wood, 8 Bronze, 2 Leather scraps",
+      "weight": "0.8",
+      "durability": "200",
+      "slash": "35",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "35",
+      "knockback": "40",
+      "blockForce": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "1 Wood, 4 Bronze, 1 Leather scraps",
+      "weight": "0.8",
+      "durability": "250",
+      "slash": "41",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "41",
+      "knockback": "40",
+      "blockForce": "25",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "2 Wood, 8 Bronze, 2 Leather scraps",
+      "weight": "0.8",
+      "durability": "300",
+      "slash": "47",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "47",
+      "knockback": "40",
+      "blockForce": "30",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "3 Wood, 12 Bronze, 3 Leather scraps",
+      "weight": "0.8",
+      "durability": "350",
+      "slash": "53",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "53",
+      "knockback": "40",
+      "blockForce": "35",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
+}
+
+### PUT/Update sword data
+PUT https://valheim-v1-data.onrender.com/swords/64567792a3b874e1f4642980 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bronze sword",
+    "description": "Blood-drinker, a thirsty friend.",
+    "quality1": {
+      "recipe": "DUPLICATE",
+      "weight": "0.8",
+      "durability": "200",
+      "slash": "35",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "35",
+      "knockback": "40",
+      "blockForce": "20",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality2": {
+      "recipe": "DUPLICATE",
+      "weight": "0.8",
+      "durability": "250",
+      "slash": "41",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "41",
+      "knockback": "40",
+      "blockForce": "25",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "DUPLICATE",
+      "weight": "0.8",
+      "durability": "300",
+      "slash": "47",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "47",
+      "knockback": "40",
+      "blockForce": "30",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "DUPLICATE",
+      "weight": "0.8",
+      "durability": "350",
+      "slash": "53",
+      "spirit": "0",
+      "frost": "0",
+      "backstab": "3x",
+      "stagger": "53",
+      "knockback": "40",
+      "blockForce": "35",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
+}
+
+### DELETE sword data
+DELETE https://valheim-v1-data.onrender.com/swords/64567792a3b874e1f4642980 HTTP/1.1
