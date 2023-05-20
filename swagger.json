@@ -7,18 +7,23 @@
   },
   "host": "valheim-v1-data.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
+  "tags": [
+    { "name": "arrows", "description": "Get information about arrows" },
+    { "name": "axes", "description": "Get information about axes" },
+    { "name": "bows", "description": "Get information about bows" },
+    { "name": "clubs", "description": "Get information about clubs" },
+    { "name": "fists", "description": "Get information about fists" },
+    { "name": "food", "description": "Get information about food" },
+    { "name": "knifes", "description": "Get information about knifes" },
+    { "name": "pickaxes", "description": "Get information about pickaxes" },
+    { "name": "polearms", "description": "Get information about polearms" },
+    { "name": "shields", "description": "Get information about shields" },
+    { "name": "spears", "description": "Get information about spears" },
+    { "name": "swords", "description": "Get information about swords" }
   ],
+  "schemes": ["https"],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
-    "/arrows": {
+"/": {
       "get": {
         "description": "",
         "produces": [
@@ -32,12 +37,83 @@
         }
       }
     },
+    "/arrows": {
+      "get": {
+        "tags": ["arrows"],
+        "description": "",
+        "produces": ["application/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": ["arrows"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "quantity": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "fire": {
+                  "example": "any"
+                },
+                "spirit": {
+                  "example": "any"
+                },
+                "poison": {
+                  "example": "any"
+                },
+                "frost": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/arrows/{id}": {
       "get": {
+        "tags": ["arrows"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -53,6 +129,7 @@
         }
       },
       "put": {
+        "tags": ["arrows"],
         "description": "",
         "parameters": [
           {
@@ -117,6 +194,7 @@
         }
       },
       "delete": {
+        "tags": ["arrows"],
         "description": "",
         "parameters": [
           {
@@ -129,66 +207,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/arrows/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "quantity": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "fire": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "poison": {
-                  "example": "any"
-                },
-                "frost": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -198,24 +216,227 @@
     },
     "/axes": {
       "get": {
+        "tags": ["axes"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["axes"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "chop": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "chop": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "chop": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "chop": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/axes/{id}": {
       "get": {
+        "tags": ["axes"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -231,6 +452,7 @@
         }
       },
       "put": {
+        "tags": ["axes"],
         "description": "",
         "parameters": [
           {
@@ -251,44 +473,181 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "chop": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "chop": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "chop": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "slash": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "poison": {
-                  "example": "any"
-                },
-                "chop": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "chop": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -304,6 +663,7 @@
         }
       },
       "delete": {
+        "tags": ["axes"],
         "description": "",
         "parameters": [
           {
@@ -316,75 +676,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/axes/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "slash": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "poison": {
-                  "example": "any"
-                },
-                "chop": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -394,24 +685,191 @@
     },
     "/bows": {
       "get": {
+        "tags": ["bows"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["bows"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/bows/{id}": {
       "get": {
+        "tags": ["bows"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -427,6 +885,7 @@
         }
       },
       "put": {
+        "tags": ["bows"],
         "description": "",
         "parameters": [
           {
@@ -447,35 +906,145 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "pierce": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "poison": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "poison": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -491,6 +1060,7 @@
         }
       },
       "delete": {
+        "tags": ["bows"],
         "description": "",
         "parameters": [
           {
@@ -503,66 +1073,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/bows/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "poison": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -572,24 +1082,239 @@
     },
     "/clubs": {
       "get": {
+        "tags": ["clubs"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["clubs"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blunt": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "fire": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "frost": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "bluntForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blunt": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "fire": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "frost": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "bluntForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blunt": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "fire": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "frost": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "bluntForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blunt": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "fire": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "frost": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "bluntForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/clubs/{id}": {
       "get": {
+        "tags": ["clubs"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -605,6 +1330,7 @@
         }
       },
       "put": {
+        "tags": ["clubs"],
         "description": "",
         "parameters": [
           {
@@ -625,47 +1351,193 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blunt": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "fire": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "frost": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "bluntForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blunt": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "fire": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "frost": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "bluntForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blunt": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "fire": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "frost": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "bluntForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "blunt": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "fire": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "frost": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blunt": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "fire": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "frost": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "bluntForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -681,6 +1553,7 @@
         }
       },
       "delete": {
+        "tags": ["clubs"],
         "description": "",
         "parameters": [
           {
@@ -693,78 +1566,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/clubs/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "blunt": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "fire": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "frost": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -774,24 +1575,167 @@
     },
     "/fists": {
       "get": {
+        "tags": ["fists"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["fists"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/fists/{id}": {
       "get": {
+        "tags": ["fists"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -807,6 +1751,7 @@
         }
       },
       "put": {
+        "tags": ["fists"],
         "description": "",
         "parameters": [
           {
@@ -827,29 +1772,121 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "slash": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -865,6 +1902,7 @@
         }
       },
       "delete": {
+        "tags": ["fists"],
         "description": "",
         "parameters": [
           {
@@ -877,60 +1915,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/fists/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "slash": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -940,24 +1924,75 @@
     },
     "/food": {
       "get": {
+        "tags": ["food"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["food"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "stack": {
+                  "example": "any"
+                },
+                "maxHealth": {
+                  "example": "any"
+                },
+                "maxStamina": {
+                  "example": "any"
+                },
+                "maxEitr": {
+                  "example": "any"
+                },
+                "duration": {
+                  "example": "any"
+                },
+                "healing": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/food/{id}": {
       "get": {
+        "tags": ["food"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -973,6 +2008,7 @@
         }
       },
       "put": {
+        "tags": ["food"],
         "description": "",
         "parameters": [
           {
@@ -1031,6 +2067,7 @@
         }
       },
       "delete": {
+        "tags": ["food"],
         "description": "",
         "parameters": [
           {
@@ -1043,60 +2080,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/food/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "stack": {
-                  "example": "any"
-                },
-                "maxHealth": {
-                  "example": "any"
-                },
-                "maxStamina": {
-                  "example": "any"
-                },
-                "maxEitr": {
-                  "example": "any"
-                },
-                "duration": {
-                  "example": "any"
-                },
-                "healing": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -1106,24 +2089,203 @@
     },
     "/knifes": {
       "get": {
+        "tags": ["knifes"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["knifes"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/knifes/{id}": {
       "get": {
+        "tags": ["knifes"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -1139,6 +2301,7 @@
         }
       },
       "put": {
+        "tags": ["knifes"],
         "description": "",
         "parameters": [
           {
@@ -1159,38 +2322,157 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "pierce": {
-                  "example": "any"
-                },
-                "slash": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "slash": {
+                      "example": "any"
+                    },
+                    "spirit": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -1206,6 +2488,7 @@
         }
       },
       "delete": {
+        "tags": ["knifes"],
         "description": "",
         "parameters": [
           {
@@ -1218,69 +2501,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/knifes/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "slash": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -1290,24 +2510,203 @@
     },
     "/pickaxes": {
       "get": {
+        "tags": ["pickaxes"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["pickaxes"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "mining": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "mining": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "mining": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "mining": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/pickaxes/{id}": {
       "get": {
+        "tags": ["pickaxes"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -1323,6 +2722,7 @@
         }
       },
       "put": {
+        "tags": ["pickaxes"],
         "description": "",
         "parameters": [
           {
@@ -1343,38 +2743,157 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "mining": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "mining": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "mining": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "pierce": {
-                  "example": "any"
-                },
-                "mining": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "mining": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -1390,6 +2909,7 @@
         }
       },
       "delete": {
+        "tags": ["pickaxes"],
         "description": "",
         "parameters": [
           {
@@ -1402,69 +2922,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/pickaxes/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "mining": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -1474,24 +2931,203 @@
     },
     "/polearms": {
       "get": {
+        "tags": ["polearms"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["polearms"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "lightning": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "lightning": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "lightning": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "lightning": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/polearms/{id}": {
       "get": {
+        "tags": ["polearms"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -1507,6 +3143,7 @@
         }
       },
       "put": {
+        "tags": ["polearms"],
         "description": "",
         "parameters": [
           {
@@ -1527,38 +3164,157 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "lightning": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "lightning": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "lightning": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "pierce": {
-                  "example": "any"
-                },
-                "lightning": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "lightning": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -1574,6 +3330,7 @@
         }
       },
       "delete": {
+        "tags": ["polearms"],
         "description": "",
         "parameters": [
           {
@@ -1586,69 +3343,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/polearms/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "lightning": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -1658,24 +3352,155 @@
     },
     "/shields": {
       "get": {
+        "tags": ["shields"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["shields"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blockArmor": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blockArmor": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blockArmor": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blockArmor": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/shields/{id}": {
       "get": {
+        "tags": ["shields"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -1691,6 +3516,7 @@
         }
       },
       "put": {
+        "tags": ["shields"],
         "description": "",
         "parameters": [
           {
@@ -1711,26 +3537,109 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blockArmor": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blockArmor": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blockArmor": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "blockArmor": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "blockArmor": {
+                      "example": "any"
+                    },
+                    "blockForce": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -1746,6 +3655,7 @@
         }
       },
       "delete": {
+        "tags": ["shields"],
         "description": "",
         "parameters": [
           {
@@ -1758,57 +3668,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/shields/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "blockArmor": {
-                  "example": "any"
-                },
-                "blockForce": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -1818,24 +3677,179 @@
     },
     "/spears": {
       "get": {
+        "tags": ["spears"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["spears"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/spears/{id}": {
       "get": {
+        "tags": ["spears"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -1851,6 +3865,7 @@
         }
       },
       "put": {
+        "tags": ["spears"],
         "description": "",
         "parameters": [
           {
@@ -1871,32 +3886,133 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "pierce": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -1912,6 +4028,7 @@
         }
       },
       "delete": {
+        "tags": ["spears"],
         "description": "",
         "parameters": [
           {
@@ -1924,63 +4041,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/spears/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -1990,24 +4050,179 @@
     },
     "/swords": {
       "get": {
+        "tags": ["swords"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": ["swords"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                },
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/swords/{id}": {
       "get": {
+        "tags": ["swords"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -2023,6 +4238,7 @@
         }
       },
       "put": {
+        "tags": ["swords"],
         "description": "",
         "parameters": [
           {
@@ -2043,32 +4259,133 @@
                 "description": {
                   "example": "any"
                 },
-                "recipe": {
-                  "example": "any"
+                "quality1": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "weight": {
-                  "example": "any"
+                "quality2": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "durability": {
-                  "example": "any"
+                "quality3": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 },
-                "pierce": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
+                "quality4": {
+                  "type": "object",
+                  "properties": {
+                    "recipe": {
+                      "example": "any"
+                    },
+                    "weight": {
+                      "example": "any"
+                    },
+                    "durability": {
+                      "example": "any"
+                    },
+                    "pierce": {
+                      "example": "any"
+                    },
+                    "backstab": {
+                      "example": "any"
+                    },
+                    "stagger": {
+                      "example": "any"
+                    },
+                    "knockback": {
+                      "example": "any"
+                    },
+                    "parryBonus": {
+                      "example": "any"
+                    },
+                    "movement": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -2084,6 +4401,7 @@
         }
       },
       "delete": {
+        "tags": ["swords"],
         "description": "",
         "parameters": [
           {
@@ -2096,63 +4414,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/swords/": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "durability": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "backstab": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                },
-                "parryBonus": {
-                  "example": "any"
-                },
-                "movement": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"

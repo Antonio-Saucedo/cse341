@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+const dataController = require('../controllers/data');
 const arrowController = require('../controllers/arrows');
 const axeController = require('../controllers/axes');
 const bowController = require('../controllers/bows');
@@ -14,6 +15,9 @@ const shieldController = require('../controllers/shields');
 const spearController = require('../controllers/spears');
 const swordController = require('../controllers/swords');
 
+// GET all data information
+router.get('/', dataController.getAllData);
+
 // GET all arrow data
 router.get('/arrows', arrowController.getAllArrowData);
 
@@ -21,7 +25,7 @@ router.get('/arrows', arrowController.getAllArrowData);
 router.get('/arrows/:id', arrowController.getArrowDataById);
 
 // POST/Create arrow data
-router.post('/arrows/', arrowController.createArrowData);
+router.post('/arrows', arrowController.createArrowData);
 
 // PUT/Update arrow data by id
 router.put('/arrows/:id', arrowController.updateArrowData);
@@ -36,7 +40,7 @@ router.get('/axes', axeController.getAllAxeData);
 router.get('/axes/:id', axeController.getAxeDataById);
 
 // POST/Create axe data
-router.post('/axes/', axeController.createAxeData);
+router.post('/axes', axeController.createAxeData);
 
 // PUT/Update axe data by id
 router.put('/axes/:id', axeController.updateAxeData);
@@ -51,7 +55,7 @@ router.get('/bows', bowController.getAllBowData);
 router.get('/bows/:id', bowController.getBowDataById);
 
 // POST/Create bow data
-router.post('/bows/', bowController.createBowData);
+router.post('/bows', bowController.createBowData);
 
 // PUT/Update bow data by id
 router.put('/bows/:id', bowController.updateBowData);
@@ -66,7 +70,7 @@ router.get('/clubs', clubController.getAllClubData);
 router.get('/clubs/:id', clubController.getClubDataById);
 
 // POST/Create club data
-router.post('/clubs/', clubController.createClubData);
+router.post('/clubs', clubController.createClubData);
 
 // PUT/Update club data by id
 router.put('/clubs/:id', clubController.updateClubData);
@@ -81,7 +85,7 @@ router.get('/fists', fistController.getAllFistData);
 router.get('/fists/:id', fistController.getFistDataById);
 
 // POST/Create fist data
-router.post('/fists/', fistController.createFistData);
+router.post('/fists', fistController.createFistData);
 
 // PUT/Update fist data by id
 router.put('/fists/:id', fistController.updateFistData);
@@ -96,7 +100,7 @@ router.get('/food', foodController.getAllFoodData);
 router.get('/food/:id', foodController.getFoodDataById);
 
 // POST/Create food data
-router.post('/food/', foodController.createFoodData);
+router.post('/food', foodController.createFoodData);
 
 // PUT/Update food data by id
 router.put('/food/:id', foodController.updateFoodData);
@@ -111,7 +115,7 @@ router.get('/knifes', knifeController.getAllKnifeData);
 router.get('/knifes/:id', knifeController.getKnifeDataById);
 
 // POST/Create knife data
-router.post('/knifes/', knifeController.createKnifeData);
+router.post('/knifes', knifeController.createKnifeData);
 
 // PUT/Update knife data by id
 router.put('/knifes/:id', knifeController.updateKnifeData);
@@ -126,7 +130,7 @@ router.get('/pickaxes', pickaxeController.getAllPickaxeData);
 router.get('/pickaxes/:id', pickaxeController.getPickaxeDataById);
 
 // POST/Create pickaxe data
-router.post('/pickaxes/', pickaxeController.createPickaxeData);
+router.post('/pickaxes', pickaxeController.createPickaxeData);
 
 // PUT/Update pickaxe data by id
 router.put('/pickaxes/:id', pickaxeController.updatePickaxeData);
@@ -141,7 +145,7 @@ router.get('/polearms', polearmController.getAllPolearmData);
 router.get('/polearms/:id', polearmController.getPolearmDataById);
 
 // POST/Create polearm data
-router.post('/polearms/', polearmController.createPolearmData);
+router.post('/polearms', polearmController.createPolearmData);
 
 // PUT/Update polearms data by id
 router.put('/polearms/:id', polearmController.updatePolearmData);
@@ -156,7 +160,7 @@ router.get('/shields', shieldController.getAllShieldData);
 router.get('/shields/:id', shieldController.getShieldDataById);
 
 // POST/Create shield data
-router.post('/shields/', shieldController.createShieldData);
+router.post('/shields', shieldController.createShieldData);
 
 // PUT/Update shield data by id
 router.put('/shields/:id', shieldController.updateShieldData);
@@ -171,7 +175,7 @@ router.get('/spears', spearController.getAllSpearData);
 router.get('/spears/:id', spearController.getSpearDataById);
 
 // POST/Create spear data
-router.post('/spears/', spearController.createSpearData);
+router.post('/spears', spearController.createSpearData);
 
 // PUT/Update spear data by id
 router.put('/spears/:id', spearController.updateSpearData);
@@ -186,7 +190,7 @@ router.get('/swords', swordController.getAllSwordData);
 router.get('/swords/:id', swordController.getSwordDataById);
 
 // POST/Create sword data
-router.post('/swords/', swordController.createSwordData);
+router.post('/swords', swordController.createSwordData);
 
 // PUT/Update sword data by id
 router.put('/swords/:id', swordController.updateSwordData);
