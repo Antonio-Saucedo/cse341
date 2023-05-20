@@ -33,44 +33,44 @@
       "movement": "-5%"
     },
     "quality2": {
-        "recipe": "1 Core wood, 5 Bronze",
-        "weight": "2.0",
-        "durability": "170",
-        "pierce": "30",
-        "mining": "39",
-        "backstab": "3x",
-        "stagger": "30",
-        "knockback": "50",
-        "blockForce": "25",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality3": {
-        "recipe": "2 Core wood, 10 Bronze",
-        "weight": "2.0",
-        "durability": "220",
-        "pierce": "35",
-        "mining": "33",
-        "backstab": "3x",
-        "stagger": "35",
-        "knockback": "50",
-        "blockForce": "30",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality4": {
-        "recipe": "3 Core wood, 15 Bronze",
-        "weight": "2.0",
-        "durability": "270",
-        "pierce": "40",
-        "mining": "37",
-        "backstab": "3x",
-        "stagger": "40",
-        "knockback": "50",
-        "blockForce": "35",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      }
+      "recipe": "1 Core wood, 5 Bronze",
+      "weight": "2.0",
+      "durability": "170",
+      "pierce": "30",
+      "mining": "39",
+      "backstab": "3x",
+      "stagger": "30",
+      "knockback": "50",
+      "blockForce": "25",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "2 Core wood, 10 Bronze",
+      "weight": "2.0",
+      "durability": "220",
+      "pierce": "35",
+      "mining": "33",
+      "backstab": "3x",
+      "stagger": "35",
+      "knockback": "50",
+      "blockForce": "30",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "3 Core wood, 15 Bronze",
+      "weight": "2.0",
+      "durability": "270",
+      "pierce": "40",
+      "mining": "37",
+      "backstab": "3x",
+      "stagger": "40",
+      "knockback": "50",
+      "blockForce": "35",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
   },
   "pickaxe03": {
     "name": "Iron pickaxe",
@@ -89,44 +89,44 @@
       "movement": "-5%"
     },
     "quality2": {
-        "recipe": "1 Core wood, 10 Iron",
-        "weight": "2.0",
-        "durability": "200",
-        "pierce": "38",
-        "mining": "38",
-        "backstab": "3x",
-        "stagger": "38",
-        "knockback": "50",
-        "blockForce": "25",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality3": {
-        "recipe": "2 Core wood, 20 Iron",
-        "weight": "2.0",
-        "durability": "250",
-        "pierce": "43",
-        "mining": "43",
-        "backstab": "3x",
-        "stagger": "43",
-        "knockback": "50",
-        "blockForce": "30",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality4": {
-        "recipe": "3 Core wood, 30 Iron",
-        "weight": "2.0",
-        "durability": "300",
-        "pierce": "48",
-        "mining": "48",
-        "backstab": "3x",
-        "stagger": "48",
-        "knockback": "50",
-        "blockForce": "35",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      }
+      "recipe": "1 Core wood, 10 Iron",
+      "weight": "2.0",
+      "durability": "200",
+      "pierce": "38",
+      "mining": "38",
+      "backstab": "3x",
+      "stagger": "38",
+      "knockback": "50",
+      "blockForce": "25",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "2 Core wood, 20 Iron",
+      "weight": "2.0",
+      "durability": "250",
+      "pierce": "43",
+      "mining": "43",
+      "backstab": "3x",
+      "stagger": "43",
+      "knockback": "50",
+      "blockForce": "30",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "3 Core wood, 30 Iron",
+      "weight": "2.0",
+      "durability": "300",
+      "pierce": "48",
+      "mining": "48",
+      "backstab": "3x",
+      "stagger": "48",
+      "knockback": "50",
+      "blockForce": "35",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
   },
   "pickaxe04": {
     "name": "Blackmetal pickaxe",
@@ -145,43 +145,43 @@
       "movement": "-5%"
     },
     "quality2": {
-        "recipe": "1 Yggdrasil wood, 15 Black metal",
-        "weight": "2.0",
-        "durability": "260",
-        "pierce": "54",
-        "mining": "54",
-        "backstab": "3x",
-        "stagger": "54",
-        "knockback": "50",
-        "blockForce": "25",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality3": {
-        "recipe": "2 Yggdrasil wood, 30 Black metal",
-        "weight": "2.0",
-        "durability": "310",
-        "pierce": "59",
-        "mining": "59",
-        "backstab": "3x",
-        "stagger": "59",
-        "knockback": "50",
-        "blockForce": "30",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality4": {
-        "recipe": "3 Yggdrasil wood, 45 Black metal",
-        "weight": "2.0",
-        "durability": "360",
-        "pierce": "64",
-        "mining": "64",
-        "backstab": "3x",
-        "stagger": "64",
-        "knockback": "50",
-        "blockForce": "35",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      }
+      "recipe": "1 Yggdrasil wood, 15 Black metal",
+      "weight": "2.0",
+      "durability": "260",
+      "pierce": "54",
+      "mining": "54",
+      "backstab": "3x",
+      "stagger": "54",
+      "knockback": "50",
+      "blockForce": "25",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality3": {
+      "recipe": "2 Yggdrasil wood, 30 Black metal",
+      "weight": "2.0",
+      "durability": "310",
+      "pierce": "59",
+      "mining": "59",
+      "backstab": "3x",
+      "stagger": "59",
+      "knockback": "50",
+      "blockForce": "30",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    },
+    "quality4": {
+      "recipe": "3 Yggdrasil wood, 45 Black metal",
+      "weight": "2.0",
+      "durability": "360",
+      "pierce": "64",
+      "mining": "64",
+      "backstab": "3x",
+      "stagger": "64",
+      "knockback": "50",
+      "blockForce": "35",
+      "parryBonus": "2x",
+      "movement": "-5%"
+    }
   }
 }

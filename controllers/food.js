@@ -37,8 +37,80 @@ const createFoodData = async (req, res) => {
   } else {
     res
       .status(500)
-      .json(responce.error || 'Something went wrong while creating the contact. Try again later.');
+      .json(
+        responce.error || 'Something went wrong while creating the food data. Try again later.'
+      );
   }
 };
 
-module.exports = { getAllFoodData, getFoodDataById, createFoodData };
+const updateFoodData = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const food = {
+    name: req.body.name,
+    description: req.body.description,
+    recipe: req.body.recipe,
+    weight: req.body.weight,
+    stack: req.body.stack,
+    maxHealth: req.body.maxHealth,
+    maxStamina: req.body.maxStamina,
+    maxEitr: req.body.maxEitr,
+    duration: req.body.duration,
+    healing: req.body.healing
+  };
+  const responce = await mongodb
+    .getDb()
+    .db('valheim')
+    .collection('food')
+    .updateOne(
+      { _id: userId },
+      {
+        $set: {
+          name: food.name,
+          description: food.description,
+          recipe: food.recipe,
+          weight: food.weight,
+          stack: food.stack,
+          maxHealth: food.maxHealth,
+          maxStamina: food.maxStamina,
+          maxEitr: food.maxEitr,
+          duration: food.duration,
+          healing: food.healing
+        }
+      }
+    );
+  if (responce.modifiedCount > 0) {
+    res.status(204).send();
+  } else {
+    res
+      .status(500)
+      .json(
+        responce.error || 'Something went wrong while updating the food data. Try again later.'
+      );
+  }
+};
+
+const deleteFoodData = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const responce = await mongodb
+    .getDb()
+    .db('valheim')
+    .collection('food')
+    .deleteOne({ _id: userId }, true);
+  if (responce.deletedCount > 0) {
+    res.status(200).send();
+  } else {
+    res
+      .status(500)
+      .json(
+        responce.error || 'Something went wrong while deleting the food data. Try again later.'
+      );
+  }
+};
+
+module.exports = {
+  getAllFoodData,
+  getFoodDataById,
+  createFoodData,
+  updateFoodData,
+  deleteFoodData
+};

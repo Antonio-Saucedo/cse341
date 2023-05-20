@@ -51,6 +51,89 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "quantity": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "fire": {
+                  "example": "any"
+                },
+                "spirit": {
+                  "example": "any"
+                },
+                "poison": {
+                  "example": "any"
+                },
+                "frost": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/arrows/": {
@@ -144,6 +227,98 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "slash": {
+                  "example": "any"
+                },
+                "spirit": {
+                  "example": "any"
+                },
+                "poison": {
+                  "example": "any"
+                },
+                "chop": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                },
+                "blockForce": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                },
+                "movement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -250,6 +425,89 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "spirit": {
+                  "example": "any"
+                },
+                "poison": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                },
+                "movement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/bows/": {
@@ -343,6 +601,101 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "blunt": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "fire": {
+                  "example": "any"
+                },
+                "spirit": {
+                  "example": "any"
+                },
+                "frost": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                },
+                "blockForce": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                },
+                "movement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -452,6 +805,83 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "slash": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "blockForce": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/fists/": {
@@ -541,6 +971,83 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "stack": {
+                  "example": "any"
+                },
+                "maxHealth": {
+                  "example": "any"
+                },
+                "maxStamina": {
+                  "example": "any"
+                },
+                "maxEitr": {
+                  "example": "any"
+                },
+                "duration": {
+                  "example": "any"
+                },
+                "healing": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/food/": {
@@ -628,6 +1135,92 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "slash": {
+                  "example": "any"
+                },
+                "spirit": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                },
+                "blockForce": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -728,6 +1321,92 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "mining": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                },
+                "blockForce": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                },
+                "movement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/pickaxes/": {
@@ -824,6 +1503,92 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "lightning": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                },
+                "blockForce": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                },
+                "movement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -924,6 +1689,80 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "blockArmor": {
+                  "example": "any"
+                },
+                "blockForce": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                },
+                "movement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/shields/": {
@@ -1008,6 +1847,86 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                },
+                "movement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1100,6 +2019,86 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                },
+                "movement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
