@@ -1,3 +1,7 @@
 // LOCALHOST
 ### Get all contacts
-GET http://localhost:8080/valheim HTTP/1.1
+GET http://localhost:8080/data HTTP/1.1
+
+// PRODUCTION
+### Get all data
+GET https://valheim-v1-data.onrender.com/data
