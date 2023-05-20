@@ -53,6 +53,63 @@
         }
       }
     },
+    "/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "recipe": {
+                  "example": "any"
+                },
+                "weight": {
+                  "example": "any"
+                },
+                "durability": {
+                  "example": "any"
+                },
+                "pierce": {
+                  "example": "any"
+                },
+                "backstab": {
+                  "example": "any"
+                },
+                "stagger": {
+                  "example": "any"
+                },
+                "knockback": {
+                  "example": "any"
+                },
+                "parryBonus": {
+                  "example": "any"
+                },
+                "movement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/axes": {
       "get": {
         "description": "",
