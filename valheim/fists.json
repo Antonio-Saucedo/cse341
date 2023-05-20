@@ -1,0 +1,46 @@
+{
+  "fist01": {
+    "name": "Flesh Rippers",
+    "description": "If claws work for wolves, why not for a viking?",
+    "quality1": {
+      "recipe": "10 Fenris hair, 6 Fenris claw, 10 Silver",
+      "weight": "2.0",
+      "durability": "300",
+      "slash": "60",
+      "backstab": "6x",
+      "stagger": "60",
+      "blockForce": "10",
+      "parryBonus": "6x"
+    },
+    "quality2": {
+      "recipe": "1 Fenris hair, 1 Fenris claw, 1 Silver",
+      "weight": "2.0",
+      "durability": "350",
+      "slash": "64",
+      "backstab": "6x",
+      "stagger": "64",
+      "blockForce": "15",
+      "parryBonus": "6x"
+    },
+    "quality3": {
+      "recipe": "2 Fenris hair, 2 Fenris claw, 2 Silver",
+      "weight": "2.0",
+      "durability": "400",
+      "slash": "68",
+      "backstab": "6x",
+      "stagger": "68",
+      "blockForce": "20",
+      "parryBonus": "6x"
+    },
+    "quality4": {
+      "recipe": "3 Fenris hair, 3 Fenris claw, 3 Silver",
+      "weight": "2.0",
+      "durability": "450",
+      "slash": "72",
+      "backstab": "6x",
+      "stagger": "72",
+      "blockForce": "25",
+      "parryBonus": "6x"
+    }
+  }
+}
