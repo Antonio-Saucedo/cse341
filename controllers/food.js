@@ -18,4 +18,27 @@ const getFoodDataById = async (req, res) => {
   });
 };
 
-module.exports = { getAllFoodData, getFoodDataById };
+const createFoodData = async (req, res) => {
+  const food = {
+    name: req.body.name,
+    description: req.body.description,
+    recipe: req.body.recipe,
+    weight: req.body.weight,
+    stack: req.body.stack,
+    maxHealth: req.body.maxHealth,
+    maxStamina: req.body.maxStamina,
+    maxEitr: req.body.maxEitr,
+    duration: req.body.duration,
+    healing: req.body.healing
+  };
+  const responce = await mongodb.getDb().db('valheim').collection('food').insertOne(food);
+  if (responce.acknowledged) {
+    res.status(201).json(responce);
+  } else {
+    res
+      .status(500)
+      .json(responce.error || 'Something went wrong while creating the contact. Try again later.');
+  }
+};
+
+module.exports = { getAllFoodData, getFoodDataById, createFoodData };
