@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Contacts API",
+    "title": "Valheim Info API",
+    "description": "Valheim Items API",
     "version": "1.0.0"
   },
   "host": "valheim-v1-data.onrender.com",
@@ -23,24 +23,10 @@
   ],
   "schemes": ["https"],
   "paths": {
-"/": {
-      "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/arrows": {
       "get": {
         "tags": ["arrows"],
-        "description": "",
+        "description": "Get all arrow data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -51,7 +37,7 @@
       },
       "post": {
         "tags": ["arrows"],
-        "description": "",
+        "description": "Add new arrow data",
         "parameters": [
           {
             "name": "body",
@@ -112,7 +98,7 @@
     "/arrows/{id}": {
       "get": {
         "tags": ["arrows"],
-        "description": "",
+        "description": "Find arrow data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -130,7 +116,7 @@
       },
       "put": {
         "tags": ["arrows"],
-        "description": "",
+        "description": "Update existing arrow data",
         "parameters": [
           {
             "name": "id",
@@ -195,7 +181,7 @@
       },
       "delete": {
         "tags": ["arrows"],
-        "description": "",
+        "description": "Delete arrow data",
         "parameters": [
           {
             "name": "id",
@@ -217,7 +203,7 @@
     "/axes": {
       "get": {
         "tags": ["axes"],
-        "description": "",
+        "description": "Get all axe data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -228,7 +214,7 @@
       },
       "post": {
         "tags": ["axes"],
-        "description": "",
+        "description": "Add new axe data",
         "parameters": [
           {
             "name": "body",
@@ -435,7 +421,7 @@
     "/axes/{id}": {
       "get": {
         "tags": ["axes"],
-        "description": "",
+        "description": "Find axe data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -453,7 +439,7 @@
       },
       "put": {
         "tags": ["axes"],
-        "description": "",
+        "description": "Update existing axe data",
         "parameters": [
           {
             "name": "id",
@@ -664,7 +650,7 @@
       },
       "delete": {
         "tags": ["axes"],
-        "description": "",
+        "description": "Delete axe data",
         "parameters": [
           {
             "name": "id",
@@ -686,7 +672,7 @@
     "/bows": {
       "get": {
         "tags": ["bows"],
-        "description": "",
+        "description": "Get all bow data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -697,7 +683,7 @@
       },
       "post": {
         "tags": ["bows"],
-        "description": "",
+        "description": "Add new bow data",
         "parameters": [
           {
             "name": "body",
@@ -868,7 +854,7 @@
     "/bows/{id}": {
       "get": {
         "tags": ["bows"],
-        "description": "",
+        "description": "Find bow data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -886,7 +872,7 @@
       },
       "put": {
         "tags": ["bows"],
-        "description": "",
+        "description": "Update existing bow data",
         "parameters": [
           {
             "name": "id",
@@ -1061,7 +1047,7 @@
       },
       "delete": {
         "tags": ["bows"],
-        "description": "",
+        "description": "Delete bow data",
         "parameters": [
           {
             "name": "id",
@@ -1083,7 +1069,7 @@
     "/clubs": {
       "get": {
         "tags": ["clubs"],
-        "description": "",
+        "description": "Get all club data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -1094,7 +1080,7 @@
       },
       "post": {
         "tags": ["clubs"],
-        "description": "",
+        "description": "Add new club data",
         "parameters": [
           {
             "name": "body",
@@ -1313,7 +1299,7 @@
     "/clubs/{id}": {
       "get": {
         "tags": ["clubs"],
-        "description": "",
+        "description": "Find club data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -1331,7 +1317,7 @@
       },
       "put": {
         "tags": ["clubs"],
-        "description": "",
+        "description": "Update existing club data",
         "parameters": [
           {
             "name": "id",
@@ -1554,7 +1540,7 @@
       },
       "delete": {
         "tags": ["clubs"],
-        "description": "",
+        "description": "Delete club data",
         "parameters": [
           {
             "name": "id",
@@ -1576,7 +1562,7 @@
     "/fists": {
       "get": {
         "tags": ["fists"],
-        "description": "",
+        "description": "Get all fist data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -1587,7 +1573,7 @@
       },
       "post": {
         "tags": ["fists"],
-        "description": "",
+        "description": "Add new fist data",
         "parameters": [
           {
             "name": "body",
@@ -1734,7 +1720,7 @@
     "/fists/{id}": {
       "get": {
         "tags": ["fists"],
-        "description": "",
+        "description": "Find fist data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -1752,7 +1738,7 @@
       },
       "put": {
         "tags": ["fists"],
-        "description": "",
+        "description": "Update existing fist data",
         "parameters": [
           {
             "name": "id",
@@ -1903,7 +1889,7 @@
       },
       "delete": {
         "tags": ["fists"],
-        "description": "",
+        "description": "Delete fist data",
         "parameters": [
           {
             "name": "id",
@@ -1925,7 +1911,7 @@
     "/food": {
       "get": {
         "tags": ["food"],
-        "description": "",
+        "description": "Get all food data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -1936,7 +1922,7 @@
       },
       "post": {
         "tags": ["food"],
-        "description": "",
+        "description": "Add new food data",
         "parameters": [
           {
             "name": "body",
@@ -1991,7 +1977,7 @@
     "/food/{id}": {
       "get": {
         "tags": ["food"],
-        "description": "",
+        "description": "Find food data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -2009,7 +1995,7 @@
       },
       "put": {
         "tags": ["food"],
-        "description": "",
+        "description": "Update existing food data",
         "parameters": [
           {
             "name": "id",
@@ -2068,7 +2054,7 @@
       },
       "delete": {
         "tags": ["food"],
-        "description": "",
+        "description": "Delete food data",
         "parameters": [
           {
             "name": "id",
@@ -2090,7 +2076,7 @@
     "/knifes": {
       "get": {
         "tags": ["knifes"],
-        "description": "",
+        "description": "Get all knife data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -2101,7 +2087,7 @@
       },
       "post": {
         "tags": ["knifes"],
-        "description": "",
+        "description": "Add new knife data",
         "parameters": [
           {
             "name": "body",
@@ -2284,7 +2270,7 @@
     "/knifes/{id}": {
       "get": {
         "tags": ["knifes"],
-        "description": "",
+        "description": "Find knife data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -2302,7 +2288,7 @@
       },
       "put": {
         "tags": ["knifes"],
-        "description": "",
+        "description": "Update existing knife data",
         "parameters": [
           {
             "name": "id",
@@ -2489,7 +2475,7 @@
       },
       "delete": {
         "tags": ["knifes"],
-        "description": "",
+        "description": "Delete knife data",
         "parameters": [
           {
             "name": "id",
@@ -2511,7 +2497,7 @@
     "/pickaxes": {
       "get": {
         "tags": ["pickaxes"],
-        "description": "",
+        "description": "Get all pickaxe data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -2522,7 +2508,7 @@
       },
       "post": {
         "tags": ["pickaxes"],
-        "description": "",
+        "description": "Add new pickaxe data",
         "parameters": [
           {
             "name": "body",
@@ -2705,7 +2691,7 @@
     "/pickaxes/{id}": {
       "get": {
         "tags": ["pickaxes"],
-        "description": "",
+        "description": "Find pickaxe data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -2723,7 +2709,7 @@
       },
       "put": {
         "tags": ["pickaxes"],
-        "description": "",
+        "description": "Update existing pickaxe data",
         "parameters": [
           {
             "name": "id",
@@ -2910,7 +2896,7 @@
       },
       "delete": {
         "tags": ["pickaxes"],
-        "description": "",
+        "description": "Delete pickaxe data",
         "parameters": [
           {
             "name": "id",
@@ -2932,7 +2918,7 @@
     "/polearms": {
       "get": {
         "tags": ["polearms"],
-        "description": "",
+        "description": "Get all polearm data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -2943,7 +2929,7 @@
       },
       "post": {
         "tags": ["polearms"],
-        "description": "",
+        "description": "Add new polearm data",
         "parameters": [
           {
             "name": "body",
@@ -3126,7 +3112,7 @@
     "/polearms/{id}": {
       "get": {
         "tags": ["polearms"],
-        "description": "",
+        "description": "Find polearm data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -3144,7 +3130,7 @@
       },
       "put": {
         "tags": ["polearms"],
-        "description": "",
+        "description": "Update existing polearm data",
         "parameters": [
           {
             "name": "id",
@@ -3331,7 +3317,7 @@
       },
       "delete": {
         "tags": ["polearms"],
-        "description": "",
+        "description": "Delete polearm data",
         "parameters": [
           {
             "name": "id",
@@ -3353,7 +3339,7 @@
     "/shields": {
       "get": {
         "tags": ["shields"],
-        "description": "",
+        "description": "Get all shield data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -3364,7 +3350,7 @@
       },
       "post": {
         "tags": ["shields"],
-        "description": "",
+        "description": "Add new shield data",
         "parameters": [
           {
             "name": "body",
@@ -3499,7 +3485,7 @@
     "/shields/{id}": {
       "get": {
         "tags": ["shields"],
-        "description": "",
+        "description": "Find shield data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -3517,7 +3503,7 @@
       },
       "put": {
         "tags": ["shields"],
-        "description": "",
+        "description": "Update existing shield data",
         "parameters": [
           {
             "name": "id",
@@ -3656,7 +3642,7 @@
       },
       "delete": {
         "tags": ["shields"],
-        "description": "",
+        "description": "Delete shield data",
         "parameters": [
           {
             "name": "id",
@@ -3678,7 +3664,7 @@
     "/spears": {
       "get": {
         "tags": ["spears"],
-        "description": "",
+        "description": "Get all spear data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -3689,7 +3675,7 @@
       },
       "post": {
         "tags": ["spears"],
-        "description": "",
+        "description": "Add new spear data",
         "parameters": [
           {
             "name": "body",
@@ -3848,7 +3834,7 @@
     "/spears/{id}": {
       "get": {
         "tags": ["spears"],
-        "description": "",
+        "description": "Find spear data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -3866,7 +3852,7 @@
       },
       "put": {
         "tags": ["spears"],
-        "description": "",
+        "description": "Update existing spear data",
         "parameters": [
           {
             "name": "id",
@@ -4029,7 +4015,7 @@
       },
       "delete": {
         "tags": ["spears"],
-        "description": "",
+        "description": "Delete spear data",
         "parameters": [
           {
             "name": "id",
@@ -4051,7 +4037,7 @@
     "/swords": {
       "get": {
         "tags": ["swords"],
-        "description": "",
+        "description": "Get all sword data",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -4062,7 +4048,7 @@
       },
       "post": {
         "tags": ["swords"],
-        "description": "",
+        "description": "Add new sword data",
         "parameters": [
           {
             "name": "body",
@@ -4221,7 +4207,7 @@
     "/swords/{id}": {
       "get": {
         "tags": ["swords"],
-        "description": "",
+        "description": "Find sword data by id",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -4239,7 +4225,7 @@
       },
       "put": {
         "tags": ["swords"],
-        "description": "",
+        "description": "Update existing sword data",
         "parameters": [
           {
             "name": "id",
@@ -4402,7 +4388,7 @@
       },
       "delete": {
         "tags": ["swords"],
-        "description": "",
+        "description": "Delete sword data",
         "parameters": [
           {
             "name": "id",

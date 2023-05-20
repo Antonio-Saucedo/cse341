@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const dataController = require('../controllers/data');
 const arrowController = require('../controllers/arrows');
 const axeController = require('../controllers/axes');
 const bowController = require('../controllers/bows');
@@ -14,9 +13,6 @@ const polearmController = require('../controllers/polearms');
 const shieldController = require('../controllers/shields');
 const spearController = require('../controllers/spears');
 const swordController = require('../controllers/swords');
-
-// GET all data information
-router.get('/', dataController.getAllData);
 
 // GET all arrow data
 router.get('/arrows', arrowController.getAllArrowData);
