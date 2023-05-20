@@ -5,7 +5,7 @@ const doc = {
     title: 'My API',
     description: 'Contacts API'
   },
-  host: 'cse341-lesson4-done.onrender.com',
+  host: 'valheim-v1-data.onrender.com',
   schemes: ['https']
 };
 

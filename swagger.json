@@ -5,7 +5,7 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "cse341-lesson4-done.onrender.com",
+  "host": "valheim-v1-data.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
