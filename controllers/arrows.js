@@ -1,9 +1,9 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllArrowData = (req, res) => {
+const getAllArrowData = async (req, res) => {
   try {
-    mongodb
+    await mongodb
       .getDb()
       .db('valheim')
       .collection('arrows')
@@ -16,14 +16,15 @@ const getAllArrowData = (req, res) => {
         res.status(200).json(result);
       });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 };
 
-const getArrowDataById = (req, res) => {
+const getArrowDataById = async (req, res) => {
   try {
     const userId = new ObjectId(req.params.id);
-    mongodb
+    await mongodb
       .getDb()
       .db('valheim')
       .collection('arrows')

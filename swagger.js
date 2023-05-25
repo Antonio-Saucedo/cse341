@@ -42,7 +42,7 @@ const doc = {
             example: '20'
           },
           weight: {
-            type: 'integer',
+            type: 'number',
             format: 'double',
             example: '0.1'
           },
@@ -99,7 +99,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '0.1'
               },
@@ -164,7 +164,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '0.1'
               },
@@ -229,7 +229,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '0.1'
               },
@@ -294,7 +294,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '0.1'
               },
@@ -370,7 +370,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -425,7 +425,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -480,7 +480,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -535,7 +535,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -601,7 +601,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -671,7 +671,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -741,7 +741,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -811,7 +811,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -892,7 +892,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -933,7 +933,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -974,7 +974,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1015,7 +1015,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1114,7 +1114,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1170,7 +1170,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1226,7 +1226,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1282,7 +1282,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1349,7 +1349,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '0.1'
               },
@@ -1404,7 +1404,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '0.1'
               },
@@ -1459,7 +1459,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '0.1'
               },
@@ -1514,7 +1514,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '0.1'
               },
@@ -1580,7 +1580,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '2.5'
               },
@@ -1635,7 +1635,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '2.5'
               },
@@ -1690,7 +1690,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '2.5'
               },
@@ -1745,7 +1745,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '2.5'
               },
@@ -1811,7 +1811,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1847,7 +1847,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1883,7 +1883,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1919,7 +1919,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -1966,7 +1966,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -2016,7 +2016,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -2066,7 +2066,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -2116,7 +2116,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.5'
               },
@@ -2177,7 +2177,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.0'
               },
@@ -2237,7 +2237,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.0'
               },
@@ -2297,7 +2297,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.0'
               },
@@ -2357,7 +2357,7 @@ const doc = {
                 type: 'string'
               },
               weight: {
-                type: 'integer',
+                type: 'number',
                 format: 'double',
                 example: '1.0'
               },
@@ -2419,7 +2419,7 @@ const doc = {
 const outputFile = './swagger.json';
 const endpointsFiles = ['./routes/index.js'];
 
-// generate server
+// generate swagger.json
 swaggerAutogen(outputFile, endpointsFiles, doc);
 
 // Run server after it gets generated

@@ -1304,7 +1304,7 @@
             "example": "20"
           },
           "weight": {
-            "type": "integer",
+            "type": "number",
             "format": "double",
             "example": "0.1"
           },
@@ -1361,7 +1361,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "0.1"
               },
@@ -1426,7 +1426,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "0.1"
               },
@@ -1491,7 +1491,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "0.1"
               },
@@ -1556,7 +1556,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "0.1"
               },
@@ -1632,7 +1632,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -1687,7 +1687,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -1742,7 +1742,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -1797,7 +1797,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -1863,7 +1863,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -1933,7 +1933,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2003,7 +2003,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2073,7 +2073,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2154,7 +2154,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2195,7 +2195,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2236,7 +2236,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2277,7 +2277,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2376,7 +2376,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2432,7 +2432,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2488,7 +2488,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2544,7 +2544,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -2611,7 +2611,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "0.1"
               },
@@ -2666,7 +2666,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "0.1"
               },
@@ -2721,7 +2721,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "0.1"
               },
@@ -2776,7 +2776,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "0.1"
               },
@@ -2842,7 +2842,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "2.5"
               },
@@ -2897,7 +2897,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "2.5"
               },
@@ -2952,7 +2952,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "2.5"
               },
@@ -3007,7 +3007,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "2.5"
               },
@@ -3073,7 +3073,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -3109,7 +3109,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -3145,7 +3145,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -3181,7 +3181,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -3228,7 +3228,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -3278,7 +3278,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -3328,7 +3328,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -3378,7 +3378,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.5"
               },
@@ -3439,7 +3439,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.0"
               },
@@ -3499,7 +3499,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.0"
               },
@@ -3559,7 +3559,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.0"
               },
@@ -3619,7 +3619,7 @@
                 "type": "string"
               },
               "weight": {
-                "type": "integer",
+                "type": "number",
                 "format": "double",
                 "example": "1.0"
               },
