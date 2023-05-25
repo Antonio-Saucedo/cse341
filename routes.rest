@@ -288,6 +288,7 @@ content-type: application/json
       "poison": "0",
       "backstab": "3x",
       "stagger": "22",
+      "knockback": 0,
       "parryBonus": "1.5x",
       "movement": "-5%"
     },
@@ -300,6 +301,7 @@ content-type: application/json
       "poison": "0",
       "backstab": "3x",
       "stagger": "25",
+      "knockback": 0,
       "parryBonus": "1.5x",
       "movement": "-5%"
     },
@@ -312,6 +314,7 @@ content-type: application/json
       "poison": "0",
       "backstab": "3x",
       "stagger": "28",
+      "knockback": 0,
       "parryBonus": "1.5x",
       "movement": "-5%"
     },
@@ -324,6 +327,7 @@ content-type: application/json
       "poison": "0",
       "backstab": "3x",
       "stagger": "31",
+      "knockback": 0,
       "parryBonus": "1.5x",
       "movement": "-5%"
     }
@@ -1179,52 +1183,56 @@ POST https://valheim-v1-data.onrender.com/spears HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Flint spear DUPLICATE",
-    "description": "If your eye marks a thing for death, let your arm send the messenger.",
-    "quality1": {
-      "recipe": "5 Wood, 10 Flint, 2 Leather scraps",
-      "weight": "1.5",
-      "durability": "100",
-      "pierce": "20",
-      "backstab": "3x",
-      "stagger": "20",
-      "knockback": "20",
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality2": {
-        "recipe": "3 Wood, 5 Flint, 1 Leather scraps",
-        "weight": "1.5",
-        "durability": "150",
-        "pierce": "26",
-        "backstab": "3x",
-        "stagger": "26",
-        "knockback": "20",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality3": {
-        "recipe": "6 Wood, 10 Flint, 2 Leather scraps",
-        "weight": "1.5",
-        "durability": "200",
-        "pierce": "32",
-        "backstab": "3x",
-        "stagger": "32",
-        "knockback": "20",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality4": {
-        "recipe": "9 Wood, 15 Flint, 3 Leather scraps",
-        "weight": "1.5",
-        "durability": "250",
-        "pierce": "38",
-        "backstab": "3x",
-        "stagger": "38",
-        "knockback": "20",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      }
+  "name": "Flint spear DUPLICATE",
+  "description": "If your eye marks a thing for death, let your arm send the messenger.",
+  "quality1": {
+    "recipe": "5 Wood, 10 Flint, 2 Leather scraps",
+    "weight": "1.5",
+    "durability": "100",
+    "pierce": "20",
+    "backstab": "3x",
+    "stagger": "20",
+    "knockback": "20",
+    "blockForce": "0",
+    "parryBonus": "2x",
+    "movement": "-5%"
+  },
+  "quality2": {
+    "recipe": "3 Wood, 5 Flint, 1 Leather scraps",
+    "weight": "1.5",
+    "durability": "150",
+    "pierce": "26",
+    "backstab": "3x",
+    "stagger": "26",
+    "knockback": "20",
+    "blockForce": "0",
+    "parryBonus": "2x",
+    "movement": "-5%"
+  },
+  "quality3": {
+    "recipe": "6 Wood, 10 Flint, 2 Leather scraps",
+    "weight": "1.5",
+    "durability": "200",
+    "pierce": "32",
+    "backstab": "3x",
+    "stagger": "32",
+    "knockback": "20",
+    "blockForce": "0",
+    "parryBonus": "2x",
+    "movement": "-5%"
+  },
+  "quality4": {
+    "recipe": "9 Wood, 15 Flint, 3 Leather scraps",
+    "weight": "1.5",
+    "durability": "250",
+    "pierce": "38",
+    "backstab": "3x",
+    "stagger": "38",
+    "knockback": "20",
+    "blockForce": "0",
+    "parryBonus": "2x",
+    "movement": "-5%"
+  }
 }
 
 ### PUT/Update spear data
@@ -1232,52 +1240,56 @@ PUT https://valheim-v1-data.onrender.com/spears/64567792a3b874e1f4642980 HTTP/1.
 content-type: application/json
 
 {
-    "name": "Flint spear",
-    "description": "If your eye marks a thing for death, let your arm send the messenger.",
-    "quality1": {
-      "recipe": "DUPLICATE",
-      "weight": "1.5",
-      "durability": "100",
-      "pierce": "20",
-      "backstab": "3x",
-      "stagger": "20",
-      "knockback": "20",
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality2": {
-        "recipe": "DUPLICATE",
-        "weight": "1.5",
-        "durability": "150",
-        "pierce": "26",
-        "backstab": "3x",
-        "stagger": "26",
-        "knockback": "20",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality3": {
-        "recipe": "DUPLICATE",
-        "weight": "1.5",
-        "durability": "200",
-        "pierce": "32",
-        "backstab": "3x",
-        "stagger": "32",
-        "knockback": "20",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      },
-      "quality4": {
-        "recipe": "DUPLICATE",
-        "weight": "1.5",
-        "durability": "250",
-        "pierce": "38",
-        "backstab": "3x",
-        "stagger": "38",
-        "knockback": "20",
-        "parryBonus": "2x",
-        "movement": "-5%"
-      }
+  "name": "Flint spear",
+  "description": "If your eye marks a thing for death, let your arm send the messenger.",
+  "quality1": {
+    "recipe": "DUPLICATE",
+    "weight": "1.5",
+    "durability": "100",
+    "pierce": "20",
+    "backstab": "3x",
+    "stagger": "20",
+    "knockback": "20",
+    "blockForce": "0",
+    "parryBonus": "2x",
+    "movement": "-5%"
+  },
+  "quality2": {
+    "recipe": "DUPLICATE",
+    "weight": "1.5",
+    "durability": "150",
+    "pierce": "26",
+    "backstab": "3x",
+    "stagger": "26",
+    "knockback": "20",
+    "blockForce": "0",
+    "parryBonus": "2x",
+    "movement": "-5%"
+  },
+  "quality3": {
+    "recipe": "DUPLICATE",
+    "weight": "1.5",
+    "durability": "200",
+    "pierce": "32",
+    "backstab": "3x",
+    "stagger": "32",
+    "knockback": "20",
+    "blockForce": "0",
+    "parryBonus": "2x",
+    "movement": "-5%"
+  },
+  "quality4": {
+    "recipe": "DUPLICATE",
+    "weight": "1.5",
+    "durability": "250",
+    "pierce": "38",
+    "backstab": "3x",
+    "stagger": "38",
+    "knockback": "20",
+    "blockForce": "0",
+    "parryBonus": "2x",
+    "movement": "-5%"
+  }
 }
 
 ### DELETE spear data

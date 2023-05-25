@@ -92,6 +92,7 @@ const updateSpearData = async (req, res) => {
       backstab: req.body.backstab,
       stagger: req.body.stagger,
       knockback: req.body.knockback,
+      blockForce: req.body.blockForce,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     },
@@ -103,6 +104,7 @@ const updateSpearData = async (req, res) => {
       backstab: req.body.backstab,
       stagger: req.body.stagger,
       knockback: req.body.knockback,
+      blockForce: req.body.blockForce,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     },
@@ -114,6 +116,7 @@ const updateSpearData = async (req, res) => {
       backstab: req.body.backstab,
       stagger: req.body.stagger,
       knockback: req.body.knockback,
+      blockForce: req.body.blockForce,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     },
@@ -125,6 +128,7 @@ const updateSpearData = async (req, res) => {
       backstab: req.body.backstab,
       stagger: req.body.stagger,
       knockback: req.body.knockback,
+      blockForce: req.body.blockForce,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     }
@@ -147,6 +151,7 @@ const updateSpearData = async (req, res) => {
             backstab: spear.quality1.backstab,
             stagger: spear.quality1.stagger,
             knockback: spear.quality1.knockback,
+            blockForce: spear.quality4.blockForce,
             parryBonus: spear.quality1.parryBonus,
             movement: spear.quality1.movement
           },
@@ -158,6 +163,7 @@ const updateSpearData = async (req, res) => {
             backstab: spear.quality2.backstab,
             stagger: spear.quality2.stagger,
             knockback: spear.quality2.knockback,
+            blockForce: spear.quality4.blockForce,
             parryBonus: spear.quality2.parryBonus,
             movement: spear.quality2.movement
           },
@@ -169,6 +175,7 @@ const updateSpearData = async (req, res) => {
             backstab: spear.quality3.backstab,
             stagger: spear.quality3.stagger,
             knockback: spear.quality3.knockback,
+            blockForce: spear.quality4.blockForce,
             parryBonus: spear.quality3.parryBonus,
             movement: spear.quality3.movement
           },
@@ -180,6 +187,7 @@ const updateSpearData = async (req, res) => {
             backstab: spear.quality4.backstab,
             stagger: spear.quality4.stagger,
             knockback: spear.quality4.knockback,
+            blockForce: spear.quality4.blockForce,
             parryBonus: spear.quality4.parryBonus,
             movement: spear.quality4.movement
           }

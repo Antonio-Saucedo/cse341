@@ -8,18 +8,54 @@
   "host": "valheim-v1-data.onrender.com",
   "basePath": "/",
   "tags": [
-    { "name": "arrows", "description": "Get information about arrows" },
-    { "name": "axes", "description": "Get information about axes" },
-    { "name": "bows", "description": "Get information about bows" },
-    { "name": "clubs", "description": "Get information about clubs" },
-    { "name": "fists", "description": "Get information about fists" },
-    { "name": "food", "description": "Get information about food" },
-    { "name": "knifes", "description": "Get information about knifes" },
-    { "name": "pickaxes", "description": "Get information about pickaxes" },
-    { "name": "polearms", "description": "Get information about polearms" },
-    { "name": "shields", "description": "Get information about shields" },
-    { "name": "spears", "description": "Get information about spears" },
-    { "name": "swords", "description": "Get information about swords" }
+    {
+      "name": "arrows",
+      "description": "Get information about arrows"
+    },
+    {
+      "name": "axes",
+      "description": "Get information about axes"
+    },
+    {
+      "name": "bows",
+      "description": "Get information about bows"
+    },
+    {
+      "name": "clubs",
+      "description": "Get information about clubs"
+    },
+    {
+      "name": "fists",
+      "description": "Get information about fists"
+    },
+    {
+      "name": "food",
+      "description": "Get information about food"
+    },
+    {
+      "name": "knifes",
+      "description": "Get information about knifes"
+    },
+    {
+      "name": "pickaxes",
+      "description": "Get information about pickaxes"
+    },
+    {
+      "name": "polearms",
+      "description": "Get information about polearms"
+    },
+    {
+      "name": "shields",
+      "description": "Get information about shields"
+    },
+    {
+      "name": "spears",
+      "description": "Get information about spears"
+    },
+    {
+      "name": "swords",
+      "description": "Get information about swords"
+    }
   ],
   "schemes": ["https"],
   "paths": {
@@ -32,6 +68,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -43,45 +85,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "quantity": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "fire": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "poison": {
-                  "example": "any"
-                },
-                "frost": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                }
-              }
+              "$ref": "#/components/schemas/arrows"
             }
           }
         ],
@@ -111,6 +115,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -128,45 +138,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "quantity": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "pierce": {
-                  "example": "any"
-                },
-                "fire": {
-                  "example": "any"
-                },
-                "spirit": {
-                  "example": "any"
-                },
-                "poison": {
-                  "example": "any"
-                },
-                "frost": {
-                  "example": "any"
-                },
-                "stagger": {
-                  "example": "any"
-                },
-                "knockback": {
-                  "example": "any"
-                }
-              }
+              "$ref": "#/components/schemas/arrows"
             }
           }
         ],
@@ -220,191 +192,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "chop": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "chop": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "chop": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "chop": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/axes"
             }
           }
         ],
@@ -451,191 +239,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "chop": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "chop": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "chop": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "chop": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/axes"
             }
           }
         ],
@@ -689,155 +293,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/bows"
             }
           }
         ],
@@ -884,155 +340,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "poison": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/bows"
             }
           }
         ],
@@ -1086,203 +394,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blunt": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "fire": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "frost": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "bluntForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blunt": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "fire": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "frost": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "bluntForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blunt": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "fire": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "frost": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "bluntForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blunt": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "fire": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "frost": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "bluntForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/clubs"
             }
           }
         ],
@@ -1329,203 +441,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blunt": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "fire": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "frost": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "bluntForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blunt": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "fire": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "frost": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "bluntForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blunt": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "fire": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "frost": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "bluntForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blunt": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "fire": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "frost": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "bluntForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/clubs"
             }
           }
         ],
@@ -1579,131 +495,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/fists"
             }
           }
         ],
@@ -1750,131 +542,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/fists"
             }
           }
         ],
@@ -1928,39 +596,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "stack": {
-                  "example": "any"
-                },
-                "maxHealth": {
-                  "example": "any"
-                },
-                "maxStamina": {
-                  "example": "any"
-                },
-                "maxEitr": {
-                  "example": "any"
-                },
-                "duration": {
-                  "example": "any"
-                },
-                "healing": {
-                  "example": "any"
-                }
-              }
+              "$ref": "#/components/schemas/food"
             }
           }
         ],
@@ -2007,39 +643,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "recipe": {
-                  "example": "any"
-                },
-                "weight": {
-                  "example": "any"
-                },
-                "stack": {
-                  "example": "any"
-                },
-                "maxHealth": {
-                  "example": "any"
-                },
-                "maxStamina": {
-                  "example": "any"
-                },
-                "maxEitr": {
-                  "example": "any"
-                },
-                "duration": {
-                  "example": "any"
-                },
-                "healing": {
-                  "example": "any"
-                }
-              }
+              "$ref": "#/components/schemas/food"
             }
           }
         ],
@@ -2093,167 +697,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/knifes"
             }
           }
         ],
@@ -2300,167 +744,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "slash": {
-                      "example": "any"
-                    },
-                    "spirit": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/knifes"
             }
           }
         ],
@@ -2514,167 +798,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "mining": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "mining": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "mining": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "mining": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/pickaxes"
             }
           }
         ],
@@ -2721,167 +845,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "mining": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "mining": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "mining": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "mining": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/pickaxes"
             }
           }
         ],
@@ -2935,167 +899,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "lightning": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "lightning": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "lightning": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "lightning": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/polearms"
             }
           }
         ],
@@ -3142,167 +946,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "lightning": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "lightning": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "lightning": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "lightning": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/polearms"
             }
           }
         ],
@@ -3356,119 +1000,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blockArmor": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blockArmor": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blockArmor": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blockArmor": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/shields"
             }
           }
         ],
@@ -3515,119 +1047,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blockArmor": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blockArmor": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blockArmor": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "blockArmor": {
-                      "example": "any"
-                    },
-                    "blockForce": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/shields"
             }
           }
         ],
@@ -3681,143 +1101,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/spears"
             }
           }
         ],
@@ -3864,143 +1148,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/spears"
             }
           }
         ],
@@ -4054,143 +1202,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/swords"
             }
           }
         ],
@@ -4237,143 +1249,7 @@
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "quality1": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality2": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality3": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                },
-                "quality4": {
-                  "type": "object",
-                  "properties": {
-                    "recipe": {
-                      "example": "any"
-                    },
-                    "weight": {
-                      "example": "any"
-                    },
-                    "durability": {
-                      "example": "any"
-                    },
-                    "pierce": {
-                      "example": "any"
-                    },
-                    "backstab": {
-                      "example": "any"
-                    },
-                    "stagger": {
-                      "example": "any"
-                    },
-                    "knockback": {
-                      "example": "any"
-                    },
-                    "parryBonus": {
-                      "example": "any"
-                    },
-                    "movement": {
-                      "example": "any"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/components/schemas/swords"
             }
           }
         ],
@@ -4403,6 +1279,2398 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "arrows": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "recipe": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32",
+            "example": "20"
+          },
+          "weight": {
+            "type": "integer",
+            "format": "double",
+            "example": "0.1"
+          },
+          "pierce": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "fire": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "spirit": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "poison": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "frost": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "stagger": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "knockback": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          }
+        }
+      },
+      "axes": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "0.1"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "100"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "poison": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "chop": {
+                "type": "integer",
+                "format": "int32",
+                "example": "20"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "0.1"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "100"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "poison": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "chop": {
+                "type": "integer",
+                "format": "int32",
+                "example": "20"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "0.1"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "100"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "poison": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "chop": {
+                "type": "integer",
+                "format": "int32",
+                "example": "20"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "0.1"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "100"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "poison": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "chop": {
+                "type": "integer",
+                "format": "int32",
+                "example": "20"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          }
+        }
+      },
+      "bows": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "50"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "poison": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "1.5x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "50"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "poison": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "1.5x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "50"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "poison": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "1.5x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "50"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "poison": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "1.5x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          }
+        }
+      },
+      "clubs": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "20"
+              },
+              "blunt": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "fire": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "frost": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "20"
+              },
+              "blunt": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "fire": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "frost": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "20"
+              },
+              "blunt": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "fire": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "frost": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "20"
+              },
+              "blunt": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "fire": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "frost": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          }
+        }
+      },
+      "fists": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "300"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "6x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "6x"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "300"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "6x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "6x"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "300"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "6x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "6x"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "300"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "6x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "6x"
+              }
+            }
+          }
+        }
+      },
+      "food": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "recipe": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "integer",
+            "format": "double",
+            "example": "0.1"
+          },
+          "stack": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "maxHealth": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "maxStamina": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "maxEitr": {
+            "type": "integer",
+            "format": "int32",
+            "example": "0"
+          },
+          "duration": {
+            "type": "string",
+            "example": "1800s"
+          },
+          "healing": {
+            "type": "string",
+            "example": "5 hp/tick"
+          }
+        }
+      },
+      "knifes": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "6x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "4x"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "6x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "4x"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "6x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "4x"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "6x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "4x"
+              }
+            }
+          }
+        }
+      },
+      "pickaxes": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "0.1"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "mining": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "0.1"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "mining": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "0.1"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "mining": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "0.1"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "mining": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          }
+        }
+      },
+      "polearms": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "2.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "lightning": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "2.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "lightning": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "2.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "lightning": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "2.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "lightning": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          }
+        }
+      },
+      "shields": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockArmor": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "0x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockArmor": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "0x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockArmor": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "0x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockArmor": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "0x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          }
+        }
+      },
+      "spears": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.5"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "pierce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          }
+        }
+      },
+      "swords": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quality1": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.0"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "frost": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality2": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.0"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "frost": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality3": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.0"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "frost": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
+          },
+          "quality4": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "integer",
+                "format": "double",
+                "example": "1.0"
+              },
+              "durability": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "slash": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "spirit": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "frost": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "backstab": {
+                "type": "string",
+                "example": "3x"
+              },
+              "stagger": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "knockback": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "blockForce": {
+                "type": "integer",
+                "format": "int32",
+                "example": "0"
+              },
+              "parryBonus": {
+                "type": "string",
+                "example": "2x"
+              },
+              "movement": {
+                "type": "string",
+                "example": "-5%"
+              }
+            }
           }
         }
       }

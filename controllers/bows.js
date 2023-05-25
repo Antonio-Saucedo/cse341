@@ -31,6 +31,7 @@ const createBowData = async (req, res) => {
       poison: req.body.poison,
       backstab: req.body.backstab,
       stagger: req.body.stagger,
+      knockback: req.body.knockback,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     },
@@ -43,6 +44,7 @@ const createBowData = async (req, res) => {
       poison: req.body.poison,
       backstab: req.body.backstab,
       stagger: req.body.stagger,
+      knockback: req.body.knockback,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     },
@@ -55,6 +57,7 @@ const createBowData = async (req, res) => {
       poison: req.body.poison,
       backstab: req.body.backstab,
       stagger: req.body.stagger,
+      knockback: req.body.knockback,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     },
@@ -67,6 +70,7 @@ const createBowData = async (req, res) => {
       poison: req.body.poison,
       backstab: req.body.backstab,
       stagger: req.body.stagger,
+      knockback: req.body.knockback,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     }
@@ -95,6 +99,7 @@ const updateBowData = async (req, res) => {
       poison: req.body.poison,
       backstab: req.body.backstab,
       stagger: req.body.stagger,
+      knockback: req.body.knockback,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     },
@@ -107,6 +112,7 @@ const updateBowData = async (req, res) => {
       poison: req.body.poison,
       backstab: req.body.backstab,
       stagger: req.body.stagger,
+      knockback: req.body.knockback,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     },
@@ -119,6 +125,7 @@ const updateBowData = async (req, res) => {
       poison: req.body.poison,
       backstab: req.body.backstab,
       stagger: req.body.stagger,
+      knockback: req.body.knockback,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     },
@@ -131,6 +138,7 @@ const updateBowData = async (req, res) => {
       poison: req.body.poison,
       backstab: req.body.backstab,
       stagger: req.body.stagger,
+      knockback: req.body.knockback,
       parryBonus: req.body.parryBonus,
       movement: req.body.movement
     }
@@ -154,6 +162,7 @@ const updateBowData = async (req, res) => {
             poison: bow.quality1.poison,
             backstab: bow.quality1.backstab,
             stagger: bow.quality1.stagger,
+            knockback: bow.quality4.knockback,
             parryBonus: bow.quality1.parryBonus,
             movement: bow.quality1.movement
           },
@@ -166,6 +175,7 @@ const updateBowData = async (req, res) => {
             poison: bow.quality2.poison,
             backstab: bow.quality2.backstab,
             stagger: bow.quality2.stagger,
+            knockback: bow.quality4.knockback,
             parryBonus: bow.quality2.parryBonus,
             movement: bow.quality2.movement
           },
@@ -178,6 +188,7 @@ const updateBowData = async (req, res) => {
             poison: bow.quality3.poison,
             backstab: bow.quality3.backstab,
             stagger: bow.quality3.stagger,
+            knockback: bow.quality4.knockback,
             parryBonus: bow.quality3.parryBonus,
             movement: bow.quality3.movement
           },
@@ -190,6 +201,7 @@ const updateBowData = async (req, res) => {
             poison: bow.quality4.poison,
             backstab: bow.quality4.backstab,
             stagger: bow.quality4.stagger,
+            knockback: bow.quality4.knockback,
             parryBonus: bow.quality4.parryBonus,
             movement: bow.quality4.movement
           }
