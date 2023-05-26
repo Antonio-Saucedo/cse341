@@ -3,40 +3,32 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAllArrowData = async (req, res) => {
   try {
-    await mongodb
-      .getDb()
-      .db('valheim')
-      .collection('arrows')
-      .find()
-      .toArray((err, result) => {
-        if (err) {
-          res.status(400).json({ message: err });
-        }
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(result);
-      });
+    const result = await mongodb.getDb().db('valheim').collection('arrows').find();
+    result.toArray().then((err, lists) => {
+      if (err) {
+        res.status(400).json({ message: err });
+      }
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists);
+    });
   } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+    res.status(500).json({ message: err });
   }
 };
 
 const getArrowDataById = async (req, res) => {
   try {
     const userId = new ObjectId(req.params.id);
-    await mongodb
-      .getDb()
-      .db('valheim')
-      .collection('arrows')
-      .find({ _id: userId })
-      .toArray((err, result) => {
-        if (err) {
-          res.status(400).json({ message: err });
-        }
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(result[0]);
-      });
+    const result = await mongodb.getDb().db('valheim').collection('arrows').find({ _id: userId });
+    result.toArray().then((err, lists) => {
+      if (err) {
+        res.status(400).json({ message: err });
+      }
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists[0]);
+    });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 };
