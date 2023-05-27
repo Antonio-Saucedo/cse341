@@ -2,240 +2,509 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAllPickaxeData = async (req, res) => {
-  const result = await mongodb.getDb().db('valheim').collection('pickaxe').find();
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists);
-  });
+  try {
+    const result = await mongodb.getDb().db('valheim').collection('pickaxe').find();
+    result.toArray().then((lists) => {
+      if (lists.message.length == 0) {
+        res.status(404).json('Pickaxe information was not found. Try again later.');
+      } else {
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(lists);
+      }
+    });
+  } catch (err) {
+    res.status(500).json('Pickaxe information was not found. Try again later.');
+  }
 };
 
 const getPickaxeDataById = async (req, res) => {
-  const userId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db('valheim').collection('pickaxe').find({ _id: userId });
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0]);
-  });
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+    } else {
+      const userId = new ObjectId(req.params.id);
+      const result = await mongodb
+        .getDb()
+        .db('valheim')
+        .collection('pickaxe')
+        .find({ _id: userId });
+      result.toArray().then((lists) => {
+        if (!lists[0]) {
+          res.status(404).json(`Pickaxe with id ${userId} was not found.`);
+        } else {
+          res.setHeader('Content-Type', 'application/json');
+          res.status(200).json(lists[0]);
+        }
+      });
+    }
+  } catch (err) {
+    res.status(500).json('Pickaxe information was not found. Try again later.');
+  }
 };
 
 const createPickaxeData = async (req, res) => {
-  const pickaxe = {
-    name: req.body.name,
-    description: req.body.description,
-    quality1: {
-      recipe: req.body.recipe,
-      weight: req.body.weight,
-      durability: req.body.durability,
-      pierce: req.body.pierce,
-      mining: req.body.mining,
-      backstab: req.body.backstab,
-      stagger: req.body.stagger,
-      knockback: req.body.knockback,
-      blockForce: req.body.blockForce,
-      parryBonus: req.body.parryBonus,
-      movement: req.body.movement
-    },
-    quality2: {
-      recipe: req.body.recipe,
-      weight: req.body.weight,
-      durability: req.body.durability,
-      pierce: req.body.pierce,
-      mining: req.body.mining,
-      backstab: req.body.backstab,
-      stagger: req.body.stagger,
-      knockback: req.body.knockback,
-      blockForce: req.body.blockForce,
-      parryBonus: req.body.parryBonus,
-      movement: req.body.movement
-    },
-    quality3: {
-      recipe: req.body.recipe,
-      weight: req.body.weight,
-      durability: req.body.durability,
-      pierce: req.body.pierce,
-      mining: req.body.mining,
-      backstab: req.body.backstab,
-      stagger: req.body.stagger,
-      knockback: req.body.knockback,
-      blockForce: req.body.blockForce,
-      parryBonus: req.body.parryBonus,
-      movement: req.body.movement
-    },
-    quality4: {
-      recipe: req.body.recipe,
-      weight: req.body.weight,
-      durability: req.body.durability,
-      pierce: req.body.pierce,
-      mining: req.body.mining,
-      backstab: req.body.backstab,
-      stagger: req.body.stagger,
-      knockback: req.body.knockback,
-      blockForce: req.body.blockForce,
-      parryBonus: req.body.parryBonus,
-      movement: req.body.movement
+  try {
+    let failMessage = '';
+    const pickaxe = {
+      name: req.body.name,
+      description: req.body.description,
+      quality1: {
+        recipe: req.body.recipe,
+        weight: req.body.weight,
+        durability: req.body.durability,
+        pierce: req.body.pierce,
+        mining: req.body.mining,
+        backstab: req.body.backstab,
+        stagger: req.body.stagger,
+        knockback: req.body.knockback,
+        blockForce: req.body.blockForce,
+        parryBonus: req.body.parryBonus,
+        movement: req.body.movement
+      },
+      quality2: {
+        recipe: req.body.recipe,
+        weight: req.body.weight,
+        durability: req.body.durability,
+        pierce: req.body.pierce,
+        mining: req.body.mining,
+        backstab: req.body.backstab,
+        stagger: req.body.stagger,
+        knockback: req.body.knockback,
+        blockForce: req.body.blockForce,
+        parryBonus: req.body.parryBonus,
+        movement: req.body.movement
+      },
+      quality3: {
+        recipe: req.body.recipe,
+        weight: req.body.weight,
+        durability: req.body.durability,
+        pierce: req.body.pierce,
+        mining: req.body.mining,
+        backstab: req.body.backstab,
+        stagger: req.body.stagger,
+        knockback: req.body.knockback,
+        blockForce: req.body.blockForce,
+        parryBonus: req.body.parryBonus,
+        movement: req.body.movement
+      },
+      quality4: {
+        recipe: req.body.recipe,
+        weight: req.body.weight,
+        durability: req.body.durability,
+        pierce: req.body.pierce,
+        mining: req.body.mining,
+        backstab: req.body.backstab,
+        stagger: req.body.stagger,
+        knockback: req.body.knockback,
+        blockForce: req.body.blockForce,
+        parryBonus: req.body.parryBonus,
+        movement: req.body.movement
+      }
+    };
+    if (typeof pickaxe.name != 'string') {
+      failMessage += 'To create Pickaxe data, enter a name string.\n';
     }
-  };
-  const responce = await mongodb.getDb().db('valheim').collection('pickaxe').insertOne(pickaxe);
-  if (responce.acknowledged) {
-    res.status(201).json(responce);
-  } else {
-    res
-      .status(500)
-      .json(
-        responce.error || 'Something went wrong while creating the pickaxe data. Try again later.'
-      );
+    if (typeof pickaxe.description != 'string') {
+      failMessage += 'To create Pickaxe data, enter a description string.\n';
+    }
+    if (typeof pickaxe.quality1.recipe != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality1 recipe string.\n';
+    }
+    if (typeof pickaxe.quality1.weight != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality1 numeric weight amount.\n';
+    }
+    if (typeof pickaxe.quality1.durability != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality1 numeric durability amount.\n';
+    }
+    if (typeof pickaxe.quality1.pierce != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality1 numeric pierce amount.\n';
+    }
+    if (typeof pickaxe.quality1.mining != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality1 numeric mining amount.\n';
+    }
+    if (typeof pickaxe.quality1.backstab != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality1 backstab string.\n';
+    }
+    if (typeof pickaxe.quality1.stagger != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality1 numeric stagger amount.\n';
+    }
+    if (typeof pickaxe.quality1.knockback != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality1 numeric knockback amount.\n';
+    }
+    if (typeof pickaxe.quality1.blockForce != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality1 numeric blockForce amount.\n';
+    }
+    if (typeof pickaxe.quality1.parryBonus != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality1 parryBonus string.\n';
+    }
+    if (typeof pickaxe.quality1.movement != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality1 movement string.\n';
+    }
+    if (typeof pickaxe.quality2.recipe != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality2 recipe string.\n';
+    }
+    if (typeof pickaxe.quality2.weight != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality2 numeric weight amount.\n';
+    }
+    if (typeof pickaxe.quality2.durability != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality2 numeric durability amount.\n';
+    }
+    if (typeof pickaxe.quality2.pierce != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality2 numeric pierce amount.\n';
+    }
+    if (typeof pickaxe.quality2.mining != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality2 numeric mining amount.\n';
+    }
+    if (typeof pickaxe.quality2.backstab != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality2 backstab string.\n';
+    }
+    if (typeof pickaxe.quality2.stagger != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality2 numeric stagger amount.\n';
+    }
+    if (typeof pickaxe.quality2.knockback != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality2 numeric knockback amount.\n';
+    }
+    if (typeof pickaxe.quality2.blockForce != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality2 numeric blockForce amount.\n';
+    }
+    if (typeof pickaxe.quality2.parryBonus != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality2 parryBonus string.\n';
+    }
+    if (typeof pickaxe.quality2.movement != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality2 movement string.\n';
+    }
+    if (typeof pickaxe.quality3.recipe != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality3 recipe string.\n';
+    }
+    if (typeof pickaxe.quality3.weight != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality3 numeric weight amount.\n';
+    }
+    if (typeof pickaxe.quality3.durability != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality3 numeric durability amount.\n';
+    }
+    if (typeof pickaxe.quality3.pierce != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality3 numeric pierce amount.\n';
+    }
+    if (typeof pickaxe.quality3.mining != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality3 numeric mining amount.\n';
+    }
+    if (typeof pickaxe.quality3.backstab != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality3 backstab string.\n';
+    }
+    if (typeof pickaxe.quality3.stagger != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality3 numeric stagger amount.\n';
+    }
+    if (typeof pickaxe.quality3.knockback != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality3 numeric knockback amount.\n';
+    }
+    if (typeof pickaxe.quality3.blockForce != 'number') {
+      failMessage += 'To create Pickaxe data, enter a quality3 numeric blockForce amount.\n';
+    }
+    if (typeof pickaxe.quality3.parryBonus != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality3 parryBonus string.\n';
+    }
+    if (typeof pickaxe.quality3.movement != 'string') {
+      failMessage += 'To create Pickaxe data, enter a quality3 movement string.';
+    }
+    if (failMessage != '') {
+      res.status(400);
+      res.send(failMessage);
+    } else {
+      const responce = await mongodb.getDb().db('valheim').collection('pickaxe').insertOne(pickaxe);
+      if (responce.acknowledged) {
+        res.status(201).json(responce);
+      } else {
+        res
+          .status(500)
+          .json(
+            responce.error ||
+              'Something went wrong while creating the pickaxe data. Try again later.'
+          );
+      }
+    }
+  } catch (err) {
+    res.status(500).json('Something went wrong while creating the pickaxe data. Try again later.');
   }
 };
 
 const updatePickaxeData = async (req, res) => {
-  const userId = new ObjectId(req.params.id);
-  const pickaxe = {
-    name: req.body.name,
-    description: req.body.description,
-    quality1: {
-      recipe: req.body.recipe,
-      weight: req.body.weight,
-      durability: req.body.durability,
-      pierce: req.body.pierce,
-      mining: req.body.mining,
-      backstab: req.body.backstab,
-      stagger: req.body.stagger,
-      knockback: req.body.knockback,
-      blockForce: req.body.blockForce,
-      parryBonus: req.body.parryBonus,
-      movement: req.body.movement
-    },
-    quality2: {
-      recipe: req.body.recipe,
-      weight: req.body.weight,
-      durability: req.body.durability,
-      pierce: req.body.pierce,
-      mining: req.body.mining,
-      backstab: req.body.backstab,
-      stagger: req.body.stagger,
-      knockback: req.body.knockback,
-      blockForce: req.body.blockForce,
-      parryBonus: req.body.parryBonus,
-      movement: req.body.movement
-    },
-    quality3: {
-      recipe: req.body.recipe,
-      weight: req.body.weight,
-      durability: req.body.durability,
-      pierce: req.body.pierce,
-      mining: req.body.mining,
-      backstab: req.body.backstab,
-      stagger: req.body.stagger,
-      knockback: req.body.knockback,
-      blockForce: req.body.blockForce,
-      parryBonus: req.body.parryBonus,
-      movement: req.body.movement
-    },
-    quality4: {
-      recipe: req.body.recipe,
-      weight: req.body.weight,
-      durability: req.body.durability,
-      pierce: req.body.pierce,
-      mining: req.body.mining,
-      backstab: req.body.backstab,
-      stagger: req.body.stagger,
-      knockback: req.body.knockback,
-      blockForce: req.body.blockForce,
-      parryBonus: req.body.parryBonus,
-      movement: req.body.movement
-    }
-  };
-  const responce = await mongodb
-    .getDb()
-    .db('valheim')
-    .collection('pickaxe')
-    .updateOne(
-      { _id: userId },
-      {
-        $set: {
-          name: pickaxe.name,
-          description: pickaxe.description,
-          quality1: {
-            recipe: pickaxe.quality1.recipe,
-            weight: pickaxe.quality1.weight,
-            durability: pickaxe.quality1.durability,
-            pierce: pickaxe.quality1.pierce,
-            mining: pickaxe.quality1.mining,
-            backstab: pickaxe.quality1.backstab,
-            stagger: pickaxe.quality1.stagger,
-            knockback: pickaxe.quality1.knockback,
-            blockForce: pickaxe.quality1.blockForce,
-            parryBonus: pickaxe.quality1.parryBonus,
-            movement: pickaxe.quality1.movement
-          },
-          quality2: {
-            recipe: pickaxe.quality2.recipe,
-            weight: pickaxe.quality2.weight,
-            durability: pickaxe.quality2.durability,
-            pierce: pickaxe.quality2.pierce,
-            mining: pickaxe.quality2.mining,
-            backstab: pickaxe.quality2.backstab,
-            stagger: pickaxe.quality2.stagger,
-            knockback: pickaxe.quality2.knockback,
-            blockForce: pickaxe.quality2.blockForce,
-            parryBonus: pickaxe.quality2.parryBonus,
-            movement: pickaxe.quality2.movement
-          },
-          quality3: {
-            recipe: pickaxe.quality3.recipe,
-            weight: pickaxe.quality3.weight,
-            durability: pickaxe.quality3.durability,
-            pierce: pickaxe.quality3.pierce,
-            mining: pickaxe.quality3.mining,
-            backstab: pickaxe.quality3.backstab,
-            stagger: pickaxe.quality3.stagger,
-            knockback: pickaxe.quality3.knockback,
-            blockForce: pickaxe.quality3.blockForce,
-            parryBonus: pickaxe.quality3.parryBonus,
-            movement: pickaxe.quality3.movement
-          },
-          quality4: {
-            recipe: pickaxe.quality4.recipe,
-            weight: pickaxe.quality4.weight,
-            durability: pickaxe.quality4.durability,
-            pierce: pickaxe.quality4.pierce,
-            mining: pickaxe.quality4.mining,
-            backstab: pickaxe.quality4.backstab,
-            stagger: pickaxe.quality4.stagger,
-            knockback: pickaxe.quality4.knockback,
-            blockForce: pickaxe.quality4.blockForce,
-            parryBonus: pickaxe.quality4.parryBonus,
-            movement: pickaxe.quality4.movement
-          }
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+    } else {
+      let failMessage = '';
+      const pickaxe = {
+        name: req.body.name,
+        description: req.body.description,
+        quality1: {
+          recipe: req.body.recipe,
+          weight: req.body.weight,
+          durability: req.body.durability,
+          pierce: req.body.pierce,
+          mining: req.body.mining,
+          backstab: req.body.backstab,
+          stagger: req.body.stagger,
+          knockback: req.body.knockback,
+          blockForce: req.body.blockForce,
+          parryBonus: req.body.parryBonus,
+          movement: req.body.movement
+        },
+        quality2: {
+          recipe: req.body.recipe,
+          weight: req.body.weight,
+          durability: req.body.durability,
+          pierce: req.body.pierce,
+          mining: req.body.mining,
+          backstab: req.body.backstab,
+          stagger: req.body.stagger,
+          knockback: req.body.knockback,
+          blockForce: req.body.blockForce,
+          parryBonus: req.body.parryBonus,
+          movement: req.body.movement
+        },
+        quality3: {
+          recipe: req.body.recipe,
+          weight: req.body.weight,
+          durability: req.body.durability,
+          pierce: req.body.pierce,
+          mining: req.body.mining,
+          backstab: req.body.backstab,
+          stagger: req.body.stagger,
+          knockback: req.body.knockback,
+          blockForce: req.body.blockForce,
+          parryBonus: req.body.parryBonus,
+          movement: req.body.movement
+        },
+        quality4: {
+          recipe: req.body.recipe,
+          weight: req.body.weight,
+          durability: req.body.durability,
+          pierce: req.body.pierce,
+          mining: req.body.mining,
+          backstab: req.body.backstab,
+          stagger: req.body.stagger,
+          knockback: req.body.knockback,
+          blockForce: req.body.blockForce,
+          parryBonus: req.body.parryBonus,
+          movement: req.body.movement
+        }
+      };
+      if (typeof pickaxe.name != 'string') {
+        failMessage += 'To update Pickaxe data, enter a name string.\n';
+      }
+      if (typeof pickaxe.description != 'string') {
+        failMessage += 'To update Pickaxe data, enter a description string.\n';
+      }
+      if (typeof pickaxe.quality1.recipe != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality1 recipe string.\n';
+      }
+      if (typeof pickaxe.quality1.weight != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality1 numeric weight amount.\n';
+      }
+      if (typeof pickaxe.quality1.durability != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality1 numeric durability amount.\n';
+      }
+      if (typeof pickaxe.quality1.pierce != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality1 numeric pierce amount.\n';
+      }
+      if (typeof pickaxe.quality1.mining != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality1 numeric mining amount.\n';
+      }
+      if (typeof pickaxe.quality1.backstab != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality1 backstab string.\n';
+      }
+      if (typeof pickaxe.quality1.stagger != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality1 numeric stagger amount.\n';
+      }
+      if (typeof pickaxe.quality1.knockback != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality1 numeric knockback amount.\n';
+      }
+      if (typeof pickaxe.quality1.blockForce != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality1 numeric blockForce amount.\n';
+      }
+      if (typeof pickaxe.quality1.parryBonus != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality1 parryBonus string.\n';
+      }
+      if (typeof pickaxe.quality1.movement != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality1 movement string.\n';
+      }
+      if (typeof pickaxe.quality2.recipe != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality2 recipe string.\n';
+      }
+      if (typeof pickaxe.quality2.weight != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality2 numeric weight amount.\n';
+      }
+      if (typeof pickaxe.quality2.durability != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality2 numeric durability amount.\n';
+      }
+      if (typeof pickaxe.quality2.pierce != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality2 numeric pierce amount.\n';
+      }
+      if (typeof pickaxe.quality2.mining != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality2 numeric mining amount.\n';
+      }
+      if (typeof pickaxe.quality2.backstab != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality2 backstab string.\n';
+      }
+      if (typeof pickaxe.quality2.stagger != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality2 numeric stagger amount.\n';
+      }
+      if (typeof pickaxe.quality2.knockback != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality2 numeric knockback amount.\n';
+      }
+      if (typeof pickaxe.quality2.blockForce != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality2 numeric blockForce amount.\n';
+      }
+      if (typeof pickaxe.quality2.parryBonus != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality2 parryBonus string.\n';
+      }
+      if (typeof pickaxe.quality2.movement != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality2 movement string.\n';
+      }
+      if (typeof pickaxe.quality3.recipe != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality3 recipe string.\n';
+      }
+      if (typeof pickaxe.quality3.weight != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality3 numeric weight amount.\n';
+      }
+      if (typeof pickaxe.quality3.durability != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality3 numeric durability amount.\n';
+      }
+      if (typeof pickaxe.quality3.pierce != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality3 numeric pierce amount.\n';
+      }
+      if (typeof pickaxe.quality3.mining != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality3 numeric mining amount.\n';
+      }
+      if (typeof pickaxe.quality3.backstab != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality3 backstab string.\n';
+      }
+      if (typeof pickaxe.quality3.stagger != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality3 numeric stagger amount.\n';
+      }
+      if (typeof pickaxe.quality3.knockback != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality3 numeric knockback amount.\n';
+      }
+      if (typeof pickaxe.quality3.blockForce != 'number') {
+        failMessage += 'To update Pickaxe data, enter a quality3 numeric blockForce amount.\n';
+      }
+      if (typeof pickaxe.quality3.parryBonus != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality3 parryBonus string.\n';
+      }
+      if (typeof pickaxe.quality3.movement != 'string') {
+        failMessage += 'To update Pickaxe data, enter a quality3 movement string.';
+      }
+      if (failMessage != '') {
+        res.status(400);
+        res.send(failMessage);
+      } else {
+        const userId = new ObjectId(req.params.id);
+        const responce = await mongodb
+          .getDb()
+          .db('valheim')
+          .collection('pickaxe')
+          .updateOne(
+            { _id: userId },
+            {
+              $set: {
+                name: pickaxe.name,
+                description: pickaxe.description,
+                quality1: {
+                  recipe: pickaxe.quality1.recipe,
+                  weight: pickaxe.quality1.weight,
+                  durability: pickaxe.quality1.durability,
+                  pierce: pickaxe.quality1.pierce,
+                  mining: pickaxe.quality1.mining,
+                  backstab: pickaxe.quality1.backstab,
+                  stagger: pickaxe.quality1.stagger,
+                  knockback: pickaxe.quality1.knockback,
+                  blockForce: pickaxe.quality1.blockForce,
+                  parryBonus: pickaxe.quality1.parryBonus,
+                  movement: pickaxe.quality1.movement
+                },
+                quality2: {
+                  recipe: pickaxe.quality2.recipe,
+                  weight: pickaxe.quality2.weight,
+                  durability: pickaxe.quality2.durability,
+                  pierce: pickaxe.quality2.pierce,
+                  mining: pickaxe.quality2.mining,
+                  backstab: pickaxe.quality2.backstab,
+                  stagger: pickaxe.quality2.stagger,
+                  knockback: pickaxe.quality2.knockback,
+                  blockForce: pickaxe.quality2.blockForce,
+                  parryBonus: pickaxe.quality2.parryBonus,
+                  movement: pickaxe.quality2.movement
+                },
+                quality3: {
+                  recipe: pickaxe.quality3.recipe,
+                  weight: pickaxe.quality3.weight,
+                  durability: pickaxe.quality3.durability,
+                  pierce: pickaxe.quality3.pierce,
+                  mining: pickaxe.quality3.mining,
+                  backstab: pickaxe.quality3.backstab,
+                  stagger: pickaxe.quality3.stagger,
+                  knockback: pickaxe.quality3.knockback,
+                  blockForce: pickaxe.quality3.blockForce,
+                  parryBonus: pickaxe.quality3.parryBonus,
+                  movement: pickaxe.quality3.movement
+                },
+                quality4: {
+                  recipe: pickaxe.quality4.recipe,
+                  weight: pickaxe.quality4.weight,
+                  durability: pickaxe.quality4.durability,
+                  pierce: pickaxe.quality4.pierce,
+                  mining: pickaxe.quality4.mining,
+                  backstab: pickaxe.quality4.backstab,
+                  stagger: pickaxe.quality4.stagger,
+                  knockback: pickaxe.quality4.knockback,
+                  blockForce: pickaxe.quality4.blockForce,
+                  parryBonus: pickaxe.quality4.parryBonus,
+                  movement: pickaxe.quality4.movement
+                }
+              }
+            }
+          );
+        if (responce.modifiedCount > 0) {
+          res.status(204).send();
+        } else {
+          res
+            .status(500)
+            .json(
+              responce.error ||
+                'Something went wrong while updating the pickaxe data. Try again later.'
+            );
         }
       }
-    );
-  if (responce.modifiedCount > 0) {
-    res.status(204).send();
-  } else {
-    res
-      .status(500)
-      .json(
-        responce.error || 'Something went wrong while updating the pickaxe data. Try again later.'
-      );
+    }
+  } catch (err) {
+    res.status(500).json(err);
   }
 };
 
 const deletePickaxeData = async (req, res) => {
-  const userId = new ObjectId(req.params.id);
-  const responce = await mongodb
-    .getDb()
-    .db('valheim')
-    .collection('pickaxe')
-    .deleteOne({ _id: userId }, true);
-  if (responce.deletedCount > 0) {
-    res.status(200).send();
-  } else {
-    res
-      .status(500)
-      .json(
-        responce.error || 'Something went wrong while deleting the pickaxe data. Try again later.'
-      );
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+    } else {
+      const userId = new ObjectId(req.params.id);
+      const responce = await mongodb
+        .getDb()
+        .db('valheim')
+        .collection('pickaxe')
+        .deleteOne({ _id: userId }, true);
+      if (responce.deletedCount > 0) {
+        res.status(200).send(`Pickaxe data with id ${userId} was deleted sucessfully.`);
+      } else {
+        res
+          .status(500)
+          .json(
+            responce.error ||
+              'Something went wrong while deleting the pickaxe data. Try again later.'
+          );
+      }
+    }
+  } catch (err) {
+    res.status(500).json(err);
   }
 };
 

@@ -9,7 +9,7 @@ const doc = {
   host: 'valheim-v1-data.onrender.com',
   schemes: ['https'],
   tags: [
-    { name: 'arrows', description: 'Get information about arrows' },
+    { name: 'arrows', description: 'Get information about arrows', externalDocs: '/arrows' },
     { name: 'axes', description: 'Get information about axes' },
     { name: 'bows', description: 'Get information about bows' },
     { name: 'clubs', description: 'Get information about clubs' },
