@@ -1,7 +1,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllArrowData = async (req, res) => {
+const getAllArrowData = async (req, res, next) => {
   try {
     const result = await mongodb.getDb().db('valheim').collection('arrows').find();
     result.toArray().then((lists) => {
@@ -17,7 +17,7 @@ const getAllArrowData = async (req, res) => {
   }
 };
 
-const getArrowDataById = async (req, res) => {
+const getArrowDataById = async (req, res, next) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Id must be alphanumeric, 24 characters long.');
@@ -38,7 +38,7 @@ const getArrowDataById = async (req, res) => {
   }
 };
 
-const createArrowData = async (req, res) => {
+const createArrowData = async (req, res, next) => {
   try {
     let failMessage = '';
     const arrow = {
@@ -112,7 +112,7 @@ const createArrowData = async (req, res) => {
   }
 };
 
-const updateArrowData = async (req, res) => {
+const updateArrowData = async (req, res, next) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Id must be alphanumeric, 24 characters long.');
@@ -213,7 +213,7 @@ const updateArrowData = async (req, res) => {
   }
 };
 
-const deleteArrowData = async (req, res) => {
+const deleteArrowData = async (req, res, next) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Id must be alphanumeric, 24 characters long.');
