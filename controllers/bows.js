@@ -5,7 +5,7 @@ const getAllBowData = async (req, res) => {
   try {
     const result = await mongodb.getDb().db('valheim').collection('bows').find();
     result.toArray().then((lists) => {
-      if (lists.message.length == 0) {
+      if (!lists[0]) {
         res.status(404).json('Bow information was not found. Try again later.');
       } else {
         res.setHeader('Content-Type', 'application/json');

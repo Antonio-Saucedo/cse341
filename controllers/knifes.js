@@ -5,7 +5,7 @@ const getAllKnifeData = async (req, res) => {
   try {
     const result = await mongodb.getDb().db('valheim').collection('knifes').find();
     result.toArray().then((lists) => {
-      if (lists.message.length == 0) {
+      if (!lists[0]) {
         res.status(404).json('Knife information was not found. Try again later.');
       } else {
         res.setHeader('Content-Type', 'application/json');
