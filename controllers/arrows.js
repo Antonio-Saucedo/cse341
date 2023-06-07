@@ -40,83 +40,7 @@ const getArrowDataById = async (req, res) => {
 
 const createArrowData = async (req, res) => {
   try {
-    let failMessage = '';
-    const arrow = {
-      name: req.body.name,
-      description: req.body.description,
-      recipe: req.body.recipe,
-      quantity: req.body.quantity,
-      weight: req.body.weight,
-      pierce: req.body.pierce,
-      fire: req.body.fire,
-      spirit: req.body.spirit,
-      poison: req.body.poison,
-      frost: req.body.frost,
-      stagger: req.body.stagger,
-      knockback: req.body.knockback
-    };
-    if (typeof arrow.name != 'string') {
-      failMessage += 'To create Arrow data, enter a name string.\n';
-    }
-    if (typeof arrow.description != 'string') {
-      failMessage += 'To create Arrow data, enter a description string.\n';
-    }
-    if (typeof arrow.recipe != 'string') {
-      failMessage += 'To create Arrow data, enter a recipe string.\n';
-    }
-    if (typeof arrow.quantity != 'number') {
-      failMessage += 'To create Arrow data, enter a numeric quantity amount.\n';
-    }
-    if (typeof arrow.weight != 'number') {
-      failMessage += 'To create Arrow data, enter a numeric weight amount.\n';
-    }
-    if (typeof arrow.pierce != 'number') {
-      failMessage += 'To create Arrow data, enter a numeric pierce amount.\n';
-    }
-    if (typeof arrow.fire != 'number') {
-      failMessage += 'To create Arrow data, enter a numeric fire amount.\n';
-    }
-    if (typeof arrow.spirit != 'number') {
-      failMessage += 'To create Arrow data, enter a numeric spirit amount.\n';
-    }
-    if (typeof arrow.poison != 'number') {
-      failMessage += 'To create Arrow data, enter a numeric poison amount.\n';
-    }
-    if (typeof arrow.frost != 'number') {
-      failMessage += 'To create Arrow data, enter a numeric frost amount.\n';
-    }
-    if (typeof arrow.stagger != 'number') {
-      failMessage += 'To create Arrow data, enter a numeric stagger amount.\n';
-    }
-    if (typeof arrow.knockback != 'number') {
-      failMessage += 'To create Arrow data, enter a numeric knockback amount.';
-    }
-    if (failMessage != '') {
-      res.status(400);
-      res.send(failMessage);
-    } else {
-      const responce = await mongodb.getDb().db('valheim').collection('arrows').insertOne(arrow);
-      if (responce.acknowledged) {
-        res.status(201).json(responce);
-      } else {
-        res
-          .status(500)
-          .json(
-            responce.error ||
-              'Something went wrong while creating the arrow data. Try again later.'
-          );
-      }
-    }
-  } catch (err) {
-    res.status(500).json('Something went wrong while creating the arrow data. Try again later.');
-  }
-};
-
-const updateArrowData = async (req, res) => {
-  try {
-    if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Id must be alphanumeric, 24 characters long.');
-    } else {
+    if (req.oidc.isAuthenticated()) {
       let failMessage = '';
       const arrow = {
         name: req.body.name,
@@ -133,80 +57,164 @@ const updateArrowData = async (req, res) => {
         knockback: req.body.knockback
       };
       if (typeof arrow.name != 'string') {
-        failMessage += 'To update Arrow data, enter a name string.\n';
+        failMessage += 'To create Arrow data, enter a name string.\n';
       }
       if (typeof arrow.description != 'string') {
-        failMessage += 'To update Arrow data, enter a description string.\n';
+        failMessage += 'To create Arrow data, enter a description string.\n';
       }
       if (typeof arrow.recipe != 'string') {
-        failMessage += 'To update Arrow data, enter a recipe string.\n';
+        failMessage += 'To create Arrow data, enter a recipe string.\n';
       }
       if (typeof arrow.quantity != 'number') {
-        failMessage += 'To update Arrow data, enter a numeric quantity amount.\n';
+        failMessage += 'To create Arrow data, enter a numeric quantity amount.\n';
       }
       if (typeof arrow.weight != 'number') {
-        failMessage += 'To update Arrow data, enter a numeric weight amount.\n';
+        failMessage += 'To create Arrow data, enter a numeric weight amount.\n';
       }
       if (typeof arrow.pierce != 'number') {
-        failMessage += 'To update Arrow data, enter a numeric pierce amount.\n';
+        failMessage += 'To create Arrow data, enter a numeric pierce amount.\n';
       }
       if (typeof arrow.fire != 'number') {
-        failMessage += 'To update Arrow data, enter a numeric fire amount.\n';
+        failMessage += 'To create Arrow data, enter a numeric fire amount.\n';
       }
       if (typeof arrow.spirit != 'number') {
-        failMessage += 'To update Arrow data, enter a numeric spirit amount.\n';
+        failMessage += 'To create Arrow data, enter a numeric spirit amount.\n';
       }
       if (typeof arrow.poison != 'number') {
-        failMessage += 'To update Arrow data, enter a numeric poison amount.\n';
+        failMessage += 'To create Arrow data, enter a numeric poison amount.\n';
       }
       if (typeof arrow.frost != 'number') {
-        failMessage += 'To update Arrow data, enter a numeric frost amount.\n';
+        failMessage += 'To create Arrow data, enter a numeric frost amount.\n';
       }
       if (typeof arrow.stagger != 'number') {
-        failMessage += 'To update Arrow data, enter a numeric stagger amount.\n';
+        failMessage += 'To create Arrow data, enter a numeric stagger amount.\n';
       }
       if (typeof arrow.knockback != 'number') {
-        failMessage += 'To update Arrow data, enter a numeric knockback amount.';
+        failMessage += 'To create Arrow data, enter a numeric knockback amount.';
       }
       if (failMessage != '') {
         res.status(400);
         res.send(failMessage);
       } else {
-        const userId = new ObjectId(req.params.id);
-        const responce = await mongodb
-          .getDb()
-          .db('valheim')
-          .collection('arrows')
-          .updateOne(
-            { _id: userId },
-            {
-              $set: {
-                name: arrow.name,
-                description: arrow.description,
-                recipe: arrow.recipe,
-                quantity: arrow.quantity,
-                weight: arrow.weight,
-                pierce: arrow.pierce,
-                fire: arrow.fire,
-                spirit: arrow.spirit,
-                poison: arrow.poison,
-                frost: arrow.frost,
-                stagger: arrow.stagger,
-                knockback: arrow.knockback
-              }
-            }
-          );
-        if (responce.modifiedCount > 0) {
-          res.status(204).send();
+        const responce = await mongodb.getDb().db('valheim').collection('arrows').insertOne(arrow);
+        if (responce.acknowledged) {
+          res.status(201).json(responce);
         } else {
           res
             .status(500)
             .json(
               responce.error ||
-                'Something went wrong while updating the arrow data. Try again later.'
+                'Something went wrong while creating the arrow data. Try again later.'
             );
         }
       }
+    } else {
+      res.status(401).json('You must login to run this request.');
+    }
+  } catch (err) {
+    res.status(500).json('Something went wrong while creating the arrow data. Try again later.');
+  }
+};
+
+const updateArrowData = async (req, res) => {
+  try {
+    if (req.oidc.isAuthenticated()) {
+      if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+      } else {
+        let failMessage = '';
+        const arrow = {
+          name: req.body.name,
+          description: req.body.description,
+          recipe: req.body.recipe,
+          quantity: req.body.quantity,
+          weight: req.body.weight,
+          pierce: req.body.pierce,
+          fire: req.body.fire,
+          spirit: req.body.spirit,
+          poison: req.body.poison,
+          frost: req.body.frost,
+          stagger: req.body.stagger,
+          knockback: req.body.knockback
+        };
+        if (typeof arrow.name != 'string') {
+          failMessage += 'To update Arrow data, enter a name string.\n';
+        }
+        if (typeof arrow.description != 'string') {
+          failMessage += 'To update Arrow data, enter a description string.\n';
+        }
+        if (typeof arrow.recipe != 'string') {
+          failMessage += 'To update Arrow data, enter a recipe string.\n';
+        }
+        if (typeof arrow.quantity != 'number') {
+          failMessage += 'To update Arrow data, enter a numeric quantity amount.\n';
+        }
+        if (typeof arrow.weight != 'number') {
+          failMessage += 'To update Arrow data, enter a numeric weight amount.\n';
+        }
+        if (typeof arrow.pierce != 'number') {
+          failMessage += 'To update Arrow data, enter a numeric pierce amount.\n';
+        }
+        if (typeof arrow.fire != 'number') {
+          failMessage += 'To update Arrow data, enter a numeric fire amount.\n';
+        }
+        if (typeof arrow.spirit != 'number') {
+          failMessage += 'To update Arrow data, enter a numeric spirit amount.\n';
+        }
+        if (typeof arrow.poison != 'number') {
+          failMessage += 'To update Arrow data, enter a numeric poison amount.\n';
+        }
+        if (typeof arrow.frost != 'number') {
+          failMessage += 'To update Arrow data, enter a numeric frost amount.\n';
+        }
+        if (typeof arrow.stagger != 'number') {
+          failMessage += 'To update Arrow data, enter a numeric stagger amount.\n';
+        }
+        if (typeof arrow.knockback != 'number') {
+          failMessage += 'To update Arrow data, enter a numeric knockback amount.';
+        }
+        if (failMessage != '') {
+          res.status(400);
+          res.send(failMessage);
+        } else {
+          const userId = new ObjectId(req.params.id);
+          const responce = await mongodb
+            .getDb()
+            .db('valheim')
+            .collection('arrows')
+            .updateOne(
+              { _id: userId },
+              {
+                $set: {
+                  name: arrow.name,
+                  description: arrow.description,
+                  recipe: arrow.recipe,
+                  quantity: arrow.quantity,
+                  weight: arrow.weight,
+                  pierce: arrow.pierce,
+                  fire: arrow.fire,
+                  spirit: arrow.spirit,
+                  poison: arrow.poison,
+                  frost: arrow.frost,
+                  stagger: arrow.stagger,
+                  knockback: arrow.knockback
+                }
+              }
+            );
+          if (responce.modifiedCount > 0) {
+            res.status(204).send();
+          } else {
+            res
+              .status(500)
+              .json(
+                responce.error ||
+                  'Something went wrong while updating the arrow data. Try again later.'
+              );
+          }
+        }
+      }
+    } else {
+      res.status(401).json('You must login to run this request.');
     }
   } catch (err) {
     res.status(500).json(err);
@@ -215,24 +223,29 @@ const updateArrowData = async (req, res) => {
 
 const deleteArrowData = async (req, res) => {
   try {
-    if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Id must be alphanumeric, 24 characters long.');
-    } else {
-      const userId = new ObjectId(req.params.id);
-      const responce = await mongodb
-        .getDb()
-        .db('valheim')
-        .collection('arrows')
-        .deleteOne({ _id: userId }, true);
-      if (responce.deletedCount > 0) {
-        res.status(200).send(`Arrow data with id ${userId} was deleted sucessfully.`);
+    if (req.oidc.isAuthenticated()) {
+      if (!ObjectId.isValid(req.params.id)) {
+        res.status(400).json('Id must be alphanumeric, 24 characters long.');
       } else {
-        res
-          .status(500)
-          .json(
-            responce.error || 'Something went wrong while deleting the arrow data. Try again later.'
-          );
+        const userId = new ObjectId(req.params.id);
+        const responce = await mongodb
+          .getDb()
+          .db('valheim')
+          .collection('arrows')
+          .deleteOne({ _id: userId }, true);
+        if (responce.deletedCount > 0) {
+          res.status(200).send(`Arrow data with id ${userId} was deleted sucessfully.`);
+        } else {
+          res
+            .status(500)
+            .json(
+              responce.error ||
+                'Something went wrong while deleting the arrow data. Try again later.'
+            );
+        }
       }
+    } else {
+      res.status(401).json('You must login to run this request.');
     }
   } catch (err) {
     res.status(500).json(err);

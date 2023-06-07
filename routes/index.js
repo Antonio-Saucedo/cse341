@@ -1,32 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-// OAuth
-const { auth, requiresAuth } = require('express-openid-connect');
-require('dotenv').config();
-
-const config = {
-  authRequired: false,
-  auth0Logout: true,
-  secret: process.env.SECRET,
-  baseURL: process.env.BASE_URL,
-  clientID: process.env.CLIENT_ID,
-  issuerBaseURL: process.env.ISSUER_BASE_URL
-};
-
-// auth router attaches /login, /logout, and /callback routes to the baseURL
-router.use(auth(config));
-
 // req.isAuthenticated is provided from the auth router
 router.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+  console.log(req.oidc.isAuthenticated());
+  res.render('index', {
+    title: 'Valheim Info API',
+    isAuthenticated: req.oidc.isAuthenticated()
+  });
 });
 
-router.get('/profile', requiresAuth(), (req, res) => {
-    res.send(JSON.stringify(req.oidc.user));
-  });
-
-router.use('/', requiresAuth(), require('./swagger'));
-router.use('/', requiresAuth(), require('./valheim'));
+router.use('/', require('./swagger'));
+router.use('/', require('./valheim'));
 
 module.exports = router;
