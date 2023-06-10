@@ -1,10 +1,10 @@
-const mongodb = require('../db/connect');
+import { getDb } from '../db/connect';
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllAxeData = async (req, res) => {
+export const getAllAxeData = async (req: any, res: any) => {
   try {
-    const result = await mongodb.getDb().db('valheim').collection('axes').find();
-    result.toArray().then((lists) => {
+    const result = await getDb().db('valheim').collection('axes').find();
+    result.toArray().then((lists: any) => {
       if (!lists[0]) {
         res.status(404).json('Axe information was not found. Try again later.');
       } else {
@@ -17,16 +17,16 @@ const getAllAxeData = async (req, res) => {
   }
 };
 
-const getAxeDataById = async (req, res) => {
+export const getAxeDataById = async (req: any, res: any) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+      res.status(400).json('ID must be alphanumeric, 24 characters long.');
     } else {
       const userId = new ObjectId(req.params.id);
-      const result = await mongodb.getDb().db('valheim').collection('axes').find({ _id: userId });
-      result.toArray().then((lists) => {
+      const result = await getDb().db('valheim').collection('axes').find({ _id: userId });
+      result.toArray().then((lists: any) => {
         if (!lists[0]) {
-          res.status(404).json(`Axe with id ${userId} was not found.`);
+          res.status(404).json(`Axe with ID ${userId} was not found.`);
         } else {
           res.setHeader('Content-Type', 'application/json');
           res.status(200).json(lists[0]);
@@ -38,7 +38,7 @@ const getAxeDataById = async (req, res) => {
   }
 };
 
-const createAxeData = async (req, res) => {
+export const createAxeData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       let failMessage = '';
@@ -233,7 +233,7 @@ const createAxeData = async (req, res) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await mongodb.getDb().db('valheim').collection('axes').insertOne(axe);
+        const responce = await getDb().db('valheim').collection('axes').insertOne(axe);
         if (responce.acknowledged) {
           res.status(201).json(responce);
         } else {
@@ -252,11 +252,11 @@ const createAxeData = async (req, res) => {
   }
 };
 
-const updateAxeData = async (req, res) => {
+export const updateAxeData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         let failMessage = '';
         const axe = {
@@ -451,8 +451,7 @@ const updateAxeData = async (req, res) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await mongodb
-            .getDb()
+          const responce = await getDb()
             .db('valheim')
             .collection('axes')
             .updateOne(
@@ -544,20 +543,19 @@ const updateAxeData = async (req, res) => {
   }
 };
 
-const deleteAxeData = async (req, res) => {
+export const deleteAxeData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await mongodb
-          .getDb()
+        const responce = await getDb()
           .db('valheim')
           .collection('axes')
           .deleteOne({ _id: userId }, true);
         if (responce.deletedCount > 0) {
-          res.status(200).send(`Axe data with id ${userId} was deleted sucessfully.`);
+          res.status(200).send(`Axe data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
@@ -573,5 +571,3 @@ const deleteAxeData = async (req, res) => {
     res.status(500).json(err);
   }
 };
-
-module.exports = { getAllAxeData, getAxeDataById, createAxeData, updateAxeData, deleteAxeData };

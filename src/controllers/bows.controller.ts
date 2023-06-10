@@ -1,10 +1,10 @@
-const mongodb = require('../db/connect');
+import { getDb } from '../db/connect';
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllBowData = async (req, res) => {
+export const getAllBowData = async (req: any, res: any) => {
   try {
-    const result = await mongodb.getDb().db('valheim').collection('bows').find();
-    result.toArray().then((lists) => {
+    const result = await getDb().db('valheim').collection('bows').find();
+    result.toArray().then((lists: any) => {
       if (!lists[0]) {
         res.status(404).json('Bow information was not found. Try again later.');
       } else {
@@ -17,16 +17,16 @@ const getAllBowData = async (req, res) => {
   }
 };
 
-const getBowDataById = async (req, res) => {
+export const getBowDataById = async (req: any, res: any) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+      res.status(400).json('ID must be alphanumeric, 24 characters long.');
     } else {
       const userId = new ObjectId(req.params.id);
-      const result = await mongodb.getDb().db('valheim').collection('bows').find({ _id: userId });
-      result.toArray().then((lists) => {
+      const result = await getDb().db('valheim').collection('bows').find({ _id: userId });
+      result.toArray().then((lists: any) => {
         if (!lists[0]) {
-          res.status(404).json(`Bow with id ${userId} was not found.`);
+          res.status(404).json(`Bow with ID ${userId} was not found.`);
         } else {
           res.setHeader('Content-Type', 'application/json');
           res.status(200).json(lists[0]);
@@ -38,7 +38,7 @@ const getBowDataById = async (req, res) => {
   }
 };
 
-const createBowData = async (req, res) => {
+export const createBowData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       let failMessage = '';
@@ -207,7 +207,7 @@ const createBowData = async (req, res) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await mongodb.getDb().db('valheim').collection('bows').insertOne(bow);
+        const responce = await getDb().db('valheim').collection('bows').insertOne(bow);
         if (responce.acknowledged) {
           res.status(201).json(responce);
         } else {
@@ -226,11 +226,11 @@ const createBowData = async (req, res) => {
   }
 };
 
-const updateBowData = async (req, res) => {
+export const updateBowData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         let failMessage = '';
         const bow = {
@@ -399,8 +399,7 @@ const updateBowData = async (req, res) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await mongodb
-            .getDb()
+          const responce = await getDb()
             .db('valheim')
             .collection('bows')
             .updateOne(
@@ -484,20 +483,19 @@ const updateBowData = async (req, res) => {
   }
 };
 
-const deleteBowData = async (req, res) => {
+export const deleteBowData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await mongodb
-          .getDb()
+        const responce = await getDb()
           .db('valheim')
           .collection('bows')
           .deleteOne({ _id: userId }, true);
         if (responce.deletedCount > 0) {
-          res.status(200).send(`Bow data with id ${userId} was deleted sucessfully.`);
+          res.status(200).send(`Bow data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
@@ -513,5 +511,3 @@ const deleteBowData = async (req, res) => {
     res.status(500).json(err);
   }
 };
-
-module.exports = { getAllBowData, getBowDataById, createBowData, updateBowData, deleteBowData };

@@ -1,10 +1,10 @@
-const mongodb = require('../db/connect');
+import { getDb } from '../db/connect';
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllArrowData = async (req, res) => {
+export const getAllArrowData = async (req: any, res: any) => {
   try {
-    const result = await mongodb.getDb().db('valheim').collection('arrows').find();
-    result.toArray().then((lists) => {
+    const result = await getDb().db('valheim').collection('arrows').find();
+    result.toArray().then((lists: any) => {
       if (!lists[0]) {
         res.status(404).json('Arrow information was not found. Try again later.');
       } else {
@@ -17,16 +17,16 @@ const getAllArrowData = async (req, res) => {
   }
 };
 
-const getArrowDataById = async (req, res) => {
+export const getArrowDataById = async (req: any, res: any) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+      res.status(400).json('ID must be alphanumeric, 24 characters long.');
     } else {
       const userId = new ObjectId(req.params.id);
-      const result = await mongodb.getDb().db('valheim').collection('arrows').find({ _id: userId });
-      result.toArray().then((lists) => {
+      const result = await getDb().db('valheim').collection('arrows').find({ _id: userId });
+      result.toArray().then((lists: any) => {
         if (!lists[0]) {
-          res.status(404).json(`Arrow with id ${userId} was not found.`);
+          res.status(404).json(`Arrow with ID ${userId} was not found.`);
         } else {
           res.setHeader('Content-Type', 'application/json');
           res.status(200).json(lists[0]);
@@ -38,7 +38,7 @@ const getArrowDataById = async (req, res) => {
   }
 };
 
-const createArrowData = async (req, res) => {
+export const createArrowData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       let failMessage = '';
@@ -96,7 +96,7 @@ const createArrowData = async (req, res) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await mongodb.getDb().db('valheim').collection('arrows').insertOne(arrow);
+        const responce = await getDb().db('valheim').collection('arrows').insertOne(arrow);
         if (responce.acknowledged) {
           res.status(201).json(responce);
         } else {
@@ -116,11 +116,11 @@ const createArrowData = async (req, res) => {
   }
 };
 
-const updateArrowData = async (req, res) => {
+export const updateArrowData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         let failMessage = '';
         const arrow = {
@@ -178,8 +178,7 @@ const updateArrowData = async (req, res) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await mongodb
-            .getDb()
+          const responce = await getDb()
             .db('valheim')
             .collection('arrows')
             .updateOne(
@@ -221,20 +220,19 @@ const updateArrowData = async (req, res) => {
   }
 };
 
-const deleteArrowData = async (req, res) => {
+export const deleteArrowData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await mongodb
-          .getDb()
+        const responce = await getDb()
           .db('valheim')
           .collection('arrows')
           .deleteOne({ _id: userId }, true);
         if (responce.deletedCount > 0) {
-          res.status(200).send(`Arrow data with id ${userId} was deleted sucessfully.`);
+          res.status(200).send(`Arrow data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
@@ -250,12 +248,4 @@ const deleteArrowData = async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-};
-
-module.exports = {
-  getAllArrowData,
-  getArrowDataById,
-  createArrowData,
-  updateArrowData,
-  deleteArrowData
 };

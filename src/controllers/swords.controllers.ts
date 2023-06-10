@@ -1,10 +1,10 @@
-const mongodb = require('../db/connect');
+import { getDb } from '../db/connect';
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllSwordData = async (req, res) => {
+export const getAllSwordData = async (req: any, res: any) => {
   try {
-    const result = await mongodb.getDb().db('valheim').collection('swords').find();
-    result.toArray().then((lists) => {
+    const result = await getDb().db('valheim').collection('swords').find();
+    result.toArray().then((lists: any) => {
       if (!lists[0]) {
         res.status(404).json('Sword information was not found. Try again later.');
       } else {
@@ -17,16 +17,16 @@ const getAllSwordData = async (req, res) => {
   }
 };
 
-const getSwordDataById = async (req, res) => {
+export const getSwordDataById = async (req: any, res: any) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+      res.status(400).json('ID must be alphanumeric, 24 characters long.');
     } else {
       const userId = new ObjectId(req.params.id);
-      const result = await mongodb.getDb().db('valheim').collection('swords').find({ _id: userId });
-      result.toArray().then((lists) => {
+      const result = await getDb().db('valheim').collection('swords').find({ _id: userId });
+      result.toArray().then((lists: any) => {
         if (!lists[0]) {
-          res.status(404).json(`Sword with id ${userId} was not found.`);
+          res.status(404).json(`Sword with ID ${userId} was not found.`);
         } else {
           res.setHeader('Content-Type', 'application/json');
           res.status(200).json(lists[0]);
@@ -38,7 +38,7 @@ const getSwordDataById = async (req, res) => {
   }
 };
 
-const createSwordData = async (req, res) => {
+export const createSwordData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       let failMessage = '';
@@ -256,7 +256,7 @@ const createSwordData = async (req, res) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await mongodb.getDb().db('valheim').collection('swords').insertOne(sword);
+        const responce = await getDb().db('valheim').collection('swords').insertOne(sword);
         if (responce.acknowledged) {
           res.status(201).json(responce);
         } else {
@@ -276,11 +276,11 @@ const createSwordData = async (req, res) => {
   }
 };
 
-const updateSwordData = async (req, res) => {
+export const updateSwordData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         let failMessage = '';
         const sword = {
@@ -498,8 +498,7 @@ const updateSwordData = async (req, res) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await mongodb
-            .getDb()
+          const responce = await getDb()
             .db('valheim')
             .collection('swords')
             .updateOne(
@@ -587,20 +586,19 @@ const updateSwordData = async (req, res) => {
   }
 };
 
-const deleteSwordData = async (req, res) => {
+export const deleteSwordData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await mongodb
-          .getDb()
+        const responce = await getDb()
           .db('valheim')
           .collection('swords')
           .deleteOne({ _id: userId }, true);
         if (responce.deletedCount > 0) {
-          res.status(200).send(`Sword data with id ${userId} was deleted sucessfully.`);
+          res.status(200).send(`Sword data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
@@ -616,12 +614,4 @@ const deleteSwordData = async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-};
-
-module.exports = {
-  getAllSwordData,
-  getSwordDataById,
-  createSwordData,
-  updateSwordData,
-  deleteSwordData
 };

@@ -1,10 +1,10 @@
-const mongodb = require('../db/connect');
+import { getDb } from '../db/connect';
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllShieldData = async (req, res) => {
+export const getAllShieldData = async (req: any, res: any) => {
   try {
-    const result = await mongodb.getDb().db('valheim').collection('shields').find();
-    result.toArray().then((lists) => {
+    const result = await getDb().db('valheim').collection('shields').find();
+    result.toArray().then((lists: any) => {
       if (!lists[0]) {
         res.status(404).json('Shield information was not found. Try again later.');
       } else {
@@ -17,20 +17,16 @@ const getAllShieldData = async (req, res) => {
   }
 };
 
-const getShieldDataById = async (req, res) => {
+export const getShieldDataById = async (req: any, res: any) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+      res.status(400).json('ID must be alphanumeric, 24 characters long.');
     } else {
       const userId = new ObjectId(req.params.id);
-      const result = await mongodb
-        .getDb()
-        .db('valheim')
-        .collection('shields')
-        .find({ _id: userId });
-      result.toArray().then((lists) => {
+      const result = await getDb().db('valheim').collection('shields').find({ _id: userId });
+      result.toArray().then((lists: any) => {
         if (!lists[0]) {
-          res.status(404).json(`Shield with id ${userId} was not found.`);
+          res.status(404).json(`Shield with ID ${userId} was not found.`);
         } else {
           res.setHeader('Content-Type', 'application/json');
           res.status(200).json(lists[0]);
@@ -42,7 +38,7 @@ const getShieldDataById = async (req, res) => {
   }
 };
 
-const createShieldData = async (req, res) => {
+export const createShieldData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       let failMessage = '';
@@ -159,11 +155,7 @@ const createShieldData = async (req, res) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await mongodb
-          .getDb()
-          .db('valheim')
-          .collection('shields')
-          .insertOne(shield);
+        const responce = await getDb().db('valheim').collection('shields').insertOne(shield);
         if (responce.acknowledged) {
           res.status(201).json(responce);
         } else {
@@ -183,11 +175,11 @@ const createShieldData = async (req, res) => {
   }
 };
 
-const updateShieldData = async (req, res) => {
+export const updateShieldData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         let failMessage = '';
         const shield = {
@@ -304,8 +296,7 @@ const updateShieldData = async (req, res) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await mongodb
-            .getDb()
+          const responce = await getDb()
             .db('valheim')
             .collection('shields')
             .updateOne(
@@ -373,20 +364,19 @@ const updateShieldData = async (req, res) => {
   }
 };
 
-const deleteShieldData = async (req, res) => {
+export const deleteShieldData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await mongodb
-          .getDb()
+        const responce = await getDb()
           .db('valheim')
           .collection('shields')
           .deleteOne({ _id: userId }, true);
         if (responce.deletedCount > 0) {
-          res.status(200).send(`Shield data with id ${userId} was deleted sucessfully.`);
+          res.status(200).send(`Shield data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
@@ -402,12 +392,4 @@ const deleteShieldData = async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-};
-
-module.exports = {
-  getAllShieldData,
-  getShieldDataById,
-  createShieldData,
-  updateShieldData,
-  deleteShieldData
 };

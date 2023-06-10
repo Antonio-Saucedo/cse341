@@ -1,10 +1,10 @@
-const mongodb = require('../db/connect');
+import { getDb } from '../db/connect';
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllPickaxeData = async (req, res) => {
+export const getAllPickaxeData = async (req: any, res: any) => {
   try {
-    const result = await mongodb.getDb().db('valheim').collection('pickaxe').find();
-    result.toArray().then((lists) => {
+    const result = await getDb().db('valheim').collection('pickaxe').find();
+    result.toArray().then((lists: any) => {
       if (!lists[0]) {
         res.status(404).json('Pickaxe information was not found. Try again later.');
       } else {
@@ -17,20 +17,19 @@ const getAllPickaxeData = async (req, res) => {
   }
 };
 
-const getPickaxeDataById = async (req, res) => {
+export const getPickaxeDataById = async (req: any, res: any) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+      res.status(400).json('ID must be alphanumeric, 24 characters long.');
     } else {
       const userId = new ObjectId(req.params.id);
-      const result = await mongodb
-        .getDb()
+      const result = await getDb()
         .db('valheim')
         .collection('pickaxe')
         .find({ _id: userId });
-      result.toArray().then((lists) => {
+      result.toArray().then((lists: any) => {
         if (!lists[0]) {
-          res.status(404).json(`Pickaxe with id ${userId} was not found.`);
+          res.status(404).json(`Pickaxe with ID ${userId} was not found.`);
         } else {
           res.setHeader('Content-Type', 'application/json');
           res.status(200).json(lists[0]);
@@ -42,7 +41,7 @@ const getPickaxeDataById = async (req, res) => {
   }
 };
 
-const createPickaxeData = async (req, res) => {
+export const createPickaxeData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       let failMessage = '';
@@ -211,8 +210,7 @@ const createPickaxeData = async (req, res) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await mongodb
-          .getDb()
+        const responce = await getDb()
           .db('valheim')
           .collection('pickaxe')
           .insertOne(pickaxe);
@@ -235,11 +233,11 @@ const createPickaxeData = async (req, res) => {
   }
 };
 
-const updatePickaxeData = async (req, res) => {
+export const updatePickaxeData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         let failMessage = '';
         const pickaxe = {
@@ -408,8 +406,7 @@ const updatePickaxeData = async (req, res) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await mongodb
-            .getDb()
+          const responce = await getDb()
             .db('valheim')
             .collection('pickaxe')
             .updateOne(
@@ -493,20 +490,19 @@ const updatePickaxeData = async (req, res) => {
   }
 };
 
-const deletePickaxeData = async (req, res) => {
+export const deletePickaxeData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await mongodb
-          .getDb()
+        const responce = await getDb()
           .db('valheim')
           .collection('pickaxe')
           .deleteOne({ _id: userId }, true);
         if (responce.deletedCount > 0) {
-          res.status(200).send(`Pickaxe data with id ${userId} was deleted sucessfully.`);
+          res.status(200).send(`Pickaxe data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
@@ -522,12 +518,4 @@ const deletePickaxeData = async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-};
-
-module.exports = {
-  getAllPickaxeData,
-  getPickaxeDataById,
-  createPickaxeData,
-  updatePickaxeData,
-  deletePickaxeData
 };

@@ -1,10 +1,10 @@
-const mongodb = require('../db/connect');
+import { getDb } from '../db/connect';
 const ObjectId = require('mongodb').ObjectId;
 
-const getAllClubData = async (req, res) => {
+export const getAllClubData = async (req: any, res: any) => {
   try {
-    const result = await mongodb.getDb().db('valheim').collection('clubs').find();
-    result.toArray().then((lists) => {
+    const result = await getDb().db('valheim').collection('clubs').find();
+    result.toArray().then((lists: any) => {
       if (!lists[0]) {
         res.status(404).json('Club information was not found. Try again later.');
       } else {
@@ -17,16 +17,16 @@ const getAllClubData = async (req, res) => {
   }
 };
 
-const getClubDataById = async (req, res) => {
+export const getClubDataById = async (req: any, res: any) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Id must be alphanumeric, 24 characters long.');
+      res.status(400).json('ID must be alphanumeric, 24 characters long.');
     } else {
       const userId = new ObjectId(req.params.id);
-      const result = await mongodb.getDb().db('valheim').collection('clubs').find({ _id: userId });
-      result.toArray().then((lists) => {
+      const result = await getDb().db('valheim').collection('clubs').find({ _id: userId });
+      result.toArray().then((lists: any) => {
         if (!lists[0]) {
-          res.status(404).json(`Club with id ${userId} was not found.`);
+          res.status(404).json(`Club with ID ${userId} was not found.`);
         } else {
           res.setHeader('Content-Type', 'application/json');
           res.status(200).json(lists[0]);
@@ -38,7 +38,7 @@ const getClubDataById = async (req, res) => {
   }
 };
 
-const createClubData = async (req, res) => {
+export const createClubData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       let failMessage = '';
@@ -246,7 +246,7 @@ const createClubData = async (req, res) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await mongodb.getDb().db('valheim').collection('clubs').insertOne(club);
+        const responce = await getDb().db('valheim').collection('clubs').insertOne(club);
         if (responce.acknowledged) {
           res.status(201).json(responce);
         } else {
@@ -266,11 +266,11 @@ const createClubData = async (req, res) => {
   }
 };
 
-const updateClubData = async (req, res) => {
+export const updateClubData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         let failMessage = '';
         const club = {
@@ -478,8 +478,7 @@ const updateClubData = async (req, res) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await mongodb
-            .getDb()
+          const responce = await getDb()
             .db('valheim')
             .collection('clubs')
             .updateOne(
@@ -575,20 +574,19 @@ const updateClubData = async (req, res) => {
   }
 };
 
-const deleteClubData = async (req, res) => {
+export const deleteClubData = async (req: any, res: any) => {
   try {
     if (req.oidc.isAuthenticated()) {
       if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Id must be alphanumeric, 24 characters long.');
+        res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await mongodb
-          .getDb()
+        const responce = await getDb()
           .db('valheim')
           .collection('clubs')
           .deleteOne({ _id: userId }, true);
         if (responce.deletedCount > 0) {
-          res.status(200).send(`Club data with id ${userId} was deleted sucessfully.`);
+          res.status(200).send(`Club data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
@@ -604,12 +602,4 @@ const deleteClubData = async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-};
-
-module.exports = {
-  getAllClubData,
-  getClubDataById,
-  createClubData,
-  updateClubData,
-  deleteClubData
 };

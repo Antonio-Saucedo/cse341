@@ -62,7 +62,8 @@
     "/arrows": {
       "get": {
         "tags": ["arrows"],
-        "description": "Get all arrow data",
+        "summary": "Request Valheim arrows information.",
+        "description": "A request for Valheim Info API users to see all arrow information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -79,7 +80,8 @@
       },
       "post": {
         "tags": ["arrows"],
-        "description": "Add new arrow data",
+        "summary": "Add Valheim arrow information.",
+        "description": "A request for Valheim Info API users to add arrow information.",
         "parameters": [
           {
             "name": "body",
@@ -111,7 +113,8 @@
     "/arrows/{id}": {
       "get": {
         "tags": ["arrows"],
-        "description": "Find arrow data by id",
+        "summary": "Request Valheim arrow information by ID.",
+        "description": "A request for Valheim Info API users to see arrow information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -138,7 +141,8 @@
       },
       "put": {
         "tags": ["arrows"],
-        "description": "Update existing arrow data",
+        "summary": "Update Valheim arrow information by ID.",
+        "description": "A request for Valheim Info API users to update arrow information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -174,7 +178,8 @@
       },
       "delete": {
         "tags": ["arrows"],
-        "description": "Delete arrow data",
+        "summary": "Delete Valheim arrow information by ID.",
+        "description": "A request for Valheim Info API users to delete arrow information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -202,7 +207,8 @@
     "/axes": {
       "get": {
         "tags": ["axes"],
-        "description": "Get all axe data",
+        "summary": "Request Valheim axe information.",
+        "description": "A request for Valheim Info API users to see all axe information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -219,7 +225,8 @@
       },
       "post": {
         "tags": ["axes"],
-        "description": "Add new axe data",
+        "summary": "Add Valheim axe information.",
+        "description": "A request for Valheim Info API users to add axe information.",
         "parameters": [
           {
             "name": "body",
@@ -251,7 +258,8 @@
     "/axes/{id}": {
       "get": {
         "tags": ["axes"],
-        "description": "Find axe data by id",
+        "summary": "Request Valheim axe information by ID.",
+        "description": "A request for Valheim Info API users to see axe information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -278,7 +286,8 @@
       },
       "put": {
         "tags": ["axes"],
-        "description": "Update existing axe data",
+        "summary": "Update Valheim axe information by ID.",
+        "description": "A request for Valheim Info API users to update axe information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -314,7 +323,8 @@
       },
       "delete": {
         "tags": ["axes"],
-        "description": "Delete axe data",
+        "summary": "Delete Valheim axe information by ID.",
+        "description": "A request for Valheim Info API users to delete axe information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -342,7 +352,8 @@
     "/bows": {
       "get": {
         "tags": ["bows"],
-        "description": "Get all bow data",
+        "summary": "Request Valheim bows information.",
+        "description": "A request for Valheim Info API users to see all bow information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -359,7 +370,8 @@
       },
       "post": {
         "tags": ["bows"],
-        "description": "Add new bow data",
+        "summary": "Add Valheim bow information.",
+        "description": "A request for Valheim Info API users to add bow information.",
         "parameters": [
           {
             "name": "body",
@@ -391,7 +403,8 @@
     "/bows/{id}": {
       "get": {
         "tags": ["bows"],
-        "description": "Find bow data by id",
+        "summary": "Request Valheim bow information by ID.",
+        "description": "A request for Valheim Info API users to see bow information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -418,7 +431,8 @@
       },
       "put": {
         "tags": ["bows"],
-        "description": "Update existing bow data",
+        "summary": "Update Valheim bow information by ID.",
+        "description": "A request for Valheim Info API users to update bow information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -454,7 +468,8 @@
       },
       "delete": {
         "tags": ["bows"],
-        "description": "Delete bow data",
+        "summary": "Delete Valheim bow information by ID.",
+        "description": "A request for Valheim Info API users to delete bow information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -482,7 +497,8 @@
     "/clubs": {
       "get": {
         "tags": ["clubs"],
-        "description": "Get all club data",
+        "summary": "Request Valheim clubs information.",
+        "description": "A request for Valheim Info API users to see all club information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -499,7 +515,8 @@
       },
       "post": {
         "tags": ["clubs"],
-        "description": "Add new club data",
+        "summary": "Add Valheim club information.",
+        "description": "A request for Valheim Info API users to add club information.",
         "parameters": [
           {
             "name": "body",
@@ -531,7 +548,8 @@
     "/clubs/{id}": {
       "get": {
         "tags": ["clubs"],
-        "description": "Find club data by id",
+        "summary": "Request Valheim club information by ID.",
+        "description": "A request for Valheim Info API users to see club information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -558,7 +576,8 @@
       },
       "put": {
         "tags": ["clubs"],
-        "description": "Update existing club data",
+        "summary": "Update Valheim club information by ID.",
+        "description": "A request for Valheim Info API users to update club information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -594,7 +613,8 @@
       },
       "delete": {
         "tags": ["clubs"],
-        "description": "Delete club data",
+        "summary": "Delete Valheim club information by ID.",
+        "description": "A request for Valheim Info API users to delete club information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -622,7 +642,8 @@
     "/fists": {
       "get": {
         "tags": ["fists"],
-        "description": "Get all fist data",
+        "summary": "Request Valheim fists information.",
+        "description": "A request for Valheim Info API users to see all fist information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -639,7 +660,8 @@
       },
       "post": {
         "tags": ["fists"],
-        "description": "Add new fist data",
+        "summary": "Add Valheim fist information.",
+        "description": "A request for Valheim Info API users to add fist information.",
         "parameters": [
           {
             "name": "body",
@@ -671,7 +693,8 @@
     "/fists/{id}": {
       "get": {
         "tags": ["fists"],
-        "description": "Find fist data by id",
+        "summary": "Request Valheim fist information by ID.",
+        "description": "A request for Valheim Info API users to see fist information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -698,7 +721,8 @@
       },
       "put": {
         "tags": ["fists"],
-        "description": "Update existing fist data",
+        "summary": "Update Valheim fist information by ID.",
+        "description": "A request for Valheim Info API users to update fist information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -734,7 +758,8 @@
       },
       "delete": {
         "tags": ["fists"],
-        "description": "Delete fist data",
+        "summary": "Delete Valheim fist information by ID.",
+        "description": "A request for Valheim Info API users to delete fist information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -762,7 +787,8 @@
     "/food": {
       "get": {
         "tags": ["food"],
-        "description": "Get all food data",
+        "summary": "Request Valheim food information.",
+        "description": "A request for Valheim Info API users to see all food information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -779,7 +805,8 @@
       },
       "post": {
         "tags": ["food"],
-        "description": "Add new food data",
+        "summary": "Add Valheim food information.",
+        "description": "A request for Valheim Info API users to add food information.",
         "parameters": [
           {
             "name": "body",
@@ -811,7 +838,8 @@
     "/food/{id}": {
       "get": {
         "tags": ["food"],
-        "description": "Find food data by id",
+        "summary": "Request Valheim food information by ID.",
+        "description": "A request for Valheim Info API users to see food information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -838,7 +866,8 @@
       },
       "put": {
         "tags": ["food"],
-        "description": "Update existing food data",
+        "summary": "Update Valheim food information by ID.",
+        "description": "A request for Valheim Info API users to update food information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -874,7 +903,8 @@
       },
       "delete": {
         "tags": ["food"],
-        "description": "Delete food data",
+        "summary": "Delete Valheim food information by ID.",
+        "description": "A request for Valheim Info API users to delete food information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -902,7 +932,8 @@
     "/knifes": {
       "get": {
         "tags": ["knifes"],
-        "description": "Get all knife data",
+        "summary": "Request Valheim knifes information.",
+        "description": "A request for Valheim Info API users to see all knife information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -919,7 +950,8 @@
       },
       "post": {
         "tags": ["knifes"],
-        "description": "Add new knife data",
+        "summary": "Add Valheim knife information.",
+        "description": "A request for Valheim Info API users to add knife information.",
         "parameters": [
           {
             "name": "body",
@@ -951,7 +983,8 @@
     "/knifes/{id}": {
       "get": {
         "tags": ["knifes"],
-        "description": "Find knife data by id",
+        "summary": "Request Valheim knife information by ID.",
+        "description": "A request for Valheim Info API users to see knife information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -978,7 +1011,8 @@
       },
       "put": {
         "tags": ["knifes"],
-        "description": "Update existing knife data",
+        "summary": "Update Valheim knife information by ID.",
+        "description": "A request for Valheim Info API users to update knife information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1014,7 +1048,8 @@
       },
       "delete": {
         "tags": ["knifes"],
-        "description": "Delete knife data",
+        "summary": "Delete Valheim knife information by ID.",
+        "description": "A request for Valheim Info API users to delete knife information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1042,7 +1077,8 @@
     "/pickaxes": {
       "get": {
         "tags": ["pickaxes"],
-        "description": "Get all pickaxe data",
+        "summary": "Request Valheim pickaxe information.",
+        "description": "A request for Valheim Info API users to see all pickaxe information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -1059,7 +1095,8 @@
       },
       "post": {
         "tags": ["pickaxes"],
-        "description": "Add new pickaxe data",
+        "summary": "Add Valheim pickaxe information.",
+        "description": "A request for Valheim Info API users to add pickaxe information.",
         "parameters": [
           {
             "name": "body",
@@ -1091,7 +1128,8 @@
     "/pickaxes/{id}": {
       "get": {
         "tags": ["pickaxes"],
-        "description": "Find pickaxe data by id",
+        "summary": "Request Valheim pickaxe information by ID.",
+        "description": "A request for Valheim Info API users to see pickaxe information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -1118,7 +1156,8 @@
       },
       "put": {
         "tags": ["pickaxes"],
-        "description": "Update existing pickaxe data",
+        "summary": "Update Valheim pickaxe information by ID.",
+        "description": "A request for Valheim Info API users to update pickaxe information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1154,7 +1193,8 @@
       },
       "delete": {
         "tags": ["pickaxes"],
-        "description": "Delete pickaxe data",
+        "summary": "Delete Valheim pickaxe information by ID.",
+        "description": "A request for Valheim Info API users to delete pickaxe information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1182,7 +1222,8 @@
     "/polearms": {
       "get": {
         "tags": ["polearms"],
-        "description": "Get all polearm data",
+        "summary": "Request Valheim polearm information.",
+        "description": "A request for Valheim Info API users to see all polearm information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -1199,7 +1240,8 @@
       },
       "post": {
         "tags": ["polearms"],
-        "description": "Add new polearm data",
+        "summary": "Add Valheim polearm information.",
+        "description": "A request for Valheim Info API users to add polearm information.",
         "parameters": [
           {
             "name": "body",
@@ -1231,7 +1273,8 @@
     "/polearms/{id}": {
       "get": {
         "tags": ["polearms"],
-        "description": "Find polearm data by id",
+        "summary": "Request Valheim polearm information by ID.",
+        "description": "A request for Valheim Info API users to see polearm information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -1258,7 +1301,8 @@
       },
       "put": {
         "tags": ["polearms"],
-        "description": "Update existing polearm data",
+        "summary": "Update Valheim polearm information by ID.",
+        "description": "A request for Valheim Info API users to update polearm information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1294,7 +1338,8 @@
       },
       "delete": {
         "tags": ["polearms"],
-        "description": "Delete polearm data",
+        "summary": "Delete Valheim polearm information by ID.",
+        "description": "A request for Valheim Info API users to delete polearm information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1322,7 +1367,8 @@
     "/shields": {
       "get": {
         "tags": ["shields"],
-        "description": "Get all shield data",
+        "summary": "Request Valheim shield information.",
+        "description": "A request for Valheim Info API users to see all shield information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -1339,7 +1385,8 @@
       },
       "post": {
         "tags": ["shields"],
-        "description": "Add new shield data",
+        "summary": "Add Valheim shield information.",
+        "description": "A request for Valheim Info API users to add shield information.",
         "parameters": [
           {
             "name": "body",
@@ -1371,7 +1418,8 @@
     "/shields/{id}": {
       "get": {
         "tags": ["shields"],
-        "description": "Find shield data by id",
+        "summary": "Request Valheim shield information by ID.",
+        "description": "A request for Valheim Info API users to see shield information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -1398,7 +1446,8 @@
       },
       "put": {
         "tags": ["shields"],
-        "description": "Update existing shield data",
+        "summary": "Update Valheim shield information by ID.",
+        "description": "A request for Valheim Info API users to update shield information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1434,7 +1483,8 @@
       },
       "delete": {
         "tags": ["shields"],
-        "description": "Delete shield data",
+        "summary": "Delete Valheim shield information by ID.",
+        "description": "A request for Valheim Info API users to delete shield information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1462,7 +1512,8 @@
     "/spears": {
       "get": {
         "tags": ["spears"],
-        "description": "Get all spear data",
+        "summary": "Request Valheim spear information.",
+        "description": "A request for Valheim Info API users to see all spear information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -1479,7 +1530,8 @@
       },
       "post": {
         "tags": ["spears"],
-        "description": "Add new spear data",
+        "summary": "Add Valheim spear information.",
+        "description": "A request for Valheim Info API users to add spear information.",
         "parameters": [
           {
             "name": "body",
@@ -1511,7 +1563,8 @@
     "/spears/{id}": {
       "get": {
         "tags": ["spears"],
-        "description": "Find spear data by id",
+        "summary": "Request Valheim spear information by ID.",
+        "description": "A request for Valheim Info API users to see spear information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -1538,7 +1591,8 @@
       },
       "put": {
         "tags": ["spears"],
-        "description": "Update existing spear data",
+        "summary": "Update Valheim spear information by ID.",
+        "description": "A request for Valheim Info API users to update spear information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1574,7 +1628,8 @@
       },
       "delete": {
         "tags": ["spears"],
-        "description": "Delete spear data",
+        "summary": "Delete Valheim spear information by ID.",
+        "description": "A request for Valheim Info API users to delete spear information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1602,7 +1657,8 @@
     "/swords": {
       "get": {
         "tags": ["swords"],
-        "description": "Get all sword data",
+        "summary": "Request Valheim sword information.",
+        "description": "A request for Valheim Info API users to see all sword information.",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -1619,7 +1675,8 @@
       },
       "post": {
         "tags": ["swords"],
-        "description": "Add new sword data",
+        "summary": "Add Valheim sword information.",
+        "description": "A request for Valheim Info API users to add sword information.",
         "parameters": [
           {
             "name": "body",
@@ -1651,7 +1708,8 @@
     "/swords/{id}": {
       "get": {
         "tags": ["swords"],
-        "description": "Find sword data by id",
+        "summary": "Request Valheim sword information by ID.",
+        "description": "A request for Valheim Info API users to see sword information based on ID input.",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -1678,7 +1736,8 @@
       },
       "put": {
         "tags": ["swords"],
-        "description": "Update existing sword data",
+        "summary": "Update Valheim sword information by ID.",
+        "description": "A request for Valheim Info API users to update sword information based on ID input.",
         "parameters": [
           {
             "name": "id",
@@ -1714,7 +1773,8 @@
       },
       "delete": {
         "tags": ["swords"],
-        "description": "Delete sword data",
+        "summary": "Delete Valheim sword information by ID.",
+        "description": "A request for Valheim Info API users to delete sword information based on ID input.",
         "parameters": [
           {
             "name": "id",
