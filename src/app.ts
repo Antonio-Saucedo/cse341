@@ -14,7 +14,7 @@ import polearmsRouter from './routers/polearms.router';
 import shieldsRouter from './routers/shields.router';
 import spearsRouter from './routers/spears.router';
 import swordsRouter from './routers/swords.router';
-import { auth, requiresAuth } from'express-openid-connect';
+import { auth, requiresAuth } from 'express-openid-connect';
 
 const app = express();
 const config = {
@@ -41,7 +41,7 @@ app.use(express.static('public'));
 
 // req.isAuthenticated is provided from the auth router
 app.get('/', (req, res) => {
-  console.log(req.oidc.isAuthenticated());
+  // console.log(req.oidc.isAuthenticated());
   res.render('index', {
     title: 'Valheim Info API',
     isAuthenticated: req.oidc.isAuthenticated()

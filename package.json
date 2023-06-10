@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "devStart": "cd src && nodemon app.ts",
-    "start": "cd src && node app.ts",
+    "start": "cd src && ts-node app.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" --config ./.prettierrc",

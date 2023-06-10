@@ -1,4 +1,4 @@
-const swaggerAutogen = require('swagger-autogen')();
+import swaggerAutogen from 'swagger-autogen';
 
 const doc = {
   info: {
@@ -2417,12 +2417,20 @@ const doc = {
 };
 
 const outputFile = './swagger.json';
-const endpointsFiles = ['./routes/index.js'];
+const endpointsFiles = [
+  './routers/arrows.router.ts',
+  './routers/axes.router.ts',
+  './routers/bows.router.ts',
+  './routers/clubs.router.ts',
+  './routers/fists.router.ts',
+  './routers/foods.router.ts',
+  './routers/knifes.router.ts',
+  './routers/pickaxes.router.ts',
+  './routers/polearms.router.ts',
+  './routers/shields.router.ts',
+  './routers/spears.router.ts',
+  './routers/swords.router.ts'
+];
 
 // generate swagger.json
 swaggerAutogen(outputFile, endpointsFiles, doc);
-
-// Run server after it gets generated
-// swaggerAutogen(outputFile, endpointsFiles, doc).then(async () => {
-//   await import('./app.js');
-// });
