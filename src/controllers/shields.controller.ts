@@ -46,40 +46,40 @@ export const createShieldData = async (req: any, res: any) => {
         name: req.body.name,
         description: req.body.description,
         quality1: {
-          recipe: req.body.recipe,
-          weight: req.body.weight,
-          durability: req.body.durability,
-          blockArmor: req.body.blockArmor,
-          blockForce: req.body.blockForce,
-          parryBonus: req.body.parryBonus,
-          movement: req.body.movement
+          recipe: req.body.quality1.recipe,
+          weight: req.body.quality1.weight,
+          durability: req.body.quality1.durability,
+          blockArmor: req.body.quality1.blockArmor,
+          blockForce: req.body.quality1.blockForce,
+          parryBonus: req.body.quality1.parryBonus,
+          movement: req.body.quality1.movement
         },
         quality2: {
-          recipe: req.body.recipe,
-          weight: req.body.weight,
-          durability: req.body.durability,
-          blockArmor: req.body.blockArmor,
-          blockForce: req.body.blockForce,
-          parryBonus: req.body.parryBonus,
-          movement: req.body.movement
+          recipe: req.body.quality2.recipe,
+          weight: req.body.quality2.weight,
+          durability: req.body.quality2.durability,
+          blockArmor: req.body.quality2.blockArmor,
+          blockForce: req.body.quality2.blockForce,
+          parryBonus: req.body.quality2.parryBonus,
+          movement: req.body.quality2.movement
         },
         quality3: {
-          recipe: req.body.recipe,
-          weight: req.body.weight,
-          durability: req.body.durability,
-          blockArmor: req.body.blockArmor,
-          blockForce: req.body.blockForce,
-          parryBonus: req.body.parryBonus,
-          movement: req.body.movement
+          recipe: req.body.quality3.recipe,
+          weight: req.body.quality3.weight,
+          durability: req.body.quality3.durability,
+          blockArmor: req.body.quality3.blockArmor,
+          blockForce: req.body.quality3.blockForce,
+          parryBonus: req.body.quality3.parryBonus,
+          movement: req.body.quality3.movement
         },
         quality4: {
-          recipe: req.body.recipe,
-          weight: req.body.weight,
-          durability: req.body.durability,
-          blockArmor: req.body.blockArmor,
-          blockForce: req.body.blockForce,
-          parryBonus: req.body.parryBonus,
-          movement: req.body.movement
+          recipe: req.body.quality4.recipe,
+          weight: req.body.quality4.weight,
+          durability: req.body.quality4.durability,
+          blockArmor: req.body.quality4.blockArmor,
+          blockForce: req.body.quality4.blockForce,
+          parryBonus: req.body.quality4.parryBonus,
+          movement: req.body.quality4.movement
         }
       };
       if (typeof shield.name != 'string') {
@@ -186,40 +186,40 @@ export const updateShieldData = async (req: any, res: any) => {
           name: req.body.name,
           description: req.body.description,
           quality1: {
-            recipe: req.body.recipe,
-            weight: req.body.weight,
-            durability: req.body.durability,
-            blockArmor: req.body.blockArmor,
-            blockForce: req.body.blockForce,
-            parryBonus: req.body.parryBonus,
-            movement: req.body.movement
+            recipe: req.body.quality1.recipe,
+            weight: req.body.quality1.weight,
+            durability: req.body.quality1.durability,
+            blockArmor: req.body.quality1.blockArmor,
+            blockForce: req.body.quality1.blockForce,
+            parryBonus: req.body.quality1.parryBonus,
+            movement: req.body.quality1.movement
           },
           quality2: {
-            recipe: req.body.recipe,
-            weight: req.body.weight,
-            durability: req.body.durability,
-            blockArmor: req.body.blockArmor,
-            blockForce: req.body.blockForce,
-            parryBonus: req.body.parryBonus,
-            movement: req.body.movement
+            recipe: req.body.quality2.recipe,
+            weight: req.body.quality2.weight,
+            durability: req.body.quality2.durability,
+            blockArmor: req.body.quality2.blockArmor,
+            blockForce: req.body.quality2.blockForce,
+            parryBonus: req.body.quality2.parryBonus,
+            movement: req.body.quality2.movement
           },
           quality3: {
-            recipe: req.body.recipe,
-            weight: req.body.weight,
-            durability: req.body.durability,
-            blockArmor: req.body.blockArmor,
-            blockForce: req.body.blockForce,
-            parryBonus: req.body.parryBonus,
-            movement: req.body.movement
+            recipe: req.body.quality3.recipe,
+            weight: req.body.quality3.weight,
+            durability: req.body.quality3.durability,
+            blockArmor: req.body.quality3.blockArmor,
+            blockForce: req.body.quality3.blockForce,
+            parryBonus: req.body.quality3.parryBonus,
+            movement: req.body.quality3.movement
           },
           quality4: {
-            recipe: req.body.recipe,
-            weight: req.body.weight,
-            durability: req.body.durability,
-            blockArmor: req.body.blockArmor,
-            blockForce: req.body.blockForce,
-            parryBonus: req.body.parryBonus,
-            movement: req.body.movement
+            recipe: req.body.quality4.recipe,
+            weight: req.body.quality4.weight,
+            durability: req.body.quality4.durability,
+            blockArmor: req.body.quality4.blockArmor,
+            blockForce: req.body.quality4.blockForce,
+            parryBonus: req.body.quality4.parryBonus,
+            movement: req.body.quality4.movement
           }
         };
         if (typeof shield.name != 'string') {

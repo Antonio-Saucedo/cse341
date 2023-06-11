@@ -46,44 +46,44 @@ export const createFistData = async (req: any, res: any) => {
         name: req.body.name,
         description: req.body.description,
         quality1: {
-          recipe: req.body.recipe,
-          weight: req.body.weight,
-          durability: req.body.durability,
-          slash: req.body.slash,
-          backstab: req.body.backstab,
-          stagger: req.body.stagger,
-          blockForce: req.body.blockForce,
-          parryBonus: req.body.parryBonus
+          recipe: req.body.quality1.recipe,
+          weight: req.body.quality1.weight,
+          durability: req.body.quality1.durability,
+          slash: req.body.quality1.slash,
+          backstab: req.body.quality1.backstab,
+          stagger: req.body.quality1.stagger,
+          blockForce: req.body.quality1.blockForce,
+          parryBonus: req.body.quality1.parryBonus
         },
         quality2: {
-          recipe: req.body.recipe,
-          weight: req.body.weight,
-          durability: req.body.durability,
-          slash: req.body.slash,
-          backstab: req.body.backstab,
-          stagger: req.body.stagger,
-          blockForce: req.body.blockForce,
-          parryBonus: req.body.parryBonus
+          recipe: req.body.quality2.recipe,
+          weight: req.body.quality2.weight,
+          durability: req.body.quality2.durability,
+          slash: req.body.quality2.slash,
+          backstab: req.body.quality2.backstab,
+          stagger: req.body.quality2.stagger,
+          blockForce: req.body.quality2.blockForce,
+          parryBonus: req.body.quality2.parryBonus
         },
         quality3: {
-          recipe: req.body.recipe,
-          weight: req.body.weight,
-          durability: req.body.durability,
-          slash: req.body.slash,
-          backstab: req.body.backstab,
-          stagger: req.body.stagger,
-          blockForce: req.body.blockForce,
-          parryBonus: req.body.parryBonus
+          recipe: req.body.quality3.recipe,
+          weight: req.body.quality3.weight,
+          durability: req.body.quality3.durability,
+          slash: req.body.quality3.slash,
+          backstab: req.body.quality3.backstab,
+          stagger: req.body.quality3.stagger,
+          blockForce: req.body.quality3.blockForce,
+          parryBonus: req.body.quality3.parryBonus
         },
         quality4: {
-          recipe: req.body.recipe,
-          weight: req.body.weight,
-          durability: req.body.durability,
-          slash: req.body.slash,
-          backstab: req.body.backstab,
-          stagger: req.body.stagger,
-          blockForce: req.body.blockForce,
-          parryBonus: req.body.parryBonus
+          recipe: req.body.quality4.recipe,
+          weight: req.body.quality4.weight,
+          durability: req.body.quality4.durability,
+          slash: req.body.quality4.slash,
+          backstab: req.body.quality4.backstab,
+          stagger: req.body.quality4.stagger,
+          blockForce: req.body.quality4.blockForce,
+          parryBonus: req.body.quality4.parryBonus
         }
       };
       if (typeof fist.name != 'string') {
@@ -199,44 +199,44 @@ export const updateFistData = async (req: any, res: any) => {
           name: req.body.name,
           description: req.body.description,
           quality1: {
-            recipe: req.body.recipe,
-            weight: req.body.weight,
-            durability: req.body.durability,
-            slash: req.body.slash,
-            backstab: req.body.backstab,
-            stagger: req.body.stagger,
-            blockForce: req.body.blockForce,
-            parryBonus: req.body.parryBonus
+            recipe: req.body.quality1.recipe,
+            weight: req.body.quality1.weight,
+            durability: req.body.quality1.durability,
+            slash: req.body.quality1.slash,
+            backstab: req.body.quality1.backstab,
+            stagger: req.body.quality1.stagger,
+            blockForce: req.body.quality1.blockForce,
+            parryBonus: req.body.quality1.parryBonus
           },
           quality2: {
-            recipe: req.body.recipe,
-            weight: req.body.weight,
-            durability: req.body.durability,
-            slash: req.body.slash,
-            backstab: req.body.backstab,
-            stagger: req.body.stagger,
-            blockForce: req.body.blockForce,
-            parryBonus: req.body.parryBonus
+            recipe: req.body.quality2.recipe,
+            weight: req.body.quality2.weight,
+            durability: req.body.quality2.durability,
+            slash: req.body.quality2.slash,
+            backstab: req.body.quality2.backstab,
+            stagger: req.body.quality2.stagger,
+            blockForce: req.body.quality2.blockForce,
+            parryBonus: req.body.quality2.parryBonus
           },
           quality3: {
-            recipe: req.body.recipe,
-            weight: req.body.weight,
-            durability: req.body.durability,
-            slash: req.body.slash,
-            backstab: req.body.backstab,
-            stagger: req.body.stagger,
-            blockForce: req.body.blockForce,
-            parryBonus: req.body.parryBonus
+            recipe: req.body.quality3.recipe,
+            weight: req.body.quality3.weight,
+            durability: req.body.quality3.durability,
+            slash: req.body.quality3.slash,
+            backstab: req.body.quality3.backstab,
+            stagger: req.body.quality3.stagger,
+            blockForce: req.body.quality3.blockForce,
+            parryBonus: req.body.quality3.parryBonus
           },
           quality4: {
-            recipe: req.body.recipe,
-            weight: req.body.weight,
-            durability: req.body.durability,
-            slash: req.body.slash,
-            backstab: req.body.backstab,
-            stagger: req.body.stagger,
-            blockForce: req.body.blockForce,
-            parryBonus: req.body.parryBonus
+            recipe: req.body.quality4.recipe,
+            weight: req.body.quality4.weight,
+            durability: req.body.quality4.durability,
+            slash: req.body.quality4.slash,
+            backstab: req.body.quality4.backstab,
+            stagger: req.body.quality4.stagger,
+            blockForce: req.body.quality4.blockForce,
+            parryBonus: req.body.quality4.parryBonus
           }
         };
         if (typeof fist.name != 'string') {
