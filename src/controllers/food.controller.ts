@@ -40,7 +40,7 @@ export const getFoodDataById = async (req: any, res: any) => {
 
 export const getFoodDataByParameter = async (req: any, res: any) => {
   try {
-    const valid = ['name', 'description'];
+    const valid = ['name', 'description', 'recipe'];
     const searchType = req.params.searchType;
     if (valid.includes(searchType)) {
       const searchTerm = req.params.searchTerm;
@@ -74,8 +74,23 @@ export const getFoodDataByParameter = async (req: any, res: any) => {
             res.status(200).json(lists);
           }
         });
+      } else if (searchType == 'recipe') {
+        const result = await getDb()
+          .db('valheim')
+          .collection('food')
+          .find({ recipe: { $regex: searchTerm, $options: 'i' } });
+        result.toArray().then((lists: any) => {
+          if (!lists[0]) {
+            res
+              .status(404)
+              .json(`Food with ${searchType} containing '${searchTerm}' was not found.`);
+          } else {
+            res.setHeader('Content-Type', 'application/json');
+            res.status(200).json(lists);
+          }
+        });
       } else {
-        res.status(400).json('Search types are name and description.');
+        res.status(400).json('Search types are name, description and recipe.');
       }
     }
   } catch (err) {
