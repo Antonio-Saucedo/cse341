@@ -4,7 +4,8 @@ import {
   getPickaxeDataById,
   createPickaxeData,
   updatePickaxeData,
-  deletePickaxeData
+  deletePickaxeData,
+  getPickaxeDataByParameter
 } from '../controllers/pickaxes.controller';
 const pickaxesRouter = Router();
 
@@ -13,6 +14,9 @@ pickaxesRouter.get('/pickaxes', getAllPickaxeData);
 
 // GET pickaxe data by id
 pickaxesRouter.get('/pickaxes/:id', getPickaxeDataById);
+
+// GET pickaxe data by search type and term
+pickaxesRouter.get('/pickaxes/:searchType/:searchTerm', getPickaxeDataByParameter);
 
 // POST/Create pickaxe data
 pickaxesRouter.post('/pickaxes', createPickaxeData);

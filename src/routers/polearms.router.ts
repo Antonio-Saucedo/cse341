@@ -4,7 +4,8 @@ import {
   getPolearmDataById,
   createPolearmData,
   updatePolearmData,
-  deletePolearmData
+  deletePolearmData,
+  getPolearmDataByParameter
 } from '../controllers/polearms.controller';
 const polearmsRouter = Router();
 
@@ -13,6 +14,9 @@ polearmsRouter.get('/polearms', getAllPolearmData);
 
 // GET polearm data by id
 polearmsRouter.get('/polearms/:id', getPolearmDataById);
+
+// GET polearm data by search type and term
+polearmsRouter.get('/polearms/:searchType/:searchTerm', getPolearmDataByParameter);
 
 // POST/Create polearm data
 polearmsRouter.post('/polearms', createPolearmData);

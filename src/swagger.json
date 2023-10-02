@@ -5,7 +5,7 @@
     "description": "Valheim Items API",
     "version": "1.0.0"
   },
-  "host": "valheim-v1-data.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "tags": [
     {
@@ -57,7 +57,7 @@
       "description": "Get information about swords"
     }
   ],
-  "schemes": ["https"],
+  "schemes": ["http"],
   "paths": {
     "/arrows": {
       "get": {
@@ -197,6 +197,43 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/arrows/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["arrows"],
+        "summary": "Request Valheim arrow information by search type and term.",
+        "description": "A request for Valheim Info API users to see arrow information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -349,6 +386,43 @@
         }
       }
     },
+    "/axes/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["axes"],
+        "summary": "Request Valheim axe information by search type and term.",
+        "description": "A request for Valheim Info API users to see axe information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/bows": {
       "get": {
         "tags": ["bows"],
@@ -487,6 +561,43 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/bows/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["bows"],
+        "summary": "Request Valheim bow information by ID.",
+        "description": "A request for Valheim Info API users to see bow information based on ID input.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -639,6 +750,43 @@
         }
       }
     },
+    "/clubs/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["clubs"],
+        "summary": "Request Valheim club information by search type and term.",
+        "description": "A request for Valheim Info API users to see club information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/fists": {
       "get": {
         "tags": ["fists"],
@@ -777,6 +925,43 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/fists/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["fists"],
+        "summary": "Request Valheim fist information by search type and term.",
+        "description": "A request for Valheim Info API users to see fist information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -929,6 +1114,43 @@
         }
       }
     },
+    "/food/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["food"],
+        "summary": "Request Valheim food information by search type and term.",
+        "description": "A request for Valheim Info API users to see food information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/knifes": {
       "get": {
         "tags": ["knifes"],
@@ -1067,6 +1289,43 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/knifes/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["knifes"],
+        "summary": "Request Valheim knife information by search type and term.",
+        "description": "A request for Valheim Info API users to see knife information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -1219,6 +1478,43 @@
         }
       }
     },
+    "/pickaxes/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["pickaxes"],
+        "summary": "Request Valheim pickaxe information by search type and term.",
+        "description": "A request for Valheim Info API users to see pickaxe information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/polearms": {
       "get": {
         "tags": ["polearms"],
@@ -1357,6 +1653,43 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/polearms/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["polearms"],
+        "summary": "Request Valheim polearm information by search type and term.",
+        "description": "A request for Valheim Info API users to see polearm information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -1509,6 +1842,43 @@
         }
       }
     },
+    "/shields/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["shields"],
+        "summary": "Request Valheim shield information by search type and term.",
+        "description": "A request for Valheim Info API users to see shield information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/spears": {
       "get": {
         "tags": ["spears"],
@@ -1654,6 +2024,43 @@
         }
       }
     },
+    "/spears/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["spears"],
+        "summary": "Request Valheim spear information by search type and term.",
+        "description": "A request for Valheim Info API users to see spear information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/swords": {
       "get": {
         "tags": ["swords"],
@@ -1792,6 +2199,43 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/swords/{searchType}/{searchTerm}": {
+      "get": {
+        "tags": ["swords"],
+        "summary": "Request Valheim sword information by search type and term.",
+        "description": "A request for Valheim Info API users to see sword information based on search inputs.",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "searchType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "enum": ["name", "description"]
+          },
+          {
+            "name": "searchTerm",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"

@@ -4,7 +4,8 @@ import {
   getClubDataById,
   createClubData,
   updateClubData,
-  deleteClubData
+  deleteClubData,
+  getClubDataByParameter
 } from '../controllers/clubs.controller';
 const clubsRouter = Router();
 
@@ -13,6 +14,9 @@ clubsRouter.get('/clubs', getAllClubData);
 
 // GET club data by id
 clubsRouter.get('/clubs/:id', getClubDataById);
+
+// GET club data by search type and term
+clubsRouter.get('/clubs/:searchType/:searchTerm', getClubDataByParameter);
 
 // POST/Create club data
 clubsRouter.post('/clubs', createClubData);

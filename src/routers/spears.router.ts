@@ -4,7 +4,8 @@ import {
   getSpearDataById,
   createSpearData,
   updateSpearData,
-  deleteSpearData
+  deleteSpearData,
+  getSpearDataByParameter
 } from '../controllers/spears.controller';
 const spearsRouter = Router();
 
@@ -13,6 +14,9 @@ spearsRouter.get('/spears', getAllSpearData);
 
 // GET spear data by id
 spearsRouter.get('/spears/:id', getSpearDataById);
+
+// GET spear data by search type and term
+spearsRouter.get('/spears/:searchType/:searchTerm', getSpearDataByParameter);
 
 // POST/Create spear data
 spearsRouter.post('/spears', createSpearData);

@@ -4,7 +4,8 @@ import {
   getFistDataById,
   createFistData,
   updateFistData,
-  deleteFistData
+  deleteFistData,
+  getFistDataByParameter
 } from '../controllers/fists.controller';
 const fistsRouter = Router();
 
@@ -13,6 +14,9 @@ fistsRouter.get('/fists', getAllFistData);
 
 // GET fist data by id
 fistsRouter.get('/fists/:id', getFistDataById);
+
+// GET fist data by search type and term
+fistsRouter.get('/fists/:searchType/:searchTerm', getFistDataByParameter);
 
 // POST/Create fist data
 fistsRouter.post('/fists', createFistData);

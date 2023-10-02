@@ -4,7 +4,8 @@ import {
   getKnifeDataById,
   createKnifeData,
   updateKnifeData,
-  deleteKnifeData
+  deleteKnifeData,
+  getKnifeDataByParameter
 } from '../controllers/knifes.controller';
 const knifesRouter = Router();
 
@@ -13,6 +14,9 @@ knifesRouter.get('/knifes', getAllKnifeData);
 
 // GET knife data by id
 knifesRouter.get('/knifes/:id', getKnifeDataById);
+
+// GET knife data by search type and term
+knifesRouter.get('/knifes/:searchType/:searchTerm', getKnifeDataByParameter);
 
 // POST/Create knife data
 knifesRouter.post('/knifes', createKnifeData);

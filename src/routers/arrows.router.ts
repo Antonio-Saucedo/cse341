@@ -4,7 +4,8 @@ import {
   getArrowDataById,
   createArrowData,
   updateArrowData,
-  deleteArrowData
+  deleteArrowData,
+  getArrowDataByParameter
 } from '../controllers/arrows.controller';
 const arrowsRouter = Router();
 
@@ -13,6 +14,9 @@ arrowsRouter.get('/arrows', getAllArrowData);
 
 // GET arrow data by id
 arrowsRouter.get('/arrows/:id', getArrowDataById);
+
+//GET arrow data by search type and term
+arrowsRouter.get('/arrows/:searchType/:searchTerm', getArrowDataByParameter);
 
 // POST/Create arrow data
 arrowsRouter.post('/arrows', createArrowData);

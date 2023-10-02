@@ -4,7 +4,8 @@ import {
   getFoodDataById,
   createFoodData,
   updateFoodData,
-  deleteFoodData
+  deleteFoodData,
+  getFoodDataByParameter
 } from '../controllers/food.controller';
 const foodsRouter = Router();
 
@@ -13,6 +14,9 @@ foodsRouter.get('/food', getAllFoodData);
 
 // GET food data by id
 foodsRouter.get('/food/:id', getFoodDataById);
+
+// GET food data by search type and term
+foodsRouter.get('/food/:searchType/:searchTerm', getFoodDataByParameter);
 
 // POST/Create food data
 foodsRouter.post('/food', createFoodData);

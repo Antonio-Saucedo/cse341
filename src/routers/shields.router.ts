@@ -4,7 +4,8 @@ import {
   getShieldDataById,
   createShieldData,
   updateShieldData,
-  deleteShieldData
+  deleteShieldData,
+  getShieldDataByParameter
 } from '../controllers/shields.controller';
 const shieldsRouter = Router();
 
@@ -13,6 +14,9 @@ shieldsRouter.get('/shields', getAllShieldData);
 
 // GET shield data by id
 shieldsRouter.get('/shields/:id', getShieldDataById);
+
+// GET shield data by search type and term
+shieldsRouter.get('/shields/:searchType/:searchTerm', getShieldDataByParameter);
 
 // POST/Create shield data
 shieldsRouter.post('/shields', createShieldData);

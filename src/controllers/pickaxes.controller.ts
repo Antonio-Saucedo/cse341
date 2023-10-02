@@ -23,10 +23,7 @@ export const getPickaxeDataById = async (req: any, res: any) => {
       res.status(400).json('ID must be alphanumeric, 24 characters long.');
     } else {
       const userId = new ObjectId(req.params.id);
-      const result = await getDb()
-        .db('valheim')
-        .collection('pickaxe')
-        .find({ _id: userId });
+      const result = await getDb().db('valheim').collection('pickaxe').find({ _id: userId });
       result.toArray().then((lists: any) => {
         if (!lists[0]) {
           res.status(404).json(`Pickaxe with ID ${userId} was not found.`);
@@ -35,6 +32,51 @@ export const getPickaxeDataById = async (req: any, res: any) => {
           res.status(200).json(lists[0]);
         }
       });
+    }
+  } catch (err) {
+    res.status(500).json('Pickaxe information was not found. Try again later.');
+  }
+};
+
+export const getPickaxeDataByParameter = async (req: any, res: any) => {
+  try {
+    const valid = ['name', 'description'];
+    const searchType = req.params.searchType;
+    if (valid.includes(searchType)) {
+      const searchTerm = req.params.searchTerm;
+      if (searchType == 'name') {
+        const result = await getDb()
+          .db('valheim')
+          .collection('pickaxe')
+          .find({ name: { $regex: searchTerm, $options: 'i' } });
+        result.toArray().then((lists: any) => {
+          if (!lists[0]) {
+            res
+              .status(404)
+              .json(`Pickaxe with ${searchType} containing '${searchTerm}' was not found.`);
+          } else {
+            res.setHeader('Content-Type', 'application/json');
+            res.status(200).json(lists);
+          }
+        });
+      } else if (searchType == 'description') {
+        const result = await getDb()
+          .db('valheim')
+          .collection('pickaxe')
+          .find({ description: { $regex: searchTerm, $options: 'i' } });
+        result.toArray().then((lists: any) => {
+          if (!lists[0]) {
+            res
+              .status(404)
+              .json(`Pickaxe with ${searchType} containing '${searchTerm}' was not found.`);
+          } else {
+            res.setHeader('Content-Type', 'application/json');
+            res.status(200).json(lists);
+          }
+        });
+      } else {
+        res.status(400).json('Search types are name and description.');
+      }
     }
   } catch (err) {
     res.status(500).json('Pickaxe information was not found. Try again later.');
@@ -210,10 +252,7 @@ export const createPickaxeData = async (req: any, res: any) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await getDb()
-          .db('valheim')
-          .collection('pickaxe')
-          .insertOne(pickaxe);
+        const responce = await getDb().db('valheim').collection('pickaxe').insertOne(pickaxe);
         if (responce.acknowledged) {
           res.status(201).json(responce);
         } else {

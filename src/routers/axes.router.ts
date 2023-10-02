@@ -4,7 +4,8 @@ import {
   getAxeDataById,
   createAxeData,
   updateAxeData,
-  deleteAxeData
+  deleteAxeData,
+  getAxeDataByParameter
 } from '../controllers/axes.controller';
 const axesRouter = Router();
 
@@ -13,6 +14,9 @@ axesRouter.get('/axes', getAllAxeData);
 
 // GET axe data by id
 axesRouter.get('/axes/:id', getAxeDataById);
+
+// GET axe data by search type and term
+axesRouter.get('/axes/:searchType/:searchTerm', getAxeDataByParameter);
 
 // POST/Create axe data
 axesRouter.post('/axes', createAxeData);
