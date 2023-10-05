@@ -44,54 +44,25 @@ export const getBowDataByParameter = async (req: any, res: any) => {
     const searchType = req.params.searchType;
     if (valid.includes(searchType)) {
       const searchTerm = req.params.searchTerm;
-      if (searchType == 'name') {
-        const result = await getDb()
-          .db('valheim')
-          .collection('bows')
-          .find({ name: { $regex: searchTerm, $options: 'i' } });
-        result.toArray().then((lists: any) => {
-          if (!lists[0]) {
-            res
-              .status(404)
-              .json(`Bow with ${searchType} containing '${searchTerm}' was not found.`);
-          } else {
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(lists);
-          }
-        });
-      } else if (searchType == 'description') {
-        const result = await getDb()
-          .db('valheim')
-          .collection('bows')
-          .find({ description: { $regex: searchTerm, $options: 'i' } });
-        result.toArray().then((lists: any) => {
-          if (!lists[0]) {
-            res
-              .status(404)
-              .json(`Bow with ${searchType} containing '${searchTerm}' was not found.`);
-          } else {
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(lists);
-          }
-        });
-      } else if (searchType == 'recipe') {
-        const result = await getDb()
-          .db('valheim')
-          .collection('bows')
-          .find({ recipe: { $regex: searchTerm, $options: 'i' } });
-        result.toArray().then((lists: any) => {
-          if (!lists[0]) {
-            res
-              .status(404)
-              .json(`Bow with ${searchType} containing '${searchTerm}' was not found.`);
-          } else {
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(lists);
-          }
-        });
+      let query = {};
+      if (searchType != 'recipe') {
+        query = { [searchType]: { $regex: searchTerm, $options: 'i' } };
       } else {
-        res.status(400).json('Search types are name, description and recipe.');
+        query = {
+          quality: { $elemMatch: { [searchType]: { $regex: searchTerm, $options: 'i' } } }
+        };
       }
+      const result = await getDb().db('valheim').collection('bows').find(query);
+      result.toArray().then((lists: any) => {
+        if (!lists[0]) {
+          res.status(404).json(`Bow with ${searchType} containing '${searchTerm}' was not found.`);
+        } else {
+          res.setHeader('Content-Type', 'application/json');
+          res.status(200).json(lists);
+        }
+      });
+    } else {
+      res.status(400).json('Available search types are name, description and recipe.');
     }
   } catch (err) {
     res.status(500).json('Bow information was not found. Try again later.');
@@ -108,10 +79,10 @@ export const createBowData = async (req: any, res: any) => {
         quality: req.body.quality
       };
       if (typeof bow.name != 'string') {
-        failMessage += 'To create Bow data, enter a name string.\n';
+        failMessage += 'To create Bow data, enter a name string value.\n';
       }
       if (typeof bow.description != 'string') {
-        failMessage += 'To create Bow data, enter a description string.\n';
+        failMessage += 'To create Bow data, enter a description string value.\n';
       }
       for (let i = 0; i < bow.quality.length; i++) {
         if (typeof bow.quality[i].quality != 'number') {
