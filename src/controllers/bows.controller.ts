@@ -105,58 +105,7 @@ export const createBowData = async (req: any, res: any) => {
       const bow = {
         name: req.body.name,
         description: req.body.description,
-        quality1: {
-          recipe: req.body.quality1.recipe,
-          weight: req.body.quality1.weight,
-          durability: req.body.quality1.durability,
-          pierce: req.body.quality1.pierce,
-          spirit: req.body.quality1.spirit,
-          poison: req.body.quality1.poison,
-          backstab: req.body.quality1.backstab,
-          stagger: req.body.quality1.stagger,
-          knockback: req.body.quality1.knockback,
-          parryBonus: req.body.quality1.parryBonus,
-          movement: req.body.quality1.movement
-        },
-        quality2: {
-          recipe: req.body.quality2.recipe,
-          weight: req.body.quality2.weight,
-          durability: req.body.quality2.durability,
-          pierce: req.body.quality2.pierce,
-          spirit: req.body.quality2.spirit,
-          poison: req.body.quality2.poison,
-          backstab: req.body.quality2.backstab,
-          stagger: req.body.quality2.stagger,
-          knockback: req.body.quality2.knockback,
-          parryBonus: req.body.quality2.parryBonus,
-          movement: req.body.quality2.movement
-        },
-        quality3: {
-          recipe: req.body.quality3.recipe,
-          weight: req.body.quality3.weight,
-          durability: req.body.quality3.durability,
-          pierce: req.body.quality3.pierce,
-          spirit: req.body.quality3.spirit,
-          poison: req.body.quality3.poison,
-          backstab: req.body.quality3.backstab,
-          stagger: req.body.quality3.stagger,
-          knockback: req.body.quality3.knockback,
-          parryBonus: req.body.quality3.parryBonus,
-          movement: req.body.quality3.movement
-        },
-        quality4: {
-          recipe: req.body.quality4.recipe,
-          weight: req.body.quality4.weight,
-          durability: req.body.quality4.durability,
-          pierce: req.body.quality4.pierce,
-          spirit: req.body.quality4.spirit,
-          poison: req.body.quality4.poison,
-          backstab: req.body.quality4.backstab,
-          stagger: req.body.quality4.stagger,
-          knockback: req.body.quality4.knockback,
-          parryBonus: req.body.quality4.parryBonus,
-          movement: req.body.quality4.movement
-        }
+        quality: req.body.quality
       };
       if (typeof bow.name != 'string') {
         failMessage += 'To create Bow data, enter a name string.\n';
@@ -164,104 +113,49 @@ export const createBowData = async (req: any, res: any) => {
       if (typeof bow.description != 'string') {
         failMessage += 'To create Bow data, enter a description string.\n';
       }
-      if (typeof bow.quality1.recipe != 'string') {
-        failMessage += 'To create Bow data, enter a quality1 recipe string.\n';
-      }
-      if (typeof bow.quality1.weight != 'number') {
-        failMessage += 'To create Bow data, enter a quality1 numeric weight amount.\n';
-      }
-      if (typeof bow.quality1.durability != 'number') {
-        failMessage += 'To create Bow data, enter a quality1 numeric durability amount.\n';
-      }
-      if (typeof bow.quality1.pierce != 'number') {
-        failMessage += 'To create Bow data, enter a quality1 numeric pierce amount.\n';
-      }
-      if (typeof bow.quality1.spirit != 'number') {
-        failMessage += 'To create Bow data, enter a quality1 numeric spirit amount.\n';
-      }
-      if (typeof bow.quality1.poison != 'number') {
-        failMessage += 'To create Bow data, enter a quality1 numeric poison amount.\n';
-      }
-      if (typeof bow.quality1.backstab != 'string') {
-        failMessage += 'To create Bow data, enter a quality1 backstab string.\n';
-      }
-      if (typeof bow.quality1.stagger != 'number') {
-        failMessage += 'To create Bow data, enter a quality1 numeric stagger amount.\n';
-      }
-      if (typeof bow.quality1.knockback != 'number') {
-        failMessage += 'To create Bow data, enter a quality1 numeric knockback amount.\n';
-      }
-      if (typeof bow.quality1.parryBonus != 'string') {
-        failMessage += 'To create Bow data, enter a quality1 parryBonus string.\n';
-      }
-      if (typeof bow.quality1.movement != 'string') {
-        failMessage += 'To create Bow data, enter a quality1 movement string.\n';
-      }
-      if (typeof bow.quality2.recipe != 'string') {
-        failMessage += 'To create Bow data, enter a quality2 recipe string.\n';
-      }
-      if (typeof bow.quality2.weight != 'number') {
-        failMessage += 'To create Bow data, enter a quality2 numeric weight amount.\n';
-      }
-      if (typeof bow.quality2.durability != 'number') {
-        failMessage += 'To create Bow data, enter a quality2 numeric durability amount.\n';
-      }
-      if (typeof bow.quality2.pierce != 'number') {
-        failMessage += 'To create Bow data, enter a quality2 numeric pierce amount.\n';
-      }
-      if (typeof bow.quality2.spirit != 'number') {
-        failMessage += 'To create Bow data, enter a quality2 numeric spirit amount.\n';
-      }
-      if (typeof bow.quality2.poison != 'number') {
-        failMessage += 'To create Bow data, enter a quality2 numeric poison amount.\n';
-      }
-      if (typeof bow.quality2.backstab != 'string') {
-        failMessage += 'To create Bow data, enter a quality2 backstab string.\n';
-      }
-      if (typeof bow.quality2.stagger != 'number') {
-        failMessage += 'To create Bow data, enter a quality2 numeric stagger amount.\n';
-      }
-      if (typeof bow.quality2.knockback != 'number') {
-        failMessage += 'To create Bow data, enter a quality2 numeric knockback amount.\n';
-      }
-      if (typeof bow.quality2.parryBonus != 'string') {
-        failMessage += 'To create Bow data, enter a quality2 parryBonus string.\n';
-      }
-      if (typeof bow.quality2.movement != 'string') {
-        failMessage += 'To create Bow data, enter a quality2 movement string.\n';
-      }
-      if (typeof bow.quality3.recipe != 'string') {
-        failMessage += 'To create Bow data, enter a quality3 recipe string.\n';
-      }
-      if (typeof bow.quality3.weight != 'number') {
-        failMessage += 'To create Bow data, enter a quality3 numeric weight amount.\n';
-      }
-      if (typeof bow.quality3.durability != 'number') {
-        failMessage += 'To create Bow data, enter a quality3 numeric durability amount.\n';
-      }
-      if (typeof bow.quality3.pierce != 'number') {
-        failMessage += 'To create Bow data, enter a quality3 numeric pierce amount.\n';
-      }
-      if (typeof bow.quality3.spirit != 'number') {
-        failMessage += 'To create Bow data, enter a quality3 numeric spirit amount.\n';
-      }
-      if (typeof bow.quality3.poison != 'number') {
-        failMessage += 'To create Bow data, enter a quality3 numeric poison amount.\n';
-      }
-      if (typeof bow.quality3.backstab != 'string') {
-        failMessage += 'To create Bow data, enter a quality3 backstab string.\n';
-      }
-      if (typeof bow.quality3.stagger != 'number') {
-        failMessage += 'To create Bow data, enter a quality3 numeric stagger amount.\n';
-      }
-      if (typeof bow.quality3.knockback != 'number') {
-        failMessage += 'To create Bow data, enter a quality3 numeric knockback amount.\n';
-      }
-      if (typeof bow.quality3.parryBonus != 'string') {
-        failMessage += 'To create Bow data, enter a quality3 parryBonus string.\n';
-      }
-      if (typeof bow.quality3.movement != 'string') {
-        failMessage += 'To create Bow data, enter a quality3 movement string.';
+      for (let i = 0; i < bow.quality.length; i++) {
+        if (typeof bow.quality[i].quality != 'number') {
+          failMessage += `To create Bow data, enter a quality number value for quality item ${
+            i + 1
+          }.\n`;
+        } else {
+          if (bow.quality[i].quality < 1 || bow.quality[i].quality > 4) {
+            failMessage += `To create Bow data, enter a quality number value for quality item ${bow.quality.quality} between 1 and 4 inclusive.\n`;
+          }
+          if (typeof bow.quality[i].recipe != 'string') {
+            failMessage += `To create Bow data, enter a recipe string value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].weight != 'number') {
+            failMessage += `To create Bow data, enter a weight numeric value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].durability != 'number') {
+            failMessage += `To create Bow data, enter a durability numeric value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].pierce != 'number') {
+            failMessage += `To create Bow data, enter a pierce numeric value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].spirit != 'number') {
+            failMessage += `To create Bow data, enter a spirit numeric value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].poison != 'number') {
+            failMessage += `To create Bow data, enter a poison numeric value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].backstab != 'string') {
+            failMessage += `To create Bow data, enter a backstab string value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].stagger != 'number') {
+            failMessage += `To create Bow data, enter a stagger numeric value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].knockback != 'number') {
+            failMessage += `To create Bow data, enter a knockback numeric value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].parryBonus != 'string') {
+            failMessage += `To create Bow data, enter a parryBonus string value for quality item ${bow.quality.quality}.\n`;
+          }
+          if (typeof bow.quality[i].movement != 'string') {
+            failMessage += `To create Bow data, enter a movement string value for quality item ${bow.quality.quality}.\n`;
+          }
+        }
       }
       if (failMessage != '') {
         res.status(400);
