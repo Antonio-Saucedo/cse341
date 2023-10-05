@@ -267,14 +267,14 @@ export const createPickaxeData = async (req: any, res: any) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await getDb().db('valheim').collection('pickaxe').insertOne(pickaxe);
-        if (responce.acknowledged) {
-          res.status(201).json(responce);
+        const response = await getDb().db('valheim').collection('pickaxe').insertOne(pickaxe);
+        if (response.acknowledged) {
+          res.status(201).json(response);
         } else {
           res
             .status(500)
             .json(
-              responce.error ||
+              response.error ||
                 'Something went wrong while creating the pickaxe data. Try again later.'
             );
         }
@@ -460,7 +460,7 @@ export const updatePickaxeData = async (req: any, res: any) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await getDb()
+          const response = await getDb()
             .db('valheim')
             .collection('pickaxe')
             .updateOne(
@@ -524,13 +524,13 @@ export const updatePickaxeData = async (req: any, res: any) => {
                 }
               }
             );
-          if (responce.modifiedCount > 0) {
+          if (response.modifiedCount > 0) {
             res.status(204).send();
           } else {
             res
               .status(500)
               .json(
-                responce.error ||
+                response.error ||
                   'Something went wrong while updating the pickaxe data. Try again later.'
               );
           }
@@ -551,17 +551,17 @@ export const deletePickaxeData = async (req: any, res: any) => {
         res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await getDb()
+        const response = await getDb()
           .db('valheim')
           .collection('pickaxe')
           .deleteOne({ _id: userId }, true);
-        if (responce.deletedCount > 0) {
+        if (response.deletedCount > 0) {
           res.status(200).send(`Pickaxe data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
             .json(
-              responce.error ||
+              response.error ||
                 'Something went wrong while deleting the pickaxe data. Try again later.'
             );
         }

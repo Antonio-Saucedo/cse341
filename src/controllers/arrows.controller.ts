@@ -156,14 +156,14 @@ export const createArrowData = async (req: any, res: any) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await getDb().db('valheim').collection('arrows').insertOne(arrow);
-        if (responce.acknowledged) {
-          res.status(201).json(responce);
+        const response = await getDb().db('valheim').collection('arrows').insertOne(arrow);
+        if (response.acknowledged) {
+          res.status(201).json(response);
         } else {
           res
             .status(500)
             .json(
-              responce.error ||
+              response.error ||
                 'Something went wrong while creating the arrow data. Try again later.'
             );
         }
@@ -238,7 +238,7 @@ export const updateArrowData = async (req: any, res: any) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await getDb()
+          const response = await getDb()
             .db('valheim')
             .collection('arrows')
             .updateOne(
@@ -260,13 +260,13 @@ export const updateArrowData = async (req: any, res: any) => {
                 }
               }
             );
-          if (responce.modifiedCount > 0) {
+          if (response.modifiedCount > 0) {
             res.status(204).send();
           } else {
             res
               .status(500)
               .json(
-                responce.error ||
+                response.error ||
                   'Something went wrong while updating the arrow data. Try again later.'
               );
           }
@@ -287,17 +287,17 @@ export const deleteArrowData = async (req: any, res: any) => {
         res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await getDb()
+        const response = await getDb()
           .db('valheim')
           .collection('arrows')
           .deleteOne({ _id: userId }, true);
-        if (responce.deletedCount > 0) {
+        if (response.deletedCount > 0) {
           res.status(200).send(`Arrow data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
             .json(
-              responce.error ||
+              response.error ||
                 'Something went wrong while deleting the arrow data. Try again later.'
             );
         }

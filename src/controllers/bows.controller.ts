@@ -161,14 +161,14 @@ export const createBowData = async (req: any, res: any) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await getDb().db('valheim').collection('bows').insertOne(bow);
-        if (responce.acknowledged) {
-          res.status(201).json(responce);
+        const response = await getDb().db('valheim').collection('bows').insertOne(bow);
+        if (response.acknowledged) {
+          res.status(201).json(response);
         } else {
           res
             .status(500)
             .json(
-              responce.error || 'Something went wrong while creating the bow data. Try again later.'
+              response.error || 'Something went wrong while creating the bow data. Try again later.'
             );
         }
       }
@@ -353,7 +353,7 @@ export const updateBowData = async (req: any, res: any) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await getDb()
+          const response = await getDb()
             .db('valheim')
             .collection('bows')
             .updateOne(
@@ -417,13 +417,13 @@ export const updateBowData = async (req: any, res: any) => {
                 }
               }
             );
-          if (responce.modifiedCount > 0) {
+          if (response.modifiedCount > 0) {
             res.status(204).send();
           } else {
             res
               .status(500)
               .json(
-                responce.error ||
+                response.error ||
                   'Something went wrong while updating the bow data. Try again later.'
               );
           }
@@ -444,17 +444,17 @@ export const deleteBowData = async (req: any, res: any) => {
         res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await getDb()
+        const response = await getDb()
           .db('valheim')
           .collection('bows')
           .deleteOne({ _id: userId }, true);
-        if (responce.deletedCount > 0) {
+        if (response.deletedCount > 0) {
           res.status(200).send(`Bow data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
             .json(
-              responce.error || 'Something went wrong while deleting the bow data. Try again later.'
+              response.error || 'Something went wrong while deleting the bow data. Try again later.'
             );
         }
       }

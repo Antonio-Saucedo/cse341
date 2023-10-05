@@ -169,14 +169,14 @@ export const createAxeData = async (req: any, res: any) => {
         res.status(400);
         res.send(failMessage);
       } else {
-        const responce = await getDb().db('valheim').collection('axes').insertOne(axe);
-        if (responce.acknowledged) {
-          res.status(201).json(responce);
+        const response = await getDb().db('valheim').collection('axes').insertOne(axe);
+        if (response.acknowledged) {
+          res.status(201).json(response);
         } else {
           res
             .status(500)
             .json(
-              responce.error || 'Something went wrong while creating the axe data. Try again later.'
+              response.error || 'Something went wrong while creating the axe data. Try again later.'
             );
         }
       }
@@ -387,7 +387,7 @@ export const updateAxeData = async (req: any, res: any) => {
           res.send(failMessage);
         } else {
           const userId = new ObjectId(req.params.id);
-          const responce = await getDb()
+          const response = await getDb()
             .db('valheim')
             .collection('axes')
             .updateOne(
@@ -459,13 +459,13 @@ export const updateAxeData = async (req: any, res: any) => {
                 }
               }
             );
-          if (responce.modifiedCount > 0) {
+          if (response.modifiedCount > 0) {
             res.status(204).send();
           } else {
             res
               .status(500)
               .json(
-                responce.error ||
+                response.error ||
                   'Something went wrong while updating the axe data. Try again later.'
               );
           }
@@ -486,17 +486,17 @@ export const deleteAxeData = async (req: any, res: any) => {
         res.status(400).json('ID must be alphanumeric, 24 characters long.');
       } else {
         const userId = new ObjectId(req.params.id);
-        const responce = await getDb()
+        const response = await getDb()
           .db('valheim')
           .collection('axes')
           .deleteOne({ _id: userId }, true);
-        if (responce.deletedCount > 0) {
+        if (response.deletedCount > 0) {
           res.status(200).send(`Axe data with ID ${userId} was deleted sucessfully.`);
         } else {
           res
             .status(500)
             .json(
-              responce.error || 'Something went wrong while deleting the axe data. Try again later.'
+              response.error || 'Something went wrong while deleting the axe data. Try again later.'
             );
         }
       }
