@@ -172,223 +172,62 @@ const doc = {
           description: {
             type: 'string'
           },
-          quality1: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '50'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              poison: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '1.5x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality2: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '50'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              poison: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '1.5x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality3: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '50'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              poison: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '1.5x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality4: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '50'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              poison: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '1.5x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
+          quality: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                quality: { type: 'integer', format: 'int32', example: '1' },
+                recipe: {
+                  type: 'string'
+                },
+                weight: {
+                  type: 'number',
+                  format: 'double',
+                  example: '1.5'
+                },
+                durability: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '50'
+                },
+                pierce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                spirit: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                poison: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                backstab: {
+                  type: 'string',
+                  example: '3x'
+                },
+                stagger: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                knockback: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                parryBonus: {
+                  type: 'string',
+                  example: '1.5x'
+                },
+                movement: {
+                  type: 'string',
+                  example: '-5%'
+                }
               }
             }
           }
@@ -403,283 +242,77 @@ const doc = {
           description: {
             type: 'string'
           },
-          quality1: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '20'
-              },
-              blunt: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              fire: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              frost: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality2: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '20'
-              },
-              blunt: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              fire: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              frost: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality3: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '20'
-              },
-              blunt: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              fire: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              frost: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality4: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '20'
-              },
-              blunt: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              fire: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              frost: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
+          quality: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                quality: { type: 'integer', format: 'int32', example: '1' },
+                recipe: {
+                  type: 'string'
+                },
+                weight: {
+                  type: 'number',
+                  format: 'double',
+                  example: '1.5'
+                },
+                durability: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '20'
+                },
+                blunt: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                pierce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                fire: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                spirit: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                frost: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                backstab: {
+                  type: 'string',
+                  example: '3x'
+                },
+                stagger: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                knockback: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                blockForce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                parryBonus: {
+                  type: 'string',
+                  example: '2x'
+                },
+                movement: {
+                  type: 'string',
+                  example: '-5%'
+                }
               }
             }
           }
@@ -694,167 +327,48 @@ const doc = {
           description: {
             type: 'string'
           },
-          quality1: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '300'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '6x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '6x'
-              }
-            }
-          },
-          quality2: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '300'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '6x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '6x'
-              }
-            }
-          },
-          quality3: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '300'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '6x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '6x'
-              }
-            }
-          },
-          quality4: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '300'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '6x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '6x'
+          quality: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                quality: { type: 'integer', format: 'int32', example: '1' },
+                recipe: {
+                  type: 'string'
+                },
+                weight: {
+                  type: 'number',
+                  format: 'double',
+                  example: '1.5'
+                },
+                durability: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '300'
+                },
+                slash: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                backstab: {
+                  type: 'string',
+                  example: '6x'
+                },
+                stagger: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                blockForce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                parryBonus: {
+                  type: 'string',
+                  example: '6x'
+                }
               }
             }
           }
@@ -916,227 +430,63 @@ const doc = {
           description: {
             type: 'string'
           },
-          quality1: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '6x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '4x'
-              }
-            }
-          },
-          quality2: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '6x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '4x'
-              }
-            }
-          },
-          quality3: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '6x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '4x'
-              }
-            }
-          },
-          quality4: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '6x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '4x'
+          quality: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                quality: { type: 'integer', format: 'int32', example: '1' },
+                recipe: {
+                  type: 'string'
+                },
+                weight: {
+                  type: 'number',
+                  format: 'double',
+                  example: '1.5'
+                },
+                durability: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                pierce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                slash: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                spirit: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                backstab: {
+                  type: 'string',
+                  example: '6x'
+                },
+                stagger: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                knockback: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                blockForce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                parryBonus: {
+                  type: 'string',
+                  example: '4x'
+                }
               }
             }
           }
@@ -1151,223 +501,62 @@ const doc = {
           description: {
             type: 'string'
           },
-          quality1: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '0.1'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              mining: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality2: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '0.1'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              mining: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality3: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '0.1'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              mining: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality4: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '0.1'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              mining: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
+          quality: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                quality: { type: 'integer', format: 'int32', example: '1' },
+                recipe: {
+                  type: 'string'
+                },
+                weight: {
+                  type: 'number',
+                  format: 'double',
+                  example: '0.1'
+                },
+                durability: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                pierce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                mining: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                backstab: {
+                  type: 'string',
+                  example: '3x'
+                },
+                stagger: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                knockback: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                blockForce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                parryBonus: {
+                  type: 'string',
+                  example: '2x'
+                },
+                movement: {
+                  type: 'string',
+                  example: '-5%'
+                }
               }
             }
           }
@@ -1382,223 +571,62 @@ const doc = {
           description: {
             type: 'string'
           },
-          quality1: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '2.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              lightning: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality2: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '2.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              lightning: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality3: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '2.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              lightning: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality4: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '2.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              lightning: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
+          quality: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                quality: { type: 'integer', format: 'int32', example: '1' },
+                recipe: {
+                  type: 'string'
+                },
+                weight: {
+                  type: 'number',
+                  format: 'double',
+                  example: '2.5'
+                },
+                durability: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                pierce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                lightning: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                backstab: {
+                  type: 'string',
+                  example: '3x'
+                },
+                stagger: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                knockback: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                blockForce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                parryBonus: {
+                  type: 'string',
+                  example: '2x'
+                },
+                movement: {
+                  type: 'string',
+                  example: '-5%'
+                }
               }
             }
           }
@@ -1613,147 +641,43 @@ const doc = {
           description: {
             type: 'string'
           },
-          quality1: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockArmor: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '0x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality2: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockArmor: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '0x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality3: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockArmor: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '0x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality4: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockArmor: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '0x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
+          quality: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                quality: { type: 'integer', format: 'int32', example: '1' },
+                recipe: {
+                  type: 'string'
+                },
+                weight: {
+                  type: 'number',
+                  format: 'double',
+                  example: '1.5'
+                },
+                durability: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                blockArmor: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                blockForce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                parryBonus: {
+                  type: 'string',
+                  example: '0x'
+                },
+                movement: {
+                  type: 'string',
+                  example: '-5%'
+                }
               }
             }
           }
@@ -1768,203 +692,57 @@ const doc = {
           description: {
             type: 'string'
           },
-          quality1: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality2: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality3: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality4: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.5'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              pierce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
+          quality: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                quality: { type: 'integer', format: 'int32', example: '1' },
+                recipe: {
+                  type: 'string'
+                },
+                weight: {
+                  type: 'number',
+                  format: 'double',
+                  example: '1.5'
+                },
+                durability: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                pierce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                backstab: {
+                  type: 'string',
+                  example: '3x'
+                },
+                stagger: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                knockback: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                blockForce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                parryBonus: {
+                  type: 'string',
+                  example: '2x'
+                },
+                movement: {
+                  type: 'string',
+                  example: '-5%'
+                }
               }
             }
           }
@@ -1979,243 +757,67 @@ const doc = {
           description: {
             type: 'string'
           },
-          quality1: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.0'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              frost: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality2: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.0'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              frost: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality3: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.0'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              frost: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
-              }
-            }
-          },
-          quality4: {
-            type: 'object',
-            properties: {
-              recipe: {
-                type: 'string'
-              },
-              weight: {
-                type: 'number',
-                format: 'double',
-                example: '1.0'
-              },
-              durability: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              slash: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              spirit: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              frost: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              backstab: {
-                type: 'string',
-                example: '3x'
-              },
-              stagger: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              knockback: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              blockForce: {
-                type: 'integer',
-                format: 'int32',
-                example: '0'
-              },
-              parryBonus: {
-                type: 'string',
-                example: '2x'
-              },
-              movement: {
-                type: 'string',
-                example: '-5%'
+          quality: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                quality: { type: 'integer', format: 'int32', example: '1' },
+                recipe: {
+                  type: 'string'
+                },
+                weight: {
+                  type: 'number',
+                  format: 'double',
+                  example: '1.0'
+                },
+                durability: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                slash: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                spirit: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                frost: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                backstab: {
+                  type: 'string',
+                  example: '3x'
+                },
+                stagger: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                knockback: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                blockForce: {
+                  type: 'integer',
+                  format: 'int32',
+                  example: '0'
+                },
+                parryBonus: {
+                  type: 'string',
+                  example: '2x'
+                },
+                movement: {
+                  type: 'string',
+                  example: '-5%'
+                }
               }
             }
           }
