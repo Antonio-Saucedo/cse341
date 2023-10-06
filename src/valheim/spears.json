@@ -1,262 +1,292 @@
-{
-  "spear01": {
+[
+  {
     "name": "Flint spear",
     "description": "If your eye marks a thing for death, let your arm send the messenger.",
-    "quality1": {
-      "recipe": "5 Wood, 10 Flint, 2 Leather scraps",
-      "weight": 1.5,
-      "durability": 100,
-      "pierce": 20,
-      "backstab": "3x",
-      "stagger": 20,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "3 Wood, 5 Flint, 1 Leather scraps",
-      "weight": 1.5,
-      "durability": 150,
-      "pierce": 26,
-      "backstab": "3x",
-      "stagger": 26,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "6 Wood, 10 Flint, 2 Leather scraps",
-      "weight": 1.5,
-      "durability": 200,
-      "pierce": 32,
-      "backstab": "3x",
-      "stagger": 32,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality4": {
-      "recipe": "9 Wood, 15 Flint, 3 Leather scraps",
-      "weight": 1.5,
-      "durability": 250,
-      "pierce": 38,
-      "backstab": "3x",
-      "stagger": 38,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "5 Wood, 10 Flint, 2 Leather scraps",
+        "weight": 1.5,
+        "durability": 100,
+        "pierce": 20,
+        "backstab": "3x",
+        "stagger": 20,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "3 Wood, 5 Flint, 1 Leather scraps",
+        "weight": 1.5,
+        "durability": 150,
+        "pierce": 26,
+        "backstab": "3x",
+        "stagger": 26,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "6 Wood, 10 Flint, 2 Leather scraps",
+        "weight": 1.5,
+        "durability": 200,
+        "pierce": 32,
+        "backstab": "3x",
+        "stagger": 32,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 4,
+        "recipe": "9 Wood, 15 Flint, 3 Leather scraps",
+        "weight": 1.5,
+        "durability": 250,
+        "pierce": 38,
+        "backstab": "3x",
+        "stagger": 38,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "spear02": {
+  {
     "name": "Bronze spear",
     "description": "A sturdy spear with a head of burnished bronze.",
-    "quality1": {
-      "recipe": "5 Wood, 6 Bronze, 2 Deer hide",
-      "weight": 1.5,
-      "durability": 100,
-      "pierce": 35,
-      "backstab": "3x",
-      "stagger": 35,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "3 Wood, 4 Bronze, 1 Deer hide",
-      "weight": 1.5,
-      "durability": 150,
-      "pierce": 41,
-      "backstab": "3x",
-      "stagger": 41,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "6 Wood, 8 Bronze, 2 Deer hide",
-      "weight": 1.5,
-      "durability": 200,
-      "pierce": 47,
-      "backstab": "3x",
-      "stagger": 47,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality4": {
-      "recipe": "9 Wood, 12 Bronze, 3 Deer hide",
-      "weight": 1.5,
-      "durability": 250,
-      "pierce": 53,
-      "backstab": "3x",
-      "stagger": 53,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "5 Wood, 6 Bronze, 2 Deer hide",
+        "weight": 1.5,
+        "durability": 100,
+        "pierce": 35,
+        "backstab": "3x",
+        "stagger": 35,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "3 Wood, 4 Bronze, 1 Deer hide",
+        "weight": 1.5,
+        "durability": 150,
+        "pierce": 41,
+        "backstab": "3x",
+        "stagger": 41,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "6 Wood, 8 Bronze, 2 Deer hide",
+        "weight": 1.5,
+        "durability": 200,
+        "pierce": 47,
+        "backstab": "3x",
+        "stagger": 47,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 4,
+        "recipe": "9 Wood, 12 Bronze, 3 Deer hide",
+        "weight": 1.5,
+        "durability": 250,
+        "pierce": 53,
+        "backstab": "3x",
+        "stagger": 53,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "spear03": {
+  {
     "name": "Ancient bark spear",
     "description": "Despite its gnarled look, this spear is strong and perfectly balanced.",
-    "quality1": {
-      "recipe": "4 Troll hide, 10 Iron, 10 Ancient bark",
-      "weight": 1.5,
-      "durability": 100,
-      "pierce": 55,
-      "backstab": "3x",
-      "stagger": 55,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "1 Troll hide, 5 Iron, 5 Ancient bark",
-      "weight": 1.5,
-      "durability": 150,
-      "pierce": 61,
-      "backstab": "3x",
-      "stagger": 61,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "2 Troll hide, 10 Iron, 10 Ancient bark",
-      "weight": 1.5,
-      "durability": 200,
-      "pierce": 67,
-      "backstab": "3x",
-      "stagger": 67,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality4": {
-      "recipe": "3 Troll hide, 15 Iron, 15 Ancient bark",
-      "weight": 1.5,
-      "durability": 250,
-      "pierce": 73,
-      "backstab": "3x",
-      "stagger": 73,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "4 Troll hide, 10 Iron, 10 Ancient bark",
+        "weight": 1.5,
+        "durability": 100,
+        "pierce": 55,
+        "backstab": "3x",
+        "stagger": 55,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "1 Troll hide, 5 Iron, 5 Ancient bark",
+        "weight": 1.5,
+        "durability": 150,
+        "pierce": 61,
+        "backstab": "3x",
+        "stagger": 61,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "2 Troll hide, 10 Iron, 10 Ancient bark",
+        "weight": 1.5,
+        "durability": 200,
+        "pierce": 67,
+        "backstab": "3x",
+        "stagger": 67,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 4,
+        "recipe": "3 Troll hide, 15 Iron, 15 Ancient bark",
+        "weight": 1.5,
+        "durability": 250,
+        "pierce": 73,
+        "backstab": "3x",
+        "stagger": 73,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "spear04": {
+  {
     "name": "Fang spear",
     "description": "Even in death, the wolf's tooth aches for flesh.",
-    "quality1": {
-      "recipe": "10 Ancient bark, 4 Wolf fang, 2 Leather scraps, 2 Silver",
-      "weight": 1.5,
-      "durability": 100,
-      "pierce": 75,
-      "backstab": "3x",
-      "stagger": 75,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "5 Ancient bark, 2 Wolf fang, 1 Leather scraps, 1 Silver",
-      "weight": 1.5,
-      "durability": 150,
-      "pierce": 81,
-      "backstab": "3x",
-      "stagger": 81,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "10 Ancient bark, 4 Wolf fang, 2 Leather scraps, 2 Silver",
-      "weight": 1.5,
-      "durability": 200,
-      "pierce": 87,
-      "backstab": "3x",
-      "stagger": 87,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality4": {
-      "recipe": "15 Ancient bark, 6 Wolf fang, 3 Leather scraps, 3 Silver",
-      "weight": 1.5,
-      "durability": 250,
-      "pierce": 93,
-      "backstab": "3x",
-      "stagger": 93,
-      "knockback": 20,
-      "blockForce": 0,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Ancient bark, 4 Wolf fang, 2 Leather scraps, 2 Silver",
+        "weight": 1.5,
+        "durability": 100,
+        "pierce": 75,
+        "backstab": "3x",
+        "stagger": 75,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "5 Ancient bark, 2 Wolf fang, 1 Leather scraps, 1 Silver",
+        "weight": 1.5,
+        "durability": 150,
+        "pierce": 81,
+        "backstab": "3x",
+        "stagger": 81,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "10 Ancient bark, 4 Wolf fang, 2 Leather scraps, 2 Silver",
+        "weight": 1.5,
+        "durability": 200,
+        "pierce": 87,
+        "backstab": "3x",
+        "stagger": 87,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 4,
+        "recipe": "15 Ancient bark, 6 Wolf fang, 3 Leather scraps, 3 Silver",
+        "weight": 1.5,
+        "durability": 250,
+        "pierce": 93,
+        "backstab": "3x",
+        "stagger": 93,
+        "knockback": 20,
+        "blockForce": 0,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "spear05": {
+  {
     "name": "Carapace spear",
     "description": "Sharpened to jagged perfection, this spear is sure to be deadly.",
-    "quality1": {
-      "recipe": "10 Yggdrasil Wood, 4 Carapace, 2 Mandible",
-      "weight": 1.5,
-      "durability": 100,
-      "pierce": 115,
-      "backstab": "3x",
-      "stagger": 115,
-      "knockback": 20,
-      "blockForce": 20,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "5 Yggdrasil Wood, 4 Carapace, 1 Mandible",
-      "weight": 1.5,
-      "durability": 150,
-      "pierce": 121,
-      "backstab": "3x",
-      "stagger": 121,
-      "knockback": 20,
-      "blockForce": 20,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "10 Yggdrasil Wood, 8 Carapace, 2 Mandible",
-      "weight": 1.5,
-      "durability": 200,
-      "pierce": 127,
-      "backstab": "3x",
-      "stagger": 127,
-      "knockback": 20,
-      "blockForce": 20,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    },
-    "quality4": {
-      "recipe": "15 Yggdrasil Wood, 12 Carapace, 3 Mandible",
-      "weight": 1.5,
-      "durability": 250,
-      "pierce": 133,
-      "backstab": "3x",
-      "stagger": 133,
-      "knockback": 20,
-      "blockForce": 20,
-      "parryBonus": "2x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Yggdrasil Wood, 4 Carapace, 2 Mandible",
+        "weight": 1.5,
+        "durability": 100,
+        "pierce": 115,
+        "backstab": "3x",
+        "stagger": 115,
+        "knockback": 20,
+        "blockForce": 20,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "5 Yggdrasil Wood, 4 Carapace, 1 Mandible",
+        "weight": 1.5,
+        "durability": 150,
+        "pierce": 121,
+        "backstab": "3x",
+        "stagger": 121,
+        "knockback": 20,
+        "blockForce": 20,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "10 Yggdrasil Wood, 8 Carapace, 2 Mandible",
+        "weight": 1.5,
+        "durability": 200,
+        "pierce": 127,
+        "backstab": "3x",
+        "stagger": 127,
+        "knockback": 20,
+        "blockForce": 20,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 4,
+        "recipe": "15 Yggdrasil Wood, 12 Carapace, 3 Mandible",
+        "weight": 1.5,
+        "durability": 250,
+        "pierce": 133,
+        "backstab": "3x",
+        "stagger": 133,
+        "knockback": 20,
+        "blockForce": 20,
+        "parryBonus": "2x",
+        "movement": "-5%"
+      }
+    ]
   }
-}
+]

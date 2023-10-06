@@ -1,5 +1,5 @@
-{
-  "food01": {
+[
+  {
     "name": "Raspberries",
     "description": "Sweet and delicious.",
     "recipe": "1 Raspberries",
@@ -11,7 +11,7 @@
     "duration": "600s",
     "healing": "1 hp/tick"
   },
-  "food02": {
+  {
     "name": "Mushroom",
     "description": "Bounty of the forest.",
     "recipe": "1 Mushroom",
@@ -23,7 +23,7 @@
     "duration": "900s",
     "healing": "1 hp/tick"
   },
-  "food03": {
+  {
     "name": "Honey",
     "description": "Sweet and tasty.",
     "recipe": "1 Honey",
@@ -35,7 +35,7 @@
     "duration": "900s",
     "healing": "1 hp/tick"
   },
-  "food04": {
+  {
     "name": "Grilled neck tail",
     "description": "This savoury, charcoal-grilled meat has a slight aroma of seaweed and grass.",
     "recipe": "1 Neck tail",
@@ -47,7 +47,7 @@
     "duration": "1200s",
     "healing": "2 hp/tick"
   },
-  "food05": {
+  {
     "name": "Cooked boar meat",
     "description": "An earthly taste.",
     "recipe": "1 Boar meat",
@@ -59,7 +59,7 @@
     "duration": "1200s",
     "healing": "2 hp/tick"
   },
-  "food06": {
+  {
     "name": "Cooked deer meat",
     "description": "All that running paid off.",
     "recipe": "1 Deer meat",
@@ -71,7 +71,7 @@
     "duration": "1200s",
     "healing": "2 hp/tick"
   },
-  "food07": {
+  {
     "name": "Boar jerky",
     "description": "Lean and salty.",
     "recipe": "1 Boar meat, 1 Honey",
@@ -83,7 +83,7 @@
     "duration": "1800s",
     "healing": "2 hp/tick"
   },
-  "food08": {
+  {
     "name": "Blueberries",
     "description": "Tiny but tasty.",
     "recipe": "1 Blueberries",
@@ -95,7 +95,7 @@
     "duration": "600s",
     "healing": "1 hp/tick"
   },
-  "food09": {
+  {
     "name": "Carrot",
     "description": "An orange tasty treat.",
     "recipe": "1 Carrot",
@@ -107,7 +107,7 @@
     "duration": "600s",
     "healing": "1 hp/tick"
   },
-  "food10": {
+  {
     "name": "Yellow mushroom",
     "description": "An energetic glowing mushroom.",
     "recipe": "1 Yellow mushroom",
@@ -119,7 +119,7 @@
     "duration": "600s",
     "healing": "1 hp/tick"
   },
-  "food11": {
+  {
     "name": "Carrot soup",
     "description": "A warm tasty soup made of mostly carrots.",
     "recipe": "1 Mushroom, 3 Carrot",
@@ -131,7 +131,7 @@
     "duration": "1500s",
     "healing": "2 hp/tick"
   },
-  "food12": {
+  {
     "name": "Queens jam",
     "description": "That classic tasty blend of raspberries and blueberries.",
     "recipe": "8 Raspberries, 6 Blueberries",
@@ -143,7 +143,7 @@
     "duration": "1200s",
     "healing": "2 hp/tick"
   },
-  "food13": {
+  {
     "name": "Cooked fish",
     "description": "A tasty side of smoked fish.",
     "recipe": "1 Raw fish",
@@ -155,7 +155,7 @@
     "duration": "1200s",
     "healing": "2 hp/tick"
   },
-  "food14": {
+  {
     "name": "Deer stew",
     "description": "Fall-apart tender.",
     "recipe": "1 Blueberries, 1 Carrot, 1 Cooked deer meat",
@@ -167,7 +167,7 @@
     "duration": "1500s",
     "healing": "3 hp/tick"
   },
-  "food15": {
+  {
     "name": "Minced Meat Sauce",
     "description": "Chunks of goodness in a thick gravy.",
     "recipe": "1 Boar meat, 1 Neck tail, 1 Carrot",
@@ -179,7 +179,7 @@
     "duration": "1500s",
     "healing": "3 hp/tick"
   },
-  "food16": {
+  {
     "name": "Muckshake",
     "description": "Wakes you up!",
     "recipe": "1 Ooze, 2 Raspberries, 2 Blueberries",
@@ -191,7 +191,7 @@
     "duration": "1200s",
     "healing": "1 hp/tick"
   },
-  "food17": {
+  {
     "name": "Turnip stew",
     "description": "Nutritious and restorative.",
     "recipe": "1 Boar meat, 3 Turnip",
@@ -203,7 +203,7 @@
     "duration": "25m",
     "healing": "2 hp/tick"
   },
-  "food18": {
+  {
     "name": "Sausages",
     "description": "Links of savory, smoked meat.",
     "recipe": "4 Entrails, 1 Boar meat, 1 Thistle",
@@ -215,7 +215,7 @@
     "duration": "1500s",
     "healing": "3 hp/tick"
   },
-  "food19": {
+  {
     "name": "Black soup",
     "description": "A perfect balance of sweetness and acidity.",
     "recipe": "1 Bloodbag, 1 Honey, 1 Turnip",
@@ -227,7 +227,7 @@
     "duration": "1200s",
     "healing": "3 hp/tick"
   },
-  "food20": {
+  {
     "name": "Cooked serpent meat",
     "description": "A cooked slice of sea serpent, smells good.",
     "recipe": "1 Serpent meat",
@@ -239,7 +239,7 @@
     "duration": "1500s",
     "healing": "3 hp/tick"
   },
-  "food21": {
+  {
     "name": "Serpent stew",
     "description": "Smells of honey and serpent...",
     "recipe": "1 Mushroom, 1 Cooked serpent meat, 2 Honey",
@@ -251,7 +251,7 @@
     "duration": "1800s",
     "healing": "4 hp/tick"
   },
-  "food22": {
+  {
     "name": "Onion",
     "description": "A crunchy and spicy taste.",
     "recipe": "1 Onion",
@@ -263,7 +263,7 @@
     "duration": "900s",
     "healing": "1 hp/tick"
   },
-  "food23": {
+  {
     "name": "Onion soup",
     "description": "Deliciously Rich.",
     "recipe": "3 Onion",
@@ -275,7 +275,7 @@
     "duration": "1200s",
     "healing": "1 hp/tick"
   },
-  "food24": {
+  {
     "name": "Cooked wolf meat",
     "description": "A wild taste.",
     "recipe": "1 Wolf meat",
@@ -287,7 +287,7 @@
     "duration": "1200s",
     "healing": "3 hp/tick"
   },
-  "food25": {
+  {
     "name": "Wolf jerky",
     "description": "Chewy and full of flavor.",
     "recipe": "1 Wolf meat, 1 Honey",
@@ -299,7 +299,7 @@
     "duration": "1800s",
     "healing": "3 hp/tick"
   },
-  "food26": {
+  {
     "name": "Wolf skewer",
     "description": "Dripping with taste.",
     "recipe": "1 Wolf meat, 2 Mushroom, 1 Onion",
@@ -311,7 +311,7 @@
     "duration": "1500s",
     "healing": "3 hp/tick"
   },
-  "food27": {
+  {
     "name": "Eyescream",
     "description": "Crispy cool and creamy.",
     "recipe": "3 Greydwarf eye, 1 Freeze gland",
@@ -323,7 +323,7 @@
     "duration": "1500s",
     "healing": "1 hp/tick"
   },
-  "food28": {
+  {
     "name": "Cloudberries",
     "description": "The gold of the forest.",
     "recipe": "1 Cloudberries",
@@ -335,7 +335,7 @@
     "duration": "15m",
     "healing": "1 hp/tick"
   },
-  "food29": {
+  {
     "name": "Cooked lox meat",
     "description": "A great hunk of tender meat, food fit for Valhalla!",
     "recipe": "1 Lox meat",
@@ -347,7 +347,7 @@
     "duration": "1200s",
     "healing": "4 hp/tick"
   },
-  "food30": {
+  {
     "name": "Fish wraps",
     "description": "Bread and fish, what more to wish?",
     "recipe": "2 Cooked fish, 4 Barley flour",
@@ -359,7 +359,7 @@
     "duration": "1500s",
     "healing": "4 hp/tick"
   },
-  "food31": {
+  {
     "name": "Lox meat pie",
     "description": "Break the crust to release a cloud of fragrant steam. Delicious!",
     "recipe": "2 Cooked fish, 4 Barley flour",
@@ -371,7 +371,7 @@
     "duration": "1800s",
     "healing": "4 hp/tick"
   },
-  "food32": {
+  {
     "name": "Blood pudding",
     "description": "It's bloody tasty.",
     "recipe": "2 Thistle, 2 Bloodbag, 4 Barley flour",
@@ -383,7 +383,7 @@
     "duration": "1800s",
     "healing": "2 hp/tick"
   },
-  "food33": {
+  {
     "name": "Bread",
     "description": "A tasty loaf of bread.",
     "recipe": "1 Bread dough",
@@ -395,7 +395,7 @@
     "duration": "1500s",
     "healing": "2 hp/tick"
   },
-  "food34": {
+  {
     "name": "Magecap",
     "description": "The delicate blue magecaps crackle like nerve-endings with sorcerous vitality.",
     "recipe": "1 Magecap",
@@ -407,7 +407,7 @@
     "duration": "900s",
     "healing": "1 hp/tick"
   },
-  "food35": {
+  {
     "name": "Jotun puffs",
     "description": "Swollen with magic, these golden orbs bubble from the ground where the Jotun fell.",
     "recipe": "1 Jotun puffs",
@@ -419,7 +419,7 @@
     "duration": "900s",
     "healing": "1 hp/tick"
   },
-  "food36": {
+  {
     "name": "Cooked egg",
     "description": "Sunny side up!",
     "recipe": "1 Egg",
@@ -431,7 +431,7 @@
     "duration": "1200s",
     "healing": "2 hp/tick"
   },
-  "food37": {
+  {
     "name": "Cooked seeker meat",
     "description": "Succulent white meat, a true delicacy.",
     "recipe": "1 Seeker meat",
@@ -443,7 +443,7 @@
     "duration": "1200s",
     "healing": "5 hp/tick"
   },
-  "food38": {
+  {
     "name": "Cooked hare meat",
     "description": "Stringy but flavorful.",
     "recipe": "1 Hare meat",
@@ -455,7 +455,7 @@
     "duration": "1200s",
     "healing": "5 hp/tick"
   },
-  "food39": {
+  {
     "name": "Cooked chicken meat",
     "description": "It tastes like chicken.",
     "recipe": "1 Chicken meat",
@@ -467,7 +467,7 @@
     "duration": "1200s",
     "healing": "5 hp/tick"
   },
-  "food40": {
+  {
     "name": "Meat platter",
     "description": "Battle fuel.",
     "recipe": "1 Uncooked meat platter: 1 Seeker meat, 1 Lox meat, 1 Hare meat",
@@ -479,7 +479,7 @@
     "duration": "1800s",
     "healing": "5 hp/tick"
   },
-  "food41": {
+  {
     "name": "Honey glazed chicken",
     "description": "Grilled to perfection. Make both eyes and mouths water.",
     "recipe": "1 Uncooked honey glazed chicken: 1 Chicken meat, 3 Honey, 2 Jotun puffs",
@@ -491,7 +491,7 @@
     "duration": "1800s",
     "healing": "5 hp/tick"
   },
-  "food42": {
+  {
     "name": "Misthare supreme",
     "description": "One of life's Great Pleasures.",
     "recipe": "1 Uncooked misthare supreme: 1 Hare meat, 3 Jotun puffs, 2 Carrot",
@@ -503,7 +503,7 @@
     "duration": "1500s",
     "healing": "5 hp/tick"
   },
-  "food43": {
+  {
     "name": "Salad",
     "description": "Fresh, crisp leaves.",
     "recipe": "3 Jotun puffs, 3 Onion, 3 Cloudberries",
@@ -515,7 +515,7 @@
     "duration": "1500s",
     "healing": "3 hp/tick"
   },
-  "food44": {
+  {
     "name": "Mushroom omelette",
     "description": "A delicious omelette with an earthy aftertaste.",
     "recipe": "3 Egg, 3 Jotun puffs",
@@ -527,7 +527,7 @@
     "duration": "1500s",
     "healing": "3 hp/tick"
   },
-  "food45": {
+  {
     "name": "Fish n' bread",
     "description": "Bounty from both land and sea.",
     "recipe": "1 Uncooked fish n' bread: 1 Anglerfish, 2 Bread dough",
@@ -539,7 +539,7 @@
     "duration": "1800s",
     "healing": "3 hp/tick"
   },
-  "food46": {
+  {
     "name": "Stuffed mushroom",
     "description": "Bursting with magical flavour.",
     "recipe": "1 Uncooked magically stuffed shroom: 1 Magecap, 1 Blood clot, 2 Turnip",
@@ -551,7 +551,7 @@
     "duration": "1500s",
     "healing": "3 hp/tick"
   },
-  "food47": {
+  {
     "name": "Yggdrasil porridge",
     "description": "Made with sap from the great tree, even a mouthful imparts a warm glow to your whole body.",
     "recipe": "4 Sap, 3 Barley, 2 Royal jelly",
@@ -563,7 +563,7 @@
     "duration": "1500s",
     "healing": "3 hp/tick"
   },
-  "food48": {
+  {
     "name": "Seeker aspic",
     "description": "A quivering jelly with a taste like gentle electricity.",
     "recipe": "2 Seeker meat, 2 Magecap, 2 Royal jelly",
@@ -575,4 +575,4 @@
     "duration": "1800s",
     "healing": "3 hp/tick"
   }
-}
+]

@@ -1,405 +1,470 @@
-{
-  "shield01": {
+[
+  {
     "name": "Wood shield",
     "description": "A simple wooden shield.",
-    "quality1": {
-      "recipe": "10 Wood, 4 Resin, 4 Leather scraps",
-      "weight": 4.0,
-      "durability": 200,
-      "blockArmor": 6,
-      "blockForce": 20,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "5 Wood, 2 Resin, 2 Leather scraps",
-      "weight": 4.0,
-      "durability": 250,
-      "blockArmor": 12,
-      "blockForce": 25,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "10 Wood, 4 Resin, 4 Leather scraps",
-      "weight": 4.0,
-      "durability": 300,
-      "blockArmor": 18,
-      "blockForce": 30,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Wood, 4 Resin, 4 Leather scraps",
+        "weight": 4.0,
+        "durability": 200,
+        "blockArmor": 6,
+        "blockForce": 20,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "5 Wood, 2 Resin, 2 Leather scraps",
+        "weight": 4.0,
+        "durability": 250,
+        "blockArmor": 12,
+        "blockForce": 25,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "10 Wood, 4 Resin, 4 Leather scraps",
+        "weight": 4.0,
+        "durability": 300,
+        "blockArmor": 18,
+        "blockForce": 30,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "shield02": {
+  {
     "name": "Wood tower shield",
     "description": "A rough but heavy wooden shield.",
-    "quality1": {
-      "recipe": "10 Wood, 6 Leather scraps",
-      "weight": 4.0,
-      "durability": 200,
-      "blockArmor": 10,
-      "blockForce": 100,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    },
-    "quality2": {
-      "recipe": "5 Wood, 3 Leather scraps",
-      "weight": 4.0,
-      "durability": 250,
-      "blockArmor": 16,
-      "blockForce": 105,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    },
-    "quality3": {
-      "recipe": "10 Wood, 6 Leather scraps",
-      "weight": 4.0,
-      "durability": 300,
-      "blockArmor": 22,
-      "blockForce": 110,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Wood, 6 Leather scraps",
+        "weight": 4.0,
+        "durability": 200,
+        "blockArmor": 10,
+        "blockForce": 100,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      },
+      {
+        "quality": 2,
+        "recipe": "5 Wood, 3 Leather scraps",
+        "weight": 4.0,
+        "durability": 250,
+        "blockArmor": 16,
+        "blockForce": 105,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      },
+      {
+        "quality": 3,
+        "recipe": "10 Wood, 6 Leather scraps",
+        "weight": 4.0,
+        "durability": 300,
+        "blockArmor": 22,
+        "blockForce": 110,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      }
+    ]
   },
-  "shield03": {
+  {
     "name": "Bone tower shield",
     "description": "The bones of dead warriors makes for good protection.",
-    "quality1": {
-      "recipe": "10 Wood, 10 Bone fragments, 3 Skeleton trophy",
-      "weight": 4.0,
-      "durability": 200,
-      "blockArmor": 32,
-      "blockForce": 100,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    },
-    "quality2": {
-      "recipe": "5 Wood, 5 Bone fragments",
-      "weight": 4.0,
-      "durability": 250,
-      "blockArmor": 38,
-      "blockForce": 105,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    },
-    "quality3": {
-      "recipe": "10 Wood, 10 Bone fragments",
-      "weight": 4.0,
-      "durability": 300,
-      "blockArmor": 44,
-      "blockForce": 110,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Wood, 10 Bone fragments, 3 Skeleton trophy",
+        "weight": 4.0,
+        "durability": 200,
+        "blockArmor": 32,
+        "blockForce": 100,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      },
+      {
+        "quality": 2,
+        "recipe": "5 Wood, 5 Bone fragments",
+        "weight": 4.0,
+        "durability": 250,
+        "blockArmor": 38,
+        "blockForce": 105,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      },
+      {
+        "quality": 3,
+        "recipe": "10 Wood, 10 Bone fragments",
+        "weight": 4.0,
+        "durability": 300,
+        "blockArmor": 44,
+        "blockForce": 110,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      }
+    ]
   },
-  "shield04": {
+  {
     "name": "Bronze buckler",
     "description": "A shield of burnished bronze, good to turn a blade or two.",
-    "quality1": {
-      "recipe": "10 Bronze, 4 Wood",
-      "weight": 3.0,
-      "durability": 200,
-      "blockArmor": 16,
-      "blockForce": 30,
-      "parryBonus": "2.5x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "5 Bronze, 1 Wood",
-      "weight": 3.0,
-      "durability": 250,
-      "blockArmor": 22,
-      "blockForce": 30,
-      "parryBonus": "2.5x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "10 Bronze, 2 Wood",
-      "weight": 3.0,
-      "durability": 300,
-      "blockArmor": 28,
-      "blockForce": 30,
-      "parryBonus": "2.5x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Bronze, 4 Wood",
+        "weight": 3.0,
+        "durability": 200,
+        "blockArmor": 16,
+        "blockForce": 30,
+        "parryBonus": "2.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "5 Bronze, 1 Wood",
+        "weight": 3.0,
+        "durability": 250,
+        "blockArmor": 22,
+        "blockForce": 30,
+        "parryBonus": "2.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "10 Bronze, 2 Wood",
+        "weight": 3.0,
+        "durability": 300,
+        "blockArmor": 28,
+        "blockForce": 30,
+        "parryBonus": "2.5x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "shield05": {
+  {
     "name": "Banded shield",
     "description": "Banded with hoops of iron, a true warrior's companion.",
-    "quality1": {
-      "recipe": "10 Fine wood, 8 Iron",
-      "weight": 5.0,
-      "durability": 200,
-      "blockArmor": 42,
-      "blockForce": 40,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "10 Fine wood, 4 Iron",
-      "weight": 5.0,
-      "durability": 250,
-      "blockArmor": 48,
-      "blockForce": 45,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "20 Fine wood, 8 Iron",
-      "weight": 5.0,
-      "durability": 300,
-      "blockArmor": 54,
-      "blockForce": 50,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Fine wood, 8 Iron",
+        "weight": 5.0,
+        "durability": 200,
+        "blockArmor": 42,
+        "blockForce": 40,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "10 Fine wood, 4 Iron",
+        "weight": 5.0,
+        "durability": 250,
+        "blockArmor": 48,
+        "blockForce": 45,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "20 Fine wood, 8 Iron",
+        "weight": 5.0,
+        "durability": 300,
+        "blockArmor": 54,
+        "blockForce": 50,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "shield06": {
+  {
     "name": "Iron buckler",
     "description": "Its lightness and curved center makes it excellent for deflecting attacks.",
-    "quality1": {
-      "recipe": "10 Iron, 4 Ancient bark",
-      "weight": 4.0,
-      "durability": 200,
-      "blockArmor": 28,
-      "blockForce": 30,
-      "parryBonus": "2.5x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "5 Iron, 1 Ancient bark",
-      "weight": 4.0,
-      "durability": 250,
-      "blockArmor": 34,
-      "blockForce": 30,
-      "parryBonus": "2.5x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "10 Iron, 2 Ancient bark",
-      "weight": 4.0,
-      "durability": 300,
-      "blockArmor": 40,
-      "blockForce": 30,
-      "parryBonus": "2.5x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Iron, 4 Ancient bark",
+        "weight": 4.0,
+        "durability": 200,
+        "blockArmor": 28,
+        "blockForce": 30,
+        "parryBonus": "2.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "5 Iron, 1 Ancient bark",
+        "weight": 4.0,
+        "durability": 250,
+        "blockArmor": 34,
+        "blockForce": 30,
+        "parryBonus": "2.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "10 Iron, 2 Ancient bark",
+        "weight": 4.0,
+        "durability": 300,
+        "blockArmor": 40,
+        "blockForce": 30,
+        "parryBonus": "2.5x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "shield07": {
+  {
     "name": "Iron tower shield",
     "description": "A tall shield of strong iron.",
-    "quality1": {
-      "recipe": "15 Fine wood, 10 Iron",
-      "weight": 4.0,
-      "durability": 200,
-      "blockArmor": 52,
-      "blockForce": 100,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    },
-    "quality2": {
-      "recipe": "10 Fine wood, 5 Iron",
-      "weight": 4.0,
-      "durability": 250,
-      "blockArmor": 58,
-      "blockForce": 105,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    },
-    "quality3": {
-      "recipe": "20 Fine wood, 10 Iron",
-      "weight": 4.0,
-      "durability": 300,
-      "blockArmor": 64,
-      "blockForce": 110,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "15 Fine wood, 10 Iron",
+        "weight": 4.0,
+        "durability": 200,
+        "blockArmor": 52,
+        "blockForce": 100,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      },
+      {
+        "quality": 2,
+        "recipe": "10 Fine wood, 5 Iron",
+        "weight": 4.0,
+        "durability": 250,
+        "blockArmor": 58,
+        "blockForce": 105,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      },
+      {
+        "quality": 3,
+        "recipe": "20 Fine wood, 10 Iron",
+        "weight": 4.0,
+        "durability": 300,
+        "blockArmor": 64,
+        "blockForce": 110,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      }
+    ]
   },
-  "shield08": {
+  {
     "name": "Silver shield",
     "description": "A shield of radiant silver.",
-    "quality1": {
-      "recipe": "10 Fine wood, 8 Silver",
-      "weight": 5.0,
-      "durability": 200,
-      "blockArmor": 60,
-      "blockForce": 40,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "10 Fine wood, 4 Silver",
-      "weight": 5.0,
-      "durability": 250,
-      "blockArmor": 66,
-      "blockForce": 45,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "20 Fine wood, 8 Silver",
-      "weight": 5.0,
-      "durability": 300,
-      "blockArmor": 72,
-      "blockForce": 50,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Fine wood, 8 Silver",
+        "weight": 5.0,
+        "durability": 200,
+        "blockArmor": 60,
+        "blockForce": 40,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "10 Fine wood, 4 Silver",
+        "weight": 5.0,
+        "durability": 250,
+        "blockArmor": 66,
+        "blockForce": 45,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "20 Fine wood, 8 Silver",
+        "weight": 5.0,
+        "durability": 300,
+        "blockArmor": 72,
+        "blockForce": 50,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "shield09": {
+  {
     "name": "Iron tower shield",
     "description": "A tall shield of strong iron.",
-    "quality1": {
-      "recipe": "10 Fine wood, 4 Iron, 8 Serpent scale",
-      "weight": 5.0,
-      "durability": 250,
-      "blockArmor": 60,
-      "blockForce": 100,
-      "parryBonus": "0x",
-      "movement": "-15%"
-    },
-    "quality2": {
-      "recipe": "10 Fine wood, 2 Iron, 4 Serpent scale",
-      "weight": 5.0,
-      "durability": 300,
-      "blockArmor": 66,
-      "blockForce": 105,
-      "parryBonus": "0x",
-      "movement": "-15%"
-    },
-    "quality3": {
-      "recipe": "20 Fine wood, 4 Iron, 8 Serpent scale",
-      "weight": 5.0,
-      "durability": 350,
-      "blockArmor": 72,
-      "blockForce": 110,
-      "parryBonus": "0x",
-      "movement": "-15%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Fine wood, 4 Iron, 8 Serpent scale",
+        "weight": 5.0,
+        "durability": 250,
+        "blockArmor": 60,
+        "blockForce": 100,
+        "parryBonus": "0x",
+        "movement": "-15%"
+      },
+      {
+        "quality": 2,
+        "recipe": "10 Fine wood, 2 Iron, 4 Serpent scale",
+        "weight": 5.0,
+        "durability": 300,
+        "blockArmor": 66,
+        "blockForce": 105,
+        "parryBonus": "0x",
+        "movement": "-15%"
+      },
+      {
+        "quality": 3,
+        "recipe": "20 Fine wood, 4 Iron, 8 Serpent scale",
+        "weight": 5.0,
+        "durability": 350,
+        "blockArmor": 72,
+        "blockForce": 110,
+        "parryBonus": "0x",
+        "movement": "-15%"
+      }
+    ]
   },
-  "shield10": {
+  {
     "name": "Black metal shield",
     "description": "Fashioned from the strongest metal, able to turn even the deadliest blades.",
-    "quality1": {
-      "recipe": "10 Fine wood, 8 Black metal, 5 Chain",
-      "weight": 5.0,
-      "durability": 200,
-      "blockArmor": 78,
-      "blockForce": 50,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "10 Fine wood, 4 Black metal, 2 Chain",
-      "weight": 5.0,
-      "durability": 250,
-      "blockArmor": 84,
-      "blockForce": 55,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "20 Fine wood, 8 Black metal, 4 Chain",
-      "weight": 5.0,
-      "durability": 300,
-      "blockArmor": 90,
-      "blockForce": 60,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "10 Fine wood, 8 Black metal, 5 Chain",
+        "weight": 5.0,
+        "durability": 200,
+        "blockArmor": 78,
+        "blockForce": 50,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "10 Fine wood, 4 Black metal, 2 Chain",
+        "weight": 5.0,
+        "durability": 250,
+        "blockArmor": 84,
+        "blockForce": 55,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "20 Fine wood, 8 Black metal, 4 Chain",
+        "weight": 5.0,
+        "durability": 300,
+        "blockArmor": 90,
+        "blockForce": 60,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "shield11": {
+  {
     "name": "Black metal tower shield",
     "description": "A tower shield of gleaming dark metal.",
-    "quality1": {
-      "recipe": "15 Fine wood, 10 Black metal, 7 Chain",
-      "weight": 5.0,
-      "durability": 200,
-      "blockArmor": 104,
-      "blockForce": 150,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    },
-    "quality2": {
-      "recipe": "15 Fine wood, 6 Black metal, 2 Chain",
-      "weight": 5.0,
-      "durability": 250,
-      "blockArmor": 110,
-      "blockForce": 155,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    },
-    "quality3": {
-      "recipe": "20 Fine wood, 8 Black metal, 4 Chain",
-      "weight": 5.0,
-      "durability": 300,
-      "blockArmor": 116,
-      "blockForce": 160,
-      "parryBonus": "0x",
-      "movement": "-20%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "15 Fine wood, 10 Black metal, 7 Chain",
+        "weight": 5.0,
+        "durability": 200,
+        "blockArmor": 104,
+        "blockForce": 150,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      },
+      {
+        "quality": 2,
+        "recipe": "15 Fine wood, 6 Black metal, 2 Chain",
+        "weight": 5.0,
+        "durability": 250,
+        "blockArmor": 110,
+        "blockForce": 155,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      },
+      {
+        "quality": 3,
+        "recipe": "20 Fine wood, 8 Black metal, 4 Chain",
+        "weight": 5.0,
+        "durability": 300,
+        "blockArmor": 116,
+        "blockForce": 160,
+        "parryBonus": "0x",
+        "movement": "-20%"
+      }
+    ]
   },
-  "shield12": {
+  {
     "name": "Carapace buckler",
     "description": "The skull of a seeker is solid but not heavy, which makes it perfect for a small and agile shield.",
-    "quality1": {
-      "recipe": "16 Carapace, 3 Scale hide, 10 Refined eitr",
-      "weight": 5.0,
-      "durability": 200,
-      "blockArmor": 78,
-      "blockForce": 50,
-      "parryBonus": "2.5x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "8 Carapace, 3 Scale hide, 3 Refined eitr",
-      "weight": 5.0,
-      "durability": 250,
-      "blockArmor": 84,
-      "blockForce": 55,
-      "parryBonus": "2.5x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "16 Carapace, 6 Scale hide, 6 Refined eitr",
-      "weight": 5.0,
-      "durability": 300,
-      "blockArmor": 90,
-      "blockForce": 60,
-      "parryBonus": "2.5x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "16 Carapace, 3 Scale hide, 10 Refined eitr",
+        "weight": 5.0,
+        "durability": 200,
+        "blockArmor": 78,
+        "blockForce": 50,
+        "parryBonus": "2.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "8 Carapace, 3 Scale hide, 3 Refined eitr",
+        "weight": 5.0,
+        "durability": 250,
+        "blockArmor": 84,
+        "blockForce": 55,
+        "parryBonus": "2.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "16 Carapace, 6 Scale hide, 6 Refined eitr",
+        "weight": 5.0,
+        "durability": 300,
+        "blockArmor": 90,
+        "blockForce": 60,
+        "parryBonus": "2.5x",
+        "movement": "-5%"
+      }
+    ]
   },
-  "shield13": {
+  {
     "name": "Carapace shield",
     "description": "The almost unbreakable carapace of your enemies makes an excellent shield.",
-    "quality1": {
-      "recipe": "20 Carapace, 3 Scale hide, 10 Refined eitr",
-      "weight": 5.0,
-      "durability": 200,
-      "blockArmor": 96,
-      "blockForce": 60,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality2": {
-      "recipe": "10 Carapace, 3 Scale hide, 3 Refined eitr",
-      "weight": 5.0,
-      "durability": 250,
-      "blockArmor": 102,
-      "blockForce": 65,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    },
-    "quality3": {
-      "recipe": "20 Carapace, 6 Scale hide, 6 Refined eitr",
-      "weight": 5.0,
-      "durability": 300,
-      "blockArmor": 108,
-      "blockForce": 70,
-      "parryBonus": "1.5x",
-      "movement": "-5%"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "20 Carapace, 3 Scale hide, 10 Refined eitr",
+        "weight": 5.0,
+        "durability": 200,
+        "blockArmor": 96,
+        "blockForce": 60,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 2,
+        "recipe": "10 Carapace, 3 Scale hide, 3 Refined eitr",
+        "weight": 5.0,
+        "durability": 250,
+        "blockArmor": 102,
+        "blockForce": 65,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      },
+      {
+        "quality": 3,
+        "recipe": "20 Carapace, 6 Scale hide, 6 Refined eitr",
+        "weight": 5.0,
+        "durability": 300,
+        "blockArmor": 108,
+        "blockForce": 70,
+        "parryBonus": "1.5x",
+        "movement": "-5%"
+      }
+    ]
   }
-}
+]

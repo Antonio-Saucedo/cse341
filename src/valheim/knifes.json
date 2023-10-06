@@ -1,355 +1,394 @@
-{
-  "knife01": {
+[
+  {
     "name": "Flint knife",
     "description": "Sharpened flint, a reliable tool.",
-    "quality1": {
-      "recipe": "2 Wood, 4 Flint, 2 Leather scraps",
-      "weight": 0.3,
-      "durability": 200,
-      "pierce": 5,
-      "slash": 5,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 10,
-      "knockback": 10,
-      "blockForce": 10,
-      "parryBonus": "4x"
-    },
-    "quality2": {
-      "recipe": "2 Flint",
-      "weight": 0.3,
-      "durability": 250,
-      "pierce": 6,
-      "slash": 6,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 12,
-      "knockback": 10,
-      "blockForce": 15,
-      "parryBonus": "4x"
-    },
-    "quality3": {
-      "recipe": "4 Flint",
-      "weight": 0.3,
-      "durability": 300,
-      "pierce": 7,
-      "slash": 7,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 14,
-      "knockback": 10,
-      "blockForce": 20,
-      "parryBonus": "4x"
-    },
-    "quality4": {
-      "recipe": "6 Flint",
-      "weight": 0.3,
-      "durability": 350,
-      "pierce": 8,
-      "slash": 8,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 16,
-      "knockback": 10,
-      "blockForce": 25,
-      "parryBonus": "4x"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "2 Wood, 4 Flint, 2 Leather scraps",
+        "weight": 0.3,
+        "durability": 200,
+        "pierce": 5,
+        "slash": 5,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 10,
+        "knockback": 10,
+        "blockForce": 10,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 2,
+        "recipe": "2 Flint",
+        "weight": 0.3,
+        "durability": 250,
+        "pierce": 6,
+        "slash": 6,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 12,
+        "knockback": 10,
+        "blockForce": 15,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 3,
+        "recipe": "4 Flint",
+        "weight": 0.3,
+        "durability": 300,
+        "pierce": 7,
+        "slash": 7,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 14,
+        "knockback": 10,
+        "blockForce": 20,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 4,
+        "recipe": "6 Flint",
+        "weight": 0.3,
+        "durability": 350,
+        "pierce": 8,
+        "slash": 8,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 16,
+        "knockback": 10,
+        "blockForce": 25,
+        "parryBonus": "4x"
+      }
+    ]
   },
-  "knife02": {
+  {
     "name": "Copper knife",
     "description": "A glittering copper knife.",
-    "quality1": {
-      "recipe": "2 Wood, 8 Copper",
-      "weight": 0.3,
-      "durability": 200,
-      "pierce": 12,
-      "slash": 12,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 24,
-      "knockback": 10,
-      "blockForce": 10,
-      "parryBonus": "4x"
-    },
-    "quality2": {
-      "recipe": "4 Copper, 8 Greydwarf eye",
-      "weight": 0.3,
-      "durability": 250,
-      "pierce": 13,
-      "slash": 13,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 26,
-      "knockback": 10,
-      "blockForce": 15,
-      "parryBonus": "4x"
-    },
-    "quality3": {
-      "recipe": "8 Copper, 16 Greydwarf eye",
-      "weight": 0.3,
-      "durability": 300,
-      "pierce": 14,
-      "slash": 14,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 28,
-      "knockback": 10,
-      "blockForce": 20,
-      "parryBonus": "4x"
-    },
-    "quality4": {
-      "recipe": "12 Copper, 24 Greydwarf eye",
-      "weight": 0.3,
-      "durability": 350,
-      "pierce": 15,
-      "slash": 15,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 30,
-      "knockback": 10,
-      "blockForce": 25,
-      "parryBonus": "4x"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "2 Wood, 8 Copper",
+        "weight": 0.3,
+        "durability": 200,
+        "pierce": 12,
+        "slash": 12,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 24,
+        "knockback": 10,
+        "blockForce": 10,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 2,
+        "recipe": "4 Copper, 8 Greydwarf eye",
+        "weight": 0.3,
+        "durability": 250,
+        "pierce": 13,
+        "slash": 13,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 26,
+        "knockback": 10,
+        "blockForce": 15,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 3,
+        "recipe": "8 Copper, 16 Greydwarf eye",
+        "weight": 0.3,
+        "durability": 300,
+        "pierce": 14,
+        "slash": 14,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 28,
+        "knockback": 10,
+        "blockForce": 20,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 4,
+        "recipe": "12 Copper, 24 Greydwarf eye",
+        "weight": 0.3,
+        "durability": 350,
+        "pierce": 15,
+        "slash": 15,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 30,
+        "knockback": 10,
+        "blockForce": 25,
+        "parryBonus": "4x"
+      }
+    ]
   },
-  "knife03": {
+  {
     "name": "Butcher knife",
     "description": "A butcher's knife designed specifically for slaughtering tamed animals.",
-    "quality1": {
-      "recipe": "2 Wood, 4 Tin",
-      "weight": 0.3,
-      "durability": 200,
-      "pierce": 0,
-      "slash": 0,
-      "spirit": 0,
-      "backstab": "1x",
-      "stagger": 0,
-      "knockback": 0,
-      "blockForce": 10,
-      "parryBonus": "4x"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "2 Wood, 4 Tin",
+        "weight": 0.3,
+        "durability": 200,
+        "pierce": 0,
+        "slash": 0,
+        "spirit": 0,
+        "backstab": "1x",
+        "stagger": 0,
+        "knockback": 0,
+        "blockForce": 10,
+        "parryBonus": "4x"
+      }
+    ]
   },
-  "knife04": {
+  {
     "name": "Abyssal razor",
     "description": "A knife from the deep.",
-    "quality1": {
-      "recipe": "4 Fine wood, 20 Chitin, 2 Leather scraps",
-      "weight": 0.3,
-      "durability": 200,
-      "pierce": 20,
-      "slash": 20,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 40,
-      "knockback": 10,
-      "blockForce": 10,
-      "parryBonus": "4x"
-    },
-    "quality2": {
-      "recipe": "10 Chitin",
-      "weight": 0.3,
-      "durability": 250,
-      "pierce": 21,
-      "slash": 21,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 42,
-      "knockback": 10,
-      "blockForce": 15,
-      "parryBonus": "4x"
-    },
-    "quality3": {
-      "recipe": "20 Chitin",
-      "weight": 0.3,
-      "durability": 300,
-      "pierce": 22,
-      "slash": 22,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 44,
-      "knockback": 10,
-      "blockForce": 20,
-      "parryBonus": "4x"
-    },
-    "quality4": {
-      "recipe": "30 Chitin",
-      "weight": 0.3,
-      "durability": 350,
-      "pierce": 23,
-      "slash": 23,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 46,
-      "knockback": 10,
-      "blockForce": 25,
-      "parryBonus": "4x"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "4 Fine wood, 20 Chitin, 2 Leather scraps",
+        "weight": 0.3,
+        "durability": 200,
+        "pierce": 20,
+        "slash": 20,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 40,
+        "knockback": 10,
+        "blockForce": 10,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 2,
+        "recipe": "10 Chitin",
+        "weight": 0.3,
+        "durability": 250,
+        "pierce": 21,
+        "slash": 21,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 42,
+        "knockback": 10,
+        "blockForce": 15,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 3,
+        "recipe": "20 Chitin",
+        "weight": 0.3,
+        "durability": 300,
+        "pierce": 22,
+        "slash": 22,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 44,
+        "knockback": 10,
+        "blockForce": 20,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 4,
+        "recipe": "30 Chitin",
+        "weight": 0.3,
+        "durability": 350,
+        "pierce": 23,
+        "slash": 23,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 46,
+        "knockback": 10,
+        "blockForce": 25,
+        "parryBonus": "4x"
+      }
+    ]
   },
-  "knife05": {
+  {
     "name": "Silver knife",
     "description": "A savage piece of pain.",
-    "quality1": {
-      "recipe": "2 Wood, 10 Silver, 3 Leather scraps, 2 Iron",
-      "weight": 0.3,
-      "durability": 100,
-      "pierce": 25,
-      "slash": 25,
-      "spirit": 12,
-      "backstab": "6x",
-      "stagger": 50,
-      "knockback": 10,
-      "blockForce": 10,
-      "parryBonus": "4x"
-    },
-    "quality2": {
-      "recipe": "1 Wood, 5 Silver, 1 Leather scraps, 1 Iron",
-      "weight": 0.3,
-      "durability": 150,
-      "pierce": 26,
-      "slash": 26,
-      "spirit": 12,
-      "backstab": "6x",
-      "stagger": 52,
-      "knockback": 10,
-      "blockForce": 15,
-      "parryBonus": "4x"
-    },
-    "quality3": {
-      "recipe": "2 Wood, 10 Silver, 2 Leather scraps, 2 Iron",
-      "weight": 0.3,
-      "durability": 200,
-      "pierce": 27,
-      "slash": 27,
-      "spirit": 12,
-      "backstab": "6x",
-      "stagger": 54,
-      "knockback": 10,
-      "blockForce": 20,
-      "parryBonus": "4x"
-    },
-    "quality4": {
-      "recipe": "3 Wood, 15 Silver, 3 Leather scraps, 3 Iron",
-      "weight": 0.3,
-      "durability": 250,
-      "pierce": 28,
-      "slash": 28,
-      "spirit": 12,
-      "backstab": "6x",
-      "stagger": 56,
-      "knockback": 10,
-      "blockForce": 25,
-      "parryBonus": "4x"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "2 Wood, 10 Silver, 3 Leather scraps, 2 Iron",
+        "weight": 0.3,
+        "durability": 100,
+        "pierce": 25,
+        "slash": 25,
+        "spirit": 12,
+        "backstab": "6x",
+        "stagger": 50,
+        "knockback": 10,
+        "blockForce": 10,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 2,
+        "recipe": "1 Wood, 5 Silver, 1 Leather scraps, 1 Iron",
+        "weight": 0.3,
+        "durability": 150,
+        "pierce": 26,
+        "slash": 26,
+        "spirit": 12,
+        "backstab": "6x",
+        "stagger": 52,
+        "knockback": 10,
+        "blockForce": 15,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 3,
+        "recipe": "2 Wood, 10 Silver, 2 Leather scraps, 2 Iron",
+        "weight": 0.3,
+        "durability": 200,
+        "pierce": 27,
+        "slash": 27,
+        "spirit": 12,
+        "backstab": "6x",
+        "stagger": 54,
+        "knockback": 10,
+        "blockForce": 20,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 4,
+        "recipe": "3 Wood, 15 Silver, 3 Leather scraps, 3 Iron",
+        "weight": 0.3,
+        "durability": 250,
+        "pierce": 28,
+        "slash": 28,
+        "spirit": 12,
+        "backstab": "6x",
+        "stagger": 56,
+        "knockback": 10,
+        "blockForce": 25,
+        "parryBonus": "4x"
+      }
+    ]
   },
-  "knife06": {
+  {
     "name": "Blackmetal knife",
     "description": "A darkling blade, strong and sharp.",
-    "quality1": {
-      "recipe": "4 Fine wood, 10 Black metal, 5 Linen thread",
-      "weight": 0.3,
-      "durability": 200,
-      "pierce": 34,
-      "slash": 34,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 68,
-      "knockback": 10,
-      "blockForce": 10,
-      "parryBonus": "4x"
-    },
-    "quality2": {
-      "recipe": "4 Black metal, 5 Linen thread",
-      "weight": 0.3,
-      "durability": 250,
-      "pierce": 35,
-      "slash": 35,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 70,
-      "knockback": 10,
-      "blockForce": 15,
-      "parryBonus": "4x"
-    },
-    "quality3": {
-      "recipe": "8 Black metal, 10 Linen thread",
-      "weight": 0.3,
-      "durability": 300,
-      "pierce": 36,
-      "slash": 36,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 72,
-      "knockback": 10,
-      "blockForce": 20,
-      "parryBonus": "4x"
-    },
-    "quality4": {
-      "recipe": "12 Black metal, 15 Linen thread",
-      "weight": 0.3,
-      "durability": 350,
-      "pierce": 37,
-      "slash": 37,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 74,
-      "knockback": 10,
-      "blockForce": 25,
-      "parryBonus": "4x"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "4 Fine wood, 10 Black metal, 5 Linen thread",
+        "weight": 0.3,
+        "durability": 200,
+        "pierce": 34,
+        "slash": 34,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 68,
+        "knockback": 10,
+        "blockForce": 10,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 2,
+        "recipe": "4 Black metal, 5 Linen thread",
+        "weight": 0.3,
+        "durability": 250,
+        "pierce": 35,
+        "slash": 35,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 70,
+        "knockback": 10,
+        "blockForce": 15,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 3,
+        "recipe": "8 Black metal, 10 Linen thread",
+        "weight": 0.3,
+        "durability": 300,
+        "pierce": 36,
+        "slash": 36,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 72,
+        "knockback": 10,
+        "blockForce": 20,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 4,
+        "recipe": "12 Black metal, 15 Linen thread",
+        "weight": 0.3,
+        "durability": 350,
+        "pierce": 37,
+        "slash": 37,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 74,
+        "knockback": 10,
+        "blockForce": 25,
+        "parryBonus": "4x"
+      }
+    ]
   },
-  "knife07": {
+  {
     "name": "Skoll and Hati",
     "description": "Stab once for those who've betrayed you, and twice for those you hate.",
-    "quality1": {
-      "recipe": "4 Fine wood, 10 Iron, 10 Black metal",
-      "weight": 0.3,
-      "durability": 200,
-      "pierce": 45,
-      "slash": 45,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 90,
-      "knockback": 10,
-      "blockForce": 10,
-      "parryBonus": "4x"
-    },
-    "quality2": {
-      "recipe": "4 Iron, 4 Black metal",
-      "weight": 0.3,
-      "durability": 250,
-      "pierce": 46,
-      "slash": 46,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 92,
-      "knockback": 10,
-      "blockForce": 15,
-      "parryBonus": "4x"
-    },
-    "quality3": {
-      "recipe": "8 Iron, 8 Black metal",
-      "weight": 0.3,
-      "durability": 300,
-      "pierce": 47,
-      "slash": 47,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 94,
-      "knockback": 10,
-      "blockForce": 20,
-      "parryBonus": "4x"
-    },
-    "quality4": {
-      "recipe": "12 Iron, 12 Black metal",
-      "weight": 0.3,
-      "durability": 350,
-      "pierce": 48,
-      "slash": 48,
-      "spirit": 0,
-      "backstab": "6x",
-      "stagger": 96,
-      "knockback": 10,
-      "blockForce": 25,
-      "parryBonus": "4x"
-    }
+    "quality": [
+      {
+        "quality": 1,
+        "recipe": "4 Fine wood, 10 Iron, 10 Black metal",
+        "weight": 0.3,
+        "durability": 200,
+        "pierce": 45,
+        "slash": 45,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 90,
+        "knockback": 10,
+        "blockForce": 10,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 2,
+        "recipe": "4 Iron, 4 Black metal",
+        "weight": 0.3,
+        "durability": 250,
+        "pierce": 46,
+        "slash": 46,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 92,
+        "knockback": 10,
+        "blockForce": 15,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 3,
+        "recipe": "8 Iron, 8 Black metal",
+        "weight": 0.3,
+        "durability": 300,
+        "pierce": 47,
+        "slash": 47,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 94,
+        "knockback": 10,
+        "blockForce": 20,
+        "parryBonus": "4x"
+      },
+      {
+        "quality": 4,
+        "recipe": "12 Iron, 12 Black metal",
+        "weight": 0.3,
+        "durability": 350,
+        "pierce": 48,
+        "slash": 48,
+        "spirit": 0,
+        "backstab": "6x",
+        "stagger": 96,
+        "knockback": 10,
+        "blockForce": 25,
+        "parryBonus": "4x"
+      }
+    ]
   }
-}
+]

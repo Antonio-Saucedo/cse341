@@ -1,5 +1,5 @@
-{
-  "arrow01": {
+[
+  {
     "name": "Wood arrow",
     "description": "An arrow of sharpened wood.",
     "recipe": "8 Wood",
@@ -13,7 +13,7 @@
     "stagger": 22,
     "knockback": 10
   },
-  "arrow02": {
+  {
     "name": "Fire arrow",
     "description": "This arrow burns whatever it pierces.",
     "recipe": "8 Wood, 8 Resin, 2 Feathers",
@@ -27,7 +27,7 @@
     "stagger": 11,
     "knockback": 10
   },
-  "arrow03": {
+  {
     "name": "Flinthead arrow",
     "description": "A hide-breaker with a head of flint.",
     "recipe": "8 Wood, 2 Flint, 2 Feathers",
@@ -41,7 +41,7 @@
     "stagger": 27,
     "knockback": 10
   },
-  "arrow04": {
+  {
     "name": "Bronzehead arrow",
     "description": "Sharper than flint, a sleek messenger of death.",
     "recipe": "8 Wood, 1 Bronze, 2 Feathers",
@@ -55,7 +55,7 @@
     "stagger": 32,
     "knockback": 10
   },
-  "arrow05": {
+  {
     "name": "Ironhead arrow",
     "description": "Capped with iron and flighted with dark feathers.",
     "recipe": "8 Wood, 1 Iron, 2 Feathers",
@@ -69,7 +69,7 @@
     "stagger": 42,
     "knockback": 10
   },
-  "arrow06": {
+  {
     "name": "Silver arrow",
     "description": "A needle to calm restless spirits.",
     "recipe": "8 Wood, 1 Silver, 2 Feathers",
@@ -83,7 +83,7 @@
     "stagger": 52,
     "knockback": 10
   },
-  "arrow07": {
+  {
     "name": "Obsidian arrow",
     "description": "A sliver of darkness.",
     "recipe": "8 Wood, 4 Obsidian, 2 Feathers",
@@ -97,7 +97,7 @@
     "stagger": 52,
     "knockback": 10
   },
-  "arrow08": {
+  {
     "name": "Poison arrow",
     "description": "A bitter sting from afar.",
     "recipe": "8 Wood, 4 Obsidian, 2 Feathers, 2 Ooze",
@@ -111,7 +111,7 @@
     "stagger": 26,
     "knockback": 10
   },
-  "arrow09": {
+  {
     "name": "Frost arrow",
     "description": "A shard of piercing ice.",
     "recipe": "8 Wood, 4 Obsidian, 2 Feathers, 1 Freeze gland",
@@ -125,7 +125,7 @@
     "stagger": 26,
     "knockback": 10
   },
-  "arrow10": {
+  {
     "name": "Needle arrow",
     "description": "The final stitch.",
     "recipe": "4 Needle, 2 Feathers",
@@ -139,7 +139,7 @@
     "stagger": 62,
     "knockback": 15
   },
-  "arrow11": {
+  {
     "name": "Carapace arrow",
     "description": "Heavy and pointy, this one's gonna hurt.",
     "recipe": "8 Wood, 4 Carapace, 2 Feathers",
@@ -153,4 +153,4 @@
     "stagger": 72,
     "knockback": 15
   }
-}
+]
