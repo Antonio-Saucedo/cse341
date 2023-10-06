@@ -5,7 +5,7 @@
     "description": "Valheim Items API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "valheim-v1-data.onrender.com",
   "basePath": "/",
   "tags": [
     {
@@ -57,7 +57,7 @@
       "description": "Get information about swords"
     }
   ],
-  "schemes": ["http"],
+  "schemes": ["https"],
   "paths": {
     "/arrows": {
       "get": {
