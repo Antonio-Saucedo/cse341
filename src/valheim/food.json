@@ -362,7 +362,7 @@
   {
     "name": "Lox meat pie",
     "description": "Break the crust to release a cloud of fragrant steam. Delicious!",
-    "recipe": "2 Lox Meat, 2 Cooked fish, 4 Barley flour",
+    "recipe": "2 Lox Meat, 2 Cloudberries, 4 Barley flour",
     "weight": 1.0,
     "stack": 10,
     "maxHealth": 75,
