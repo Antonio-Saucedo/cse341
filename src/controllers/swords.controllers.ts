@@ -44,54 +44,27 @@ export const getSwordDataByParameter = async (req: any, res: any) => {
     const searchType = req.params.searchType;
     if (valid.includes(searchType)) {
       const searchTerm = req.params.searchTerm;
-      if (searchType == 'name') {
-        const result = await getDb()
-          .db('valheim')
-          .collection('swords')
-          .find({ name: { $regex: searchTerm, $options: 'i' } });
-        result.toArray().then((lists: any) => {
-          if (!lists[0]) {
-            res
-              .status(404)
-              .json(`Sword with ${searchType} containing '${searchTerm}' was not found.`);
-          } else {
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(lists);
-          }
-        });
-      } else if (searchType == 'description') {
-        const result = await getDb()
-          .db('valheim')
-          .collection('swords')
-          .find({ description: { $regex: searchTerm, $options: 'i' } });
-        result.toArray().then((lists: any) => {
-          if (!lists[0]) {
-            res
-              .status(404)
-              .json(`Sword with ${searchType} containing '${searchTerm}' was not found.`);
-          } else {
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(lists);
-          }
-        });
-      } else if (searchType == 'recipe') {
-        const result = await getDb()
-          .db('valheim')
-          .collection('swords')
-          .find({ recipe: { $regex: searchTerm, $options: 'i' } });
-        result.toArray().then((lists: any) => {
-          if (!lists[0]) {
-            res
-              .status(404)
-              .json(`Sword with ${searchType} containing '${searchTerm}' was not found.`);
-          } else {
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(lists);
-          }
-        });
+      let query = {};
+      if (searchType != 'recipe') {
+        query = { [searchType]: { $regex: searchTerm, $options: 'i' } };
       } else {
-        res.status(400).json('Search types are name, description and recipe.');
+        query = {
+          quality: { $elemMatch: { [searchType]: { $regex: searchTerm, $options: 'i' } } }
+        };
       }
+      const result = await getDb().db('valheim').collection('swords').find(query);
+      result.toArray().then((lists: any) => {
+        if (!lists[0]) {
+          res
+            .status(404)
+            .json(`Sword with ${searchType} containing '${searchTerm}' was not found.`);
+        } else {
+          res.setHeader('Content-Type', 'application/json');
+          res.status(200).json(lists);
+        }
+      });
+    } else {
+      res.status(400).json('Search types are name, description and recipe.');
     }
   } catch (err) {
     res.status(500).json('Sword information was not found. Try again later.');
