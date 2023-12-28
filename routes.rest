@@ -13,40 +13,40 @@ GET http://localhost:8080/contacts/644bea15120bd798503c7f0c
 
 // PRODUCTION
 ### Get all contacts
-GET https://cse341-lesson3-duhm.onrender.com/contacts
+// GET https://cse341-lesson3-duhm.onrender.com/contacts
 
 ### Get contact by id
-GET https://cse341-lesson3-duhm.onrender.com/contacts/644be97f120bd798503c7f0a
+// GET https://cse341-lesson3-duhm.onrender.com/contacts/644be97f120bd798503c7f0a
 
 ### Get contact by id
-GET https://cse341-lesson3-duhm.onrender.com/contacts/644be9fc120bd798503c7f0b
+// GET https://cse341-lesson3-duhm.onrender.com/contacts/644be9fc120bd798503c7f0b
 
 ### Get contact by id
-GET https://cse341-lesson3-duhm.onrender.com/contacts/644bea15120bd798503c7f0c
+// GET https://cse341-lesson3-duhm.onrender.com/contacts/644bea15120bd798503c7f0c
 
 ### Create contact
-POST https://cse341-lesson3-duhm.onrender.com/contacts HTTP/1.1
-content-type: application/json
+// POST https://cse341-lesson3-duhm.onrender.com/contacts HTTP/1.1
+// content-type: application/json
 
-{
-    "firstName":"Antonio",
-    "lastName":"S.",
-    "email":"aSaucedo@email.com",
-    "favoriteColor":"Blue",
-    "birthday":"September 29, 1993"
-}
+// {
+//     "firstName":"Antonio",
+//     "lastName":"S.",
+//     "email":"aSaucedo@email.com",
+//     "favoriteColor":"Blue",
+//     "birthday":"September 29, 1993"
+// }
 
 ### PUT contact
-PUT https://cse341-lesson3-duhm.onrender.com/contacts/64567792a3b874e1f4642980 HTTP/1.1
-content-type: application/json
+// PUT https://cse341-lesson3-duhm.onrender.com/contacts/64567792a3b874e1f4642980 HTTP/1.1
+// content-type: application/json
 
-{
-    "firstName":"Antonio",
-    "lastName":"Saucedo",
-    "email":"antonioSaucedo@email.com",
-    "favoriteColor":"Red",
-    "birthday":"September 29, 1993"
-}
+// {
+//     "firstName":"Antonio",
+//     "lastName":"Saucedo",
+//     "email":"antonioSaucedo@email.com",
+//     "favoriteColor":"Red",
+//     "birthday":"September 29, 1993"
+// }
 
 ### DELETE contact
-DELETE https://cse341-lesson3-duhm.onrender.com/contacts/64567792a3b874e1f4642980 HTTP/1.1
+// DELETE https://cse341-lesson3-duhm.onrender.com/contacts/64567792a3b874e1f4642980 HTTP/1.1
